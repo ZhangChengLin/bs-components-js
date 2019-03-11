@@ -1,16 +1,17 @@
 function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
 
-    title = title ? title : "";
-    body = body ? body : "";
-    footer = footer ? footer : "";
-    titleColor = titleColor && typeof titleColor === "string" ? titleColor : "";
-    ModalSizes = ModalSizes && typeof ModalSizes === "string" ? ModalSizes : "";
-    VerticallyCentered = VerticallyCentered ? VerticallyCentered : false;
-    LongContentType = LongContentType ? LongContentType : false;
-    EventType = EventType ? EventType : "";
-    CallbackFunction = CallbackFunction ? CallbackFunction : "";
-    Options = Options ? Options : "";//加入判断数组
+    title = title && typeof title === "string" && title.length > 0 ? title : "";
+    body = body && typeof body === "string" && body.length > 0 ? body : "";
+    footer = footer && typeof footer === "string" && footer.length > 0 ? footer : "";
+    titleColor = titleColor ? titleColor : "";
+    ModalSizes = ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean" ? ModalSizes : "default";
+    VerticallyCentered = VerticallyCentered && typeof VerticallyCentered !== "number" ? VerticallyCentered : false;
+    LongContentType = LongContentType && typeof LongContentType !== "number" ? LongContentType : false;
+    EventType = EventType && typeof EventType === "string" ? EventType : "";
+    CallbackFunction = CallbackFunction && typeof CallbackFunction === "function" ? CallbackFunction : "";
+    Options = Options && typeof Options === "object" ? Options : "";
 
+    const document_body = document.querySelector("body");
     const TimeID = new Date().getTime();
     const modal_ID = "Modal_" + TimeID;
     const modal_title_ID = "modalTitle_" + TimeID;
@@ -26,7 +27,7 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
 
 
     modal.id = modal_ID;
-    modal.className = "modal";
+    modal.className = "modal fade";
     modal.tabIndex = "-1";
     modal.role = "dialog";
     modal.setAttribute("aria-hidden", "true");
@@ -42,6 +43,8 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
         case "xl":
             modal_dialog.className += " modal-xl";
             break;
+        case "default":
+            break;
         default:
             modal_dialog.className += " " + ModalSizes;
     }
@@ -50,16 +53,20 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
         case true:
             modal_dialog.className += " modal-dialog-centered";
             break;
+        case false:
+            break;
         default:
-            modal_dialog.className += " " + VerticallyCentered;
+            modal_dialog.className += " 2 " + VerticallyCentered;
     }
 
     switch (LongContentType) {
         case true:
             modal_dialog.className += " modal-dialog-scrollable";
             break;
+        case false:
+            break;
         default:
-            modal_dialog.className += " " + VerticallyCentered;
+            modal_dialog.className += " 1 " + VerticallyCentered;
     }
     modal_dialog.role = "document";
 
@@ -91,17 +98,20 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal_header.appendChild(modal_close_btn);
     modal_content.appendChild(modal_header);
     modal_content.appendChild(modal_body);
-    modal_content.appendChild(modal_footer);
+    footer ? modal_content.appendChild(modal_footer) : "";
     modal_dialog.appendChild(modal_content);
     modal.appendChild(modal_dialog);
+    document_body.appendChild(modal);
 
-    removeBootstrapModal();
+    $("#" + modal_ID).modal("show");
+    removeBootstrapModal(modal_ID);
 }
 
 function removeBootstrapModal(modal_id) {
     const modal = document.querySelector("#" + modal_id);
-    $("#" + modal).on("hidden.bs.modal", function () {
-        this.parentElement.removeChild(this);
-        console.log("123");
+    $("#" + modal_id).on("hidden.bs.modal", function () {
+        setTimeout(function () {
+            modal.parentElement.removeChild(modal);
+        }, 2e3);
     });
 }
