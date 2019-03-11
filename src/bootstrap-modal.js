@@ -3,13 +3,13 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     title = title ? title : "";
     body = body ? body : "";
     footer = footer ? footer : "";
-    titleColor = titleColor ? titleColor : "";
-    ModalSizes = ModalSizes ? ModalSizes : "";
-    VerticallyCentered = VerticallyCentered ? VerticallyCentered : "";
-    LongContentType = LongContentType ? LongContentType : "";
+    titleColor = titleColor && typeof titleColor === "string" ? titleColor : "";
+    ModalSizes = ModalSizes && typeof ModalSizes === "string" ? ModalSizes : "";
+    VerticallyCentered = VerticallyCentered ? VerticallyCentered : false;
+    LongContentType = LongContentType ? LongContentType : false;
     EventType = EventType ? EventType : "";
     CallbackFunction = CallbackFunction ? CallbackFunction : "";
-    Options = Options ? Options : "";
+    Options = Options ? Options : "";//加入判断数组
 
     const TimeID = new Date().getTime();
     const modal_ID = "Modal_" + TimeID;
@@ -95,5 +95,13 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal_dialog.appendChild(modal_content);
     modal.appendChild(modal_dialog);
 
+    removeBootstrapModal();
 }
 
+function removeBootstrapModal(modal_id) {
+    const modal = document.querySelector("#" + modal_id);
+    $("#" + modal).on("hidden.bs.modal", function () {
+        this.parentElement.removeChild(this);
+        console.log("123");
+    });
+}
