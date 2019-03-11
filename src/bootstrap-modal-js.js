@@ -31,6 +31,8 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
     modal_dialog.className = "modal-dialog";
     switch (ModalSizes) {
+        case "default":
+            break;
         case "sm":
             modal_dialog.className += " modal-sm";
             break;
@@ -39,8 +41,6 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
             break;
         case "xl":
             modal_dialog.className += " modal-xl";
-            break;
-        case "default":
             break;
         default:
             modal_dialog.className += " " + ModalSizes;
@@ -63,7 +63,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
         case false:
             break;
         default:
-            modal_dialog.className += " " + VerticallyCentered;
+            modal_dialog.className += " " + LongContentType;
     }
     modal_dialog.role = "document";
 
@@ -99,7 +99,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     modal.appendChild(modal_dialog);
     document_body.appendChild(modal);
 
-    EventType && CallbackFunction ? bootstrap_modal_events(modal_ID) : "";
+    EventType && CallbackFunction ? bootstrap_modal_events(modal_ID, EventType, CallbackFunction) : "";
 
     $("#" + modal_ID).modal("show");
     removeBootstrapModal(modal_ID);
@@ -114,6 +114,31 @@ function removeBootstrapModal(modal_id) {
     });
 }
 
-function bootstrap_modal_events(modal_id) {
+function bootstrap_modal_events(modal_id, type, fun) {
+    const modal = $("#" + modal_id);
+    switch (type) {
+        case "show":
+            modal.on("show.bs.modal", function () {
+                return fun();
+            });
+            break;
+        case "shown":
+            modal.on("shown.bs.modal", function () {
+                return fun();
+            });
+            break;
+        case "hide":
+            modal.on("hide.bs.modal", function () {
+                return fun();
+            });
+            break;
+        case "hidden":
+            modal.on("hidden.bs.modal", function () {
+                return fun();
+            });
+            break;
+        default:
+
+    }
 
 }
