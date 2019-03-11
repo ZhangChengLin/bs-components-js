@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,12 +13,26 @@
           content="Bootstrap,Bootstrap4,Modal,dynamic,show.bs.modal,shown.bs.modal,hide.bs.modal,hidden.bs.modal">
 </head>
 <body>
+<div class="mt-5 container text-center">
+    <input class="btn btn-sm btn-outline-secondary" type="button" name="btn" id="btn" value="modal">
+</div>
+
+<div>
+    <script src="demoFiles/jquery.min.js"></script>
+    <script src="demoFiles/popper.min.js"></script>
+    <script src="demoFiles/bootstrap.min.js"></script>
+    <script src="src/bootstrap-modal.js"></script>
+    <!--<script src="dist/bootstrap-modal.min.js"></script>-->
+</div>
+<script>
+    let test = function () {
+        document.querySelector("#btn").addEventListener("click", function () {
+            bootstrapModal();
+        })
+    };
+    test();
 
 
-<script src="demoFiles/jquery.min.js"></script>
-<script src="demoFiles/popper.min.js"></script>
-<script src="demoFiles/bootstrap.min.js"></script>
-<script src="src/bootstrap-modal.js"></script>
-<!--<script src="dist/bootstrap-modal.min.js"></script>-->
+</script>
 </body>
 </html>

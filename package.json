@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-modal-js",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-alpha.1",
   "description": "Bootstrap modal",
   "main": "dist/bootstrap-modal.min.js",
   "scripts": {
@@ -10,11 +10,11 @@
     "type": "git",
     "url": "git@github.com:zhangchenglin/bootstrap-modal-js.git"
   },
+  "GitHub": "https://github.com/zhangchenglin/bootstrap-modal-js",
   "keywords": [
     "bootstrap",
     "modal"
   ],
-  "GitHub": "https://github.com/zhangchenglin/bootstrap-modal",
   "author": "张成林",
   "authorEmail": "469946668@qq.com",
   "license": "MIT",
