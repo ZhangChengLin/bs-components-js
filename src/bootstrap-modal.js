@@ -1,12 +1,19 @@
-function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyCentered, longContentType, EventType, CallbackFunction, Options) {
+function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
 
     title = title ? title : "";
     body = body ? body : "";
     footer = footer ? footer : "";
+    titleColor = titleColor ? titleColor : "";
+    ModalSizes = ModalSizes ? ModalSizes : "";
+    VerticallyCentered = VerticallyCentered ? VerticallyCentered : "";
+    LongContentType = LongContentType ? LongContentType : "";
+    EventType = EventType ? EventType : "";
+    CallbackFunction = CallbackFunction ? CallbackFunction : "";
+    Options = Options ? Options : "";
 
     const TimeID = new Date().getTime();
-    const modal_ID = "modal_" + TimeID;
-    const modal_title_ID = "modal_title" + TimeID;
+    const modal_ID = "Modal_" + TimeID;
+    const modal_title_ID = "modalTitle_" + TimeID;
     const modal = document.createElement("div");
     const modal_dialog = document.createElement("div");
     const modal_content = document.createElement("div");
@@ -25,6 +32,35 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal.setAttribute("aria-hidden", "true");
 
     modal_dialog.className = "modal-dialog";
+    switch (ModalSizes) {
+        case "sm":
+            modal_dialog.className += " modal-sm";
+            break;
+        case "lg":
+            modal_dialog.className += " modal-lg";
+            break;
+        case "xl":
+            modal_dialog.className += " modal-xl";
+            break;
+        default:
+            modal_dialog.className += " " + ModalSizes;
+    }
+
+    switch (VerticallyCentered) {
+        case true:
+            modal_dialog.className += " modal-dialog-centered";
+            break;
+        default:
+            modal_dialog.className += " " + VerticallyCentered;
+    }
+
+    switch (LongContentType) {
+        case true:
+            modal_dialog.className += " modal-dialog-scrollable";
+            break;
+        default:
+            modal_dialog.className += " " + VerticallyCentered;
+    }
     modal_dialog.role = "document";
 
     modal_content.className = "modal-content";
@@ -32,7 +68,7 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal_header.className = "modal-header";
 
     modal_title.id = modal_title_ID;
-    modal_title.className = "modal-title";
+    modal_title.className = titleColor ? "modal-title " + titleColor : "modal-title";
     modal_title.innerHTML = title;
 
     modal_close_btn.type = "button";
@@ -41,6 +77,7 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal_close_btn.setAttribute("aria-label", "Close");
 
     modal_close_span.setAttribute("aria-hidden", "true");
+    modal_close_span.innerHTML = "&times;";
 
     modal_body.className = "modal-body";
     modal_body.innerHTML = body;
@@ -48,4 +85,15 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal_footer.className = "modal-footer";
     modal_footer.innerHTML = footer;
 
+
+    modal_close_btn.appendChild(modal_close_span);
+    modal_header.appendChild(modal_title);
+    modal_header.appendChild(modal_close_btn);
+    modal_content.appendChild(modal_header);
+    modal_content.appendChild(modal_body);
+    modal_content.appendChild(modal_footer);
+    modal_dialog.appendChild(modal_content);
+    modal.appendChild(modal_dialog);
+
 }
+
