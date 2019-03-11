@@ -1,9 +1,19 @@
-function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
+/*!
+ * Name: bootstrap-modal-js
+ * Version: 0.0.1-alpha.1
+ * Author: 张成林
+ * Email: 469946668@qq.com
+ * Description: Bootstrap modal
+ * Copyright (c) 2019 张成林
+ * Licenses: MIT
+ * under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ * GitHub: https://github.com/zhangchenglin/bootstrap-modal-js
+ */
 
+function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
     title = title && typeof title === "string" && title.length > 0 ? title : "";
     body = body && typeof body === "string" && body.length > 0 ? body : "";
     footer = footer && typeof footer === "string" && footer.length > 0 ? footer : "";
-    titleColor = titleColor ? titleColor : "";
     ModalSizes = ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean" ? ModalSizes : "default";
     VerticallyCentered = VerticallyCentered && typeof VerticallyCentered !== "number" ? VerticallyCentered : false;
     LongContentType = LongContentType && typeof LongContentType !== "number" ? LongContentType : false;
@@ -24,7 +34,6 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     const modal_close_span = document.createElement("span");
     const modal_body = document.createElement("div");
     const modal_footer = document.createElement("div");
-
 
     modal.id = modal_ID;
     modal.className = "modal fade";
@@ -56,7 +65,7 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
         case false:
             break;
         default:
-            modal_dialog.className += " 2 " + VerticallyCentered;
+            modal_dialog.className += " " + VerticallyCentered;
     }
 
     switch (LongContentType) {
@@ -66,7 +75,7 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
         case false:
             break;
         default:
-            modal_dialog.className += " 1 " + VerticallyCentered;
+            modal_dialog.className += " " + VerticallyCentered;
     }
     modal_dialog.role = "document";
 
@@ -75,7 +84,6 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal_header.className = "modal-header";
 
     modal_title.id = modal_title_ID;
-    modal_title.className = titleColor ? "modal-title " + titleColor : "modal-title";
     modal_title.innerHTML = title;
 
     modal_close_btn.type = "button";
@@ -103,6 +111,8 @@ function bootstrapModal(title, body, footer, titleColor, ModalSizes, VerticallyC
     modal.appendChild(modal_dialog);
     document_body.appendChild(modal);
 
+    EventType && CallbackFunction ? bootstrap_modal_events(modal_ID) : "";
+
     $("#" + modal_ID).modal("show");
     removeBootstrapModal(modal_ID);
 }
@@ -114,4 +124,8 @@ function removeBootstrapModal(modal_id) {
             modal.parentElement.removeChild(modal);
         }, 2e3);
     });
+}
+
+function bootstrap_modal_events(modal_id) {
+
 }
