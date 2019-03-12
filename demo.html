@@ -84,16 +84,16 @@
             <div class="mb-3 p-3 border border-secondary rounded">
                 <div>模态框垂直居中</div>
                 <div>VerticallyCentered</div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_true"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_true"
                            value="1">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_true"
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_true"
                            title="true"> true </label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_false"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_false"
                            value="">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_false"
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_false"
                            title="default"> false </label>
                 </div>
             </div>
@@ -101,16 +101,16 @@
             <div class="mb-3 p-3 border border-secondary rounded">
                 <div>长内容滚动方式</div>
                 <div>LongContentType</div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_true"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="LongContentType" id="LongContentType_true"
                            value="1">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="LongContentType_true"
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="LongContentType_true"
                            title="true"> true </label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_false"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="LongContentType" id="LongContentType_false"
                            value="">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="LongContentType_false"
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="LongContentType_false"
                            title="default"> false </label>
                 </div>
             </div>
@@ -122,24 +122,24 @@
                 <span class="d-block">如果使用的时候，EventType 和 CallbackFunction 必须同时存在</span>
                 <div>EventType</div>
                 <span class="d-block">EventType and CallbackFunction must exist at the same time if used</span>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="EventType" id="EventType_show" value="show">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="EventType_show"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_show" value="show">
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_show"
                            title="show.bs.modal"> show </label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="EventType" id="EventType_shown" value="shown">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="EventType_shown"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_shown" value="shown">
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_shown"
                            title="shown.bs.modal"> shown </label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hide" value="hide">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="EventType_hide"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_hide" value="hide">
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_hide"
                            title="hide.bs.modal"> hide </label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hidden" value="hidden">
-                    <label class="form-check-label btn btn-sm btn-outline-secondary" for="EventType_hidden"
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_hidden" value="hidden">
+                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_hidden"
                            title="hidden.bs.modal"> hidden </label>
                 </div>
             </div>
@@ -158,22 +158,38 @@
                                for="CallbackFunction">CallbackFunction</label>
                     </div>
                     <select class="custom-select border-success" id="CallbackFunction">
-                        <option value="">default</option>
-                        <option value="alert_some_text">alert_some_text</option>
-                        <option value="console_log_some_text">console_log_some_text</option>
-                        <option value="get_number">get_number</option>
+                        <option class="custom-select-lg" value="">default</option>
+                        <option class="custom-select-lg" value="alert_some_text">alert_some_text</option>
+                        <option class="custom-select-lg" value="console_log_some_text">console_log_some_text</option>
+                        <option class="custom-select-lg" value="get_number">get_number</option>
                     </select>
                 </div>
             </div>
         </div>
 
         <div class="mb-3 p-3 border border-secondary rounded">
-            <div>选项预留</div>
-            <div>Options Reserved</div>
+            <div>选项预留 （开发中）</div>
+            <div>Options Reserved (In development)</div>
+            <div class="custom-control custom-switch custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="backdrop" value="backdrop" checked disabled>
+                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="backdrop">backdrop</label>
+            </div>
+            <div class="custom-control custom-switch custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="keyboard" value="keyboard" checked disabled>
+                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="keyboard">keyboard</label>
+            </div>
+            <div class="custom-control custom-switch custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="focus" value="focus" checked disabled>
+                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="focus">focus</label>
+            </div>
+            <div class="custom-control custom-switch custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="show" value="show" checked disabled>
+                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="show">show</label>
+            </div>
         </div>
 
         <div class="mb-5">
-            <a href="javascript:" id="bs_modal_click" class="w-100 btn btn-lg btn-outline-success bg-dark">Click to
+            <a href="javascript:" id="bs_modal_click" class="btn btn-lg btn-block btn-outline-success bg-dark">Click to
                 generate modal box</a>
         </div>
 
