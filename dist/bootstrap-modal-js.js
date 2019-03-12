@@ -1,6 +1,6 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 0.0.1-alpha.2
+ * Version: 0.0.1-alpha.3
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
@@ -15,8 +15,8 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     body = body && typeof body === "string" && body.length > 0 ? body : "";
     footer = footer && typeof footer === "string" && footer.length > 0 ? footer : "";
     ModalSizes = ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean" ? ModalSizes : "default";
-    VerticallyCentered = VerticallyCentered && typeof VerticallyCentered !== "number" ? VerticallyCentered : false;
-    LongContentType = LongContentType && typeof LongContentType !== "number" ? LongContentType : false;
+    VerticallyCentered = VerticallyCentered && typeof VerticallyCentered === "boolean" ? VerticallyCentered : false;
+    LongContentType = LongContentType && typeof LongContentType === "boolean" ? LongContentType : false;
     EventType = EventType && typeof EventType === "string" ? EventType : "";
     CallbackFunction = CallbackFunction && typeof CallbackFunction === "function" ? CallbackFunction : "";
     Options = Options && typeof Options === "object" ? Options : "";
@@ -63,9 +63,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
             modal_dialog.className += " modal-dialog-centered";
             break;
         case false:
-            break;
         default:
-            modal_dialog.className += " " + VerticallyCentered;
     }
 
     switch (LongContentType) {
@@ -73,9 +71,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
             modal_dialog.className += " modal-dialog-scrollable";
             break;
         case false:
-            break;
         default:
-            modal_dialog.className += " " + LongContentType;
     }
     modal_dialog.role = "document";
 
