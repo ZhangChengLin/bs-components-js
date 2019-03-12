@@ -1,7 +1,7 @@
 function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
-    title = title && typeof title === "string" && title.length > 0 ? title : "";
-    body = body && typeof body === "string" && body.length > 0 ? body : "";
-    footer = footer && typeof footer === "string" && footer.length > 0 ? footer : "";
+    title = title ? (typeof title === "string" ? title : typeof title === "function" ? title() + "" : "") : "";
+    body = body ? (typeof body === "string" ? body : typeof body === "function" ? body() + "" : "") : "";
+    footer = footer ? (typeof footer === "string" ? footer : typeof footer === "function" ? footer() + "" : "") : "";
     ModalSizes = ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean" ? ModalSizes : "default";
     VerticallyCentered = VerticallyCentered && typeof VerticallyCentered === "boolean" ? VerticallyCentered : false;
     LongContentType = LongContentType && typeof LongContentType === "boolean" ? LongContentType : false;

@@ -85,13 +85,15 @@
                 <div>模态框垂直居中</div>
                 <div>VerticallyCentered</div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_true"
+                    <input class="custom-control-input" type="radio" name="VerticallyCentered"
+                           id="VerticallyCentered_true"
                            value="1">
                     <label class="custom-control-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_true"
                            title="true"> true </label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_false"
+                    <input class="custom-control-input" type="radio" name="VerticallyCentered"
+                           id="VerticallyCentered_false"
                            value="">
                     <label class="custom-control-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_false"
                            title="default"> false </label>
@@ -128,7 +130,8 @@
                            title="show.bs.modal"> show </label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_shown" value="shown">
+                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_shown"
+                           value="shown">
                     <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_shown"
                            title="shown.bs.modal"> shown </label>
                 </div>
@@ -138,7 +141,8 @@
                            title="hide.bs.modal"> hide </label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_hidden" value="hidden">
+                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_hidden"
+                           value="hidden">
                     <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_hidden"
                            title="hidden.bs.modal"> hidden </label>
                 </div>
@@ -172,11 +176,13 @@
             <div>Options Reserved (In development)</div>
             <div class="custom-control custom-switch custom-control-inline">
                 <input type="checkbox" class="custom-control-input" id="backdrop" value="backdrop" checked disabled>
-                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="backdrop">backdrop</label>
+                <label class="custom-control-label btn btn-sm btn-outline-primary disabled"
+                       for="backdrop">backdrop</label>
             </div>
             <div class="custom-control custom-switch custom-control-inline">
                 <input type="checkbox" class="custom-control-input" id="keyboard" value="keyboard" checked disabled>
-                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="keyboard">keyboard</label>
+                <label class="custom-control-label btn btn-sm btn-outline-primary disabled"
+                       for="keyboard">keyboard</label>
             </div>
             <div class="custom-control custom-switch custom-control-inline">
                 <input type="checkbox" class="custom-control-input" id="focus" value="focus" checked disabled>
@@ -251,6 +257,18 @@ function get_number() {
 
             function get_number() {
                 alert(return_number());
+            }
+
+            function return_title() {
+                return "function title";
+            }
+
+            function return_body() {
+                return "function body";
+            }
+
+            function return_footer() {
+                return "function footer";
             }
         </script>
     </div>
