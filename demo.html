@@ -15,7 +15,7 @@
 <body>
 <div class="container">
     <div class="my-5 p-3 border rounded">
-        <div class="mb-3">
+        <div class="mb-3 p-2 border rounded">
             <label for="title">标题（支持HTML）</label>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -24,47 +24,86 @@
                 <input type="text" class="form-control border-success" id="title" placeholder="请输入标题"
                        value="default title">
             </div>
+            <div class="mb-2 custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="titleFunctionSwitch">
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="titleFunctionSwitch">Use
+                    Function control title content. （使用函数控制title内容）</label>
+            </div>
+            <div class="input-group mb-3 d-none">
+                <div class="input-group-prepend">
+                    <label class="input-group-text bg-success" for="titleFunctionSelect">Options</label>
+                </div>
+                <select class="custom-select border-success" id="titleFunctionSelect">
+                    <option class="custom-select-lg" value="return_title">return_title</option>
+                    <option class="custom-select-lg" value="return_body">return_body</option>
+                    <option class="custom-select-lg" value="return_footer">return_footer</option>
+                </select>
+            </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 p-2 border rounded">
             <label for="body">内容（支持HTML）</label>
             <div>测试长内容的时候请增加body的内容来查看效果。</div>
             <div>When testing long content, please increase the content of the body to see the effect.</div>
-            <div class="input-group">
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text bg-success text-white">body</span>
                 </div>
                 <textarea rows="4" class="form-control border-success" id="body" placeholder="请输入正文内容">
-                    <p>this is default body content.</p>
-                    <p>this is default body content.</p>
-                    <p>this is default body content.</p>
-                    <p>this is default body content.</p>
-                    <p>this is default body content.</p>
+                    this is default body content.
                 </textarea>
+            </div>
+            <div class="mb-2 custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="bodyFunctionSwitch">
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="bodyFunctionSwitch">Use
+                    Function control body content. （使用函数控制body内容）</label>
+            </div>
+            <div class="input-group mb-3 d-none">
+                <div class="input-group-prepend">
+                    <label class="input-group-text bg-success" for="bodyFunctionSelect">Options</label>
+                </div>
+                <select class="custom-select border-success" id="bodyFunctionSelect">
+                    <option class="custom-select-lg" value="return_title">return_title</option>
+                    <option class="custom-select-lg" value="return_body" selected>return_body</option>
+                    <option class="custom-select-lg" value="return_footer">return_footer</option>
+                </select>
             </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 p-2 border rounded">
             <label for="footer">底部（支持HTML）</label>
-            <div class="input-group">
+            <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text bg-success text-white">footer</span>
                 </div>
                 <textarea rows="9" class="form-control border-success" id="footer" placeholder="请输入底部内容">
                     <div>
                     <div class="d-flex align-self-start">this is some code. footer is built with<a
-                            href="https://getbootstrap.com/docs/4.3/utilities/flex/"
-                            target="_blank">&nbsp;flexbox</a>
+                            href="https://getbootstrap.com/docs/4.3/utilities/flex/" target="_blank">&nbsp;flexbox</a>
                     </div>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <input type="button" class="btn btn-outline-success" data-dismiss="modal" value="Close">
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
                     </div>
                 </textarea>
             </div>
+            <div class="mb-2 custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="footerFunctionSwitch">
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="footerFunctionSwitch">Use
+                    Function control footer content. （使用函数控制footer内容）</label>
+            </div>
+            <div class="input-group mb-3 d-none">
+                <div class="input-group-prepend">
+                    <label class="input-group-text bg-success" for="footerFunctionSelect">Options</label>
+                </div>
+                <select class="custom-select border-success" id="footerFunctionSelect">
+                    <option class="custom-select-lg" value="return_title">return_title</option>
+                    <option class="custom-select-lg" value="return_body">return_body</option>
+                    <option class="custom-select-lg" value="return_footer" selected>return_footer</option>
+                </select>
+            </div>
         </div>
 
-        <div class="mb-3">
+        <div class="mb-3 p-2 border rounded">
             <div>模态框尺寸</div>
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -204,7 +243,6 @@
             <span class="d-block">CallbackFunction code example</span>
             <div class="input-group">
 <textarea rows="21" class="form-control" disabled readonly>
-<code>
 function alert_some_text() {
     alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
 }
@@ -220,8 +258,19 @@ function return_number() {
 function get_number() {
     alert(return_number());
 }
-</code>
-    </textarea>
+
+function return_title() {
+    return "function title";
+}
+
+function return_body() {
+    return "function body";
+}
+
+function return_footer() {
+    return "function footer";
+}
+</textarea>
             </div>
         </div>
 
@@ -278,9 +327,12 @@ function get_number() {
     (function () {
         const bs_modal_click = document.querySelector("#bs_modal_click");
         bs_modal_click.addEventListener("click", function () {
-            const title_value = select_value("title");
-            const body_value = select_value("body");
-            const footer_value = select_value("footer");
+
+            const title_value = checkbox_status("titleFunction") ? select_function_value("titleFunction") : select_value("title");
+            const body_value = checkbox_status("bodyFunction") ? select_function_value("bodyFunction") : select_value("body");
+            const footer_value = checkbox_status("footerFunction") ? select_function_value("footerFunction") : select_value("footer");
+            // const body_value = select_value("body");
+            // const footer_value = select_value("footer");
             const ModalSizes_value = select_value("ModalSizes");
             const VerticallyCentered_value = radio_boolean_value("VerticallyCentered");
             const LongContentType_value = radio_boolean_value("LongContentType");
@@ -291,13 +343,24 @@ function get_number() {
             bootstrapModalJs(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, EventType_value, CallbackFunction_value);
         });
 
+
+        function checkbox_status(id) {
+            const checkbox = document.querySelector("#" + id + "Switch");
+            return checkbox.checked === true ? true : "";
+        }
+
+        function select_function_value(id) {
+            const fun_name = document.querySelector("#" + id + "Select").value;
+            return eval(fun_name);
+        }
+
         function select_value(id) {
-            let option = document.querySelector("#" + id);
+            const option = document.querySelector("#" + id);
             return option.value;
         }
 
         function radio_value(name) {
-            let radio = document.querySelectorAll("[name='" + name + "']");
+            const radio = document.querySelectorAll("[name='" + name + "']");
             let radioValue;
             for (let i = 0; i < radio.length; i++) {
                 if (radio[i].checked === true) {
@@ -318,6 +381,18 @@ function get_number() {
                 }
             }
             return Boolean(radioValue);
+        }
+
+        function_swicth("titleFunction");
+        function_swicth("bodyFunction");
+        function_swicth("footerFunction");
+
+        function function_swicth(id) {
+            let swicth = document.querySelector("#" + id + "Switch");
+            let select = document.querySelector("#" + id + "Select");
+            swicth.addEventListener("click", function () {
+                select.parentElement.classList.toggle("d-none");
+            })
         }
     })();
 </script>
