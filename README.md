@@ -23,7 +23,7 @@ Supports arbitrary calls of ten parameters, supports callback functions based on
 
 ## Demo
 
-<a href="hhttps://zhangchenglin.github.io/bootstrap-modal-js/demo.html" title="_blank" title="DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
+<a href="https://zhangchenglin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
 
 ## How to use it?
 ```
