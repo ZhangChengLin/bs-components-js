@@ -15,7 +15,8 @@
 <body>
 <div class="container">
     <div class="my-5 p-3 border rounded">
-        <a class="my-2 btn btn-block btn-outline-secondary" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="How To Use">How To Use</a>
+        <a class="my-2 btn btn-block btn-outline-secondary" href="https://zhangchenglin.github.io/bootstrap-modal-js/"
+           target="_blank" title="How To Use">How To Use</a>
         <div class="mb-3 p-2 border rounded">
             <label for="title">标题（支持HTML）</label>
             <div class="input-group mb-3">
@@ -38,6 +39,8 @@
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body">return_body</option>
                     <option class="custom-select-lg" value="return_footer">return_footer</option>
+                    <option class="custom-select-lg" value="return_obj">return_obj</option>
+                    <option class="custom-select-lg" value="return_html_obj">return_html_obj</option>
                 </select>
             </div>
         </div>
@@ -67,6 +70,8 @@
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body" selected>return_body</option>
                     <option class="custom-select-lg" value="return_footer">return_footer</option>
+                    <option class="custom-select-lg" value="return_obj">return_obj</option>
+                    <option class="custom-select-lg" value="return_html_obj">return_html_obj</option>
                 </select>
             </div>
         </div>
@@ -100,6 +105,8 @@
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body">return_body</option>
                     <option class="custom-select-lg" value="return_footer" selected>return_footer</option>
+                    <option class="custom-select-lg" value="return_obj">return_obj</option>
+                    <option class="custom-select-lg" value="return_html_obj">return_html_obj</option>
                 </select>
             </div>
         </div>
@@ -271,6 +278,18 @@ function return_body() {
 function return_footer() {
     return "function footer";
 }
+
+function return_obj() {
+    return {
+        "aaa": "111",
+        "bbb": "222",
+        "ccc": "333",
+    };
+}
+
+function return_html_obj() {
+    return document.querySelector("#ModalSizes");
+}
 </textarea>
             </div>
         </div>
@@ -284,7 +303,6 @@ function return_footer() {
     <script src="demoFiles/popper.min.js"></script>
     <script src="demoFiles/bootstrap.min.js"></script>
     <script src="src/bootstrap-modal-js.js"></script>
-    <!--<script src="dist/bootstrap-modal-js.min.js"></script>-->
 
     <script>
         $("label").tooltip({
@@ -320,6 +338,18 @@ function return_footer() {
             function return_footer() {
                 return "function footer";
             }
+
+            function return_obj() {
+                return {
+                    "aaa": "111",
+                    "bbb": "222",
+                    "ccc": "333",
+                };
+            }
+
+            function return_html_obj() {
+                return document.querySelector("#ModalSizes");
+            }
         </script>
     </div>
 </div>
@@ -332,8 +362,6 @@ function return_footer() {
             const title_value = checkbox_status("titleFunction") ? select_function_value("titleFunction") : select_value("title");
             const body_value = checkbox_status("bodyFunction") ? select_function_value("bodyFunction") : select_value("body");
             const footer_value = checkbox_status("footerFunction") ? select_function_value("footerFunction") : select_value("footer");
-            // const body_value = select_value("body");
-            // const footer_value = select_value("footer");
             const ModalSizes_value = select_value("ModalSizes");
             const VerticallyCentered_value = radio_boolean_value("VerticallyCentered");
             const LongContentType_value = radio_boolean_value("LongContentType");
@@ -343,7 +371,6 @@ function return_footer() {
 
             bootstrapModalJs(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, EventType_value, CallbackFunction_value);
         });
-
 
         function checkbox_status(id) {
             const checkbox = document.querySelector("#" + id + "Switch");
