@@ -99,6 +99,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
     $("#" + modal_ID).modal("show");
     removeBootstrapModal(modal_ID);
+    return TimeID;
 }
 
 function removeBootstrapModal(modal_id) {
