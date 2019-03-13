@@ -85,10 +85,10 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     typeof footer === "object" ? modal_footer.appendChild(footer) : modal_footer.innerHTML = footer;
 
 
-    modal_close_btn.appendChild(modal_close_span);
-    modal_header.appendChild(modal_title);
-    modal_header.appendChild(modal_close_btn);
-    modal_content.appendChild(modal_header);
+    title ? modal_close_btn.appendChild(modal_close_span) : "";
+    title ? modal_header.appendChild(modal_close_btn) : "";
+    title ? modal_header.appendChild(modal_title) : "";
+    title ? modal_content.appendChild(modal_header) : "";
     modal_content.appendChild(modal_body);
     footer ? modal_content.appendChild(modal_footer) : "";
     modal_dialog.appendChild(modal_content);
