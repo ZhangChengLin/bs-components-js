@@ -1,6 +1,6 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 0.0.1-alpha.beta
+ * Version: 0.0.1-alpha.beta.2
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
@@ -111,6 +111,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
     $("#" + modal_ID).modal("show");
     removeBootstrapModal(modal_ID);
+    return TimeID;
 }
 
 function removeBootstrapModal(modal_id) {
