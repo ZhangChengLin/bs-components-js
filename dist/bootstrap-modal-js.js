@@ -1,6 +1,6 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 0.0.1-alpha.beta.4
+ * Version: 0.0.1-alpha.beta.5
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
@@ -25,6 +25,8 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     const TimeID = new Date().getTime();
     const modal_ID = "Modal_" + TimeID;
     const modal_title_ID = "modalTitle_" + TimeID;
+    const modal_body_ID = "modalBody_" + TimeID;
+    const modal_footer_ID = "modalFooter_" + TimeID;
     const modal = document.createElement("div");
     const modal_dialog = document.createElement("div");
     const modal_content = document.createElement("div");
@@ -91,11 +93,12 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     modal_close_span.innerHTML = "&times;";
 
     modal_body.className = "modal-body";
+    modal_body.id = modal_body_ID;
     typeof body === "object" ? modal_body.appendChild(body) : modal_body.innerHTML = body;
 
     modal_footer.className = "modal-footer";
+    modal_footer.id = modal_footer_ID;
     typeof footer === "object" ? modal_footer.appendChild(footer) : modal_footer.innerHTML = footer;
-
 
     title ? modal_close_btn.appendChild(modal_close_span) : "";
     title ? modal_header.appendChild(modal_title) : "";
@@ -147,7 +150,5 @@ function bootstrap_modal_events(modal_id, type, fun) {
             });
             break;
         default:
-
     }
-
 }
