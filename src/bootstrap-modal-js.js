@@ -86,8 +86,8 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
 
     title ? modal_close_btn.appendChild(modal_close_span) : "";
-    title ? modal_header.appendChild(modal_close_btn) : "";
     title ? modal_header.appendChild(modal_title) : "";
+    title ? modal_header.appendChild(modal_close_btn) : "";
     title ? modal_content.appendChild(modal_header) : "";
     modal_content.appendChild(modal_body);
     footer ? modal_content.appendChild(modal_footer) : "";
