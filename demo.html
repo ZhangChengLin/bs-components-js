@@ -33,7 +33,7 @@
             </div>
             <div class="input-group mb-3 d-none">
                 <div class="input-group-prepend">
-                    <label class="input-group-text bg-success" for="titleFunctionSelect">Options</label>
+                    <label class="input-group-text bg-success" for="titleFunctionSelect">Function Examples</label>
                 </div>
                 <select class="custom-select border-success" id="titleFunctionSelect">
                     <option class="custom-select-lg" value="return_title">return_title</option>
@@ -64,7 +64,7 @@
             </div>
             <div class="input-group mb-3 d-none">
                 <div class="input-group-prepend">
-                    <label class="input-group-text bg-success" for="bodyFunctionSelect">Options</label>
+                    <label class="input-group-text bg-success" for="bodyFunctionSelect">Function Examples</label>
                 </div>
                 <select class="custom-select border-success" id="bodyFunctionSelect">
                     <option class="custom-select-lg" value="return_title">return_title</option>
@@ -99,7 +99,7 @@
             </div>
             <div class="input-group mb-3 d-none">
                 <div class="input-group-prepend">
-                    <label class="input-group-text bg-success" for="footerFunctionSelect">Options</label>
+                    <label class="input-group-text bg-success" for="footerFunctionSelect">Function Examples</label>
                 </div>
                 <select class="custom-select border-success" id="footerFunctionSelect">
                     <option class="custom-select-lg" value="return_title">return_title</option>
@@ -288,7 +288,13 @@ function return_obj() {
 }
 
 function return_html_obj() {
-    return document.querySelector("#ModalSizes");
+    const html = document.createElement("div");
+    const p = document.createElement("p");
+    html.className = "bg-success";
+    p.className = "text-center";
+    p.innerHTML = "this is html obj.";
+    html.appendChild(p);
+    return html;
 }
 </textarea>
             </div>
@@ -348,7 +354,13 @@ function return_html_obj() {
             }
 
             function return_html_obj() {
-                return document.querySelector("#ModalSizes");
+                const html = document.createElement("div");
+                const p = document.createElement("p");
+                html.className = "bg-success";
+                p.className = "text-center";
+                p.innerHTML = "this is html obj.";
+                html.appendChild(p);
+                return html;
             }
         </script>
     </div>

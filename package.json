@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-modal-js",
-  "version": "0.0.1-alpha.beta.6",
+  "version": "0.0.1-alpha.beta.7",
   "description": "Bootstrap modal",
   "main": "dist/bootstrap-modal.min.js",
   "scripts": {

@@ -65,7 +65,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     }
     modal_dialog.role = "document";
 
-    modal_content.className = "modal-content";
+    modal_content.className = "modal-content overflow-hidden shadow-lg";
 
     modal_header.className = "modal-header";
 
@@ -105,12 +105,16 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     return TimeID;
 }
 
+function object_type_of(obj) {
+    return Object.prototype.toString.call(obj);
+}
+
 function removeBootstrapModal(modal_id) {
     const modal = document.querySelector("#" + modal_id);
     $("#" + modal_id).on("hidden.bs.modal", function () {
         setTimeout(function () {
             modal.parentElement.removeChild(modal);
-        }, 2e3);
+        }, 5e2);
     });
 }
 
