@@ -23,7 +23,7 @@ const Copyright = {
         ' * Copyright (c) ' + new Date().getFullYear() + ' <%= package.author %>\n' +
         ' * Licenses: <%= package.license %>\n' +
         ' * <%= package.licenseDescription %>\n' +
-        ' * GitHub: <%= package.GitHub %>\n' +
+        ' * GitHub: <%= package.github %>\n' +
         ' */\n\n',
     min: ""
 };

@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git@github.com:zhangchenglin/bootstrap-modal-js.git"
   },
-  "GitHub": "https://github.com/zhangchenglin/bootstrap-modal-js",
+  "github": "https://github.com/zhangchenglin/bootstrap-modal-js",
   "keywords": [
     "bootstrap",
     "modal"
@@ -23,7 +23,8 @@
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.7",
     "gulp-rename": "^1.4.0",
-    "gulp-terser": "^1.1.7"
+    "gulp-terser": "^1.1.7",
+    "npm-check-updates": "^3.0.8"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
