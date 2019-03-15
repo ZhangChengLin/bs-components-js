@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-modal-js",
-  "version": "0.0.1-alpha.beta.7",
+  "version": "0.0.1-alpha.beta.8",
   "description": "Bootstrap modal",
   "main": "dist/bootstrap-modal.min.js",
   "scripts": {
@@ -15,10 +15,12 @@
     "bootstrap",
     "modal"
   ],
-  "author": "张成林",
-  "authorEmail": "469946668@qq.com",
+  "author": {
+    "name": "张成林",
+    "email": "469946668@qq.com",
+    "url": "https://zhangchenglin.github.io"
+  },
   "license": "MIT",
-  "licenseDescription": "under the MIT License (license terms are at http://opensource.org/licenses/MIT).",
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-header": "^2.0.7",
@@ -30,5 +32,10 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7"
-  }
+  },
+  "files": [
+    "dist",
+    "demoFiles",
+    "demo.html"
+  ]
 }
