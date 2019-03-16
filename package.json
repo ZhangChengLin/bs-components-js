@@ -2,7 +2,7 @@
   "name": "bootstrap-modal-js",
   "version": "0.0.1-beta.1",
   "description": "Bootstrap modal",
-  "main": "dist/bootstrap-modal.min.js",
+  "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
