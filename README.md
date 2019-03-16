@@ -26,28 +26,59 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 <a href="https://zhangchenglin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
 
 ## How to use it?
+
 ```
 <script src="./dist/bootstrap-modal-js.js"></script>
 
-bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options)
+<a href="javascript:" onclick="bootstrapModalJs(parameter)">text</a>
 ```
 
-## How to install?
+OR
+
 ```
-npm install bootstrap-modal-js --save
+<a href="javascript:" id="xx">text</a>
+<script src="./dist/bootstrap-modal-js.js"></script>
+<script>
+    const xx = document.querySelector("#xx");
+    xx.addEventListener("click", function () {
+        bootstrapModalJs(parameter);
+    }
+</script>
+```
+OR MORE
+
+
+## How to install?
+
+```
+npm i bootstrap-modal-js --save
+```
+
+OR
+
+```
+cnpm i bootstrap-modal-js --save
 ```
 
 ## CDN
 
 - **jsDelivr**
+
 ```
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.js"></script>
 ```
+
+OR
+
 ```
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
 ```
 
 ## Parameter Description
+
+```
+bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options)
+```
 
 - **title**
 
