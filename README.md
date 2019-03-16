@@ -1,11 +1,11 @@
-## beta time
+## last beta time
 
 
 Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/modal/" title="Modal">"Modal"</a>
 
 Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap.
 
-Supports arbitrary calls of ten parameters, supports callback functions based on modal events.
+Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
 
 <p align="center">
@@ -48,4 +48,122 @@ npm install bootstrap-modal-js --save
 ```
 
 ## Parameter Description
+
+- **title**
+
+Type: String || Function || Object HTML DOM Element
+
+Default value: undefined
+
+Description:
+
+---
+- **body**
+
+Type: String || Function || Object HTML DOM Element
+
+Default value: undefined
+
+Description:
+
+---
+- **footer**
+
+Type: String || Function || Object HTML DOM Element
+
+Default value: undefined
+
+Description:
+
+---
+- **ModalSizes**
+
+Type: String
+
+Default value: undefined
+
+Description:
+
+| parameter|
+| :-------:| 
+| sm       |
+| lg       |
+| xl       |
+
+---
+- **VerticallyCentered**
+
+Type: Boolean
+
+Default value: false
+
+Description:
+
+| parameter|
+| :-------:| 
+| true     |
+| false    |
+
+---
+- **LongContentType**
+
+Type: Boolean
+
+Default value: false
+
+Description:
+
+| parameter|
+| :-------:| 
+| true     |
+| false    |
+
+---
+- **EventType**
+
+Type: String
+
+Default value: undefined
+
+Description:
+
+| parameter|
+| :-------:| 
+| show     |
+| shown    |
+| hide     |
+| hidden   |
+
+---
+- **CallbackFunction**
+
+Type: Function
+
+Default value: undefined
+
+Description:
+
+---
+- **Options**
+
+Type: Object
+
+Default value: undefined
+
+Description: [modal options](https://getbootstrap.com/docs/4.3/components/modal/#options)
+
+| parameter | default |
+| :-------: | :-----: | 
+| backdrop  | true    |
+| keyboard  | true    |
+| focus     | true    |
+| show      | true    |
+
+---
+
+## License
+
+**MIT**
+
+under the MIT License (license terms are at https://opensource.org/licenses/MIT).
 

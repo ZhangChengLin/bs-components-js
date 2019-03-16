@@ -7,7 +7,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     LongContentType = LongContentType && typeof LongContentType === "boolean" ? LongContentType : false;
     EventType = EventType && typeof EventType === "string" ? EventType : "";
     CallbackFunction = CallbackFunction && typeof CallbackFunction === "function" ? CallbackFunction : "";
-    Options = Options && typeof Options === "object" ? Options : "";
+    Options = Options ? (typeof Options === "function" ? Options() : Options) : "";
 
     const document_body = document.querySelector("body");
     const TimeID = new Date().getTime();
@@ -98,18 +98,16 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     modal.appendChild(modal_dialog);
     document_body.appendChild(modal);
 
-    EventType && CallbackFunction ? bootstrap_modal_events(modal_ID, EventType, CallbackFunction) : "";
+    EventType && CallbackFunction ? bootstrap_modal_js_events(modal_ID, EventType, CallbackFunction) : "";
 
-    $("#" + modal_ID).modal("show");
-    removeBootstrapModal(modal_ID);
+    const $modal_ID = $("#" + modal_ID);
+    Options ? $modal_ID.modal(Options) : "";
+    $modal_ID.modal("show");
+    removeBootstrapModalJs(modal_ID);
     return TimeID;
 }
 
-function object_type_of(obj) {
-    return Object.prototype.toString.call(obj);
-}
-
-function removeBootstrapModal(modal_id) {
+function removeBootstrapModalJs(modal_id) {
     const modal = document.querySelector("#" + modal_id);
     $("#" + modal_id).on("hidden.bs.modal", function () {
         setTimeout(function () {
@@ -118,7 +116,7 @@ function removeBootstrapModal(modal_id) {
     });
 }
 
-function bootstrap_modal_events(modal_id, type, fun) {
+function bootstrap_modal_js_events(modal_id, type, fun) {
     const modal = $("#" + modal_id);
     switch (type) {
         case "show":

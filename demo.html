@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <link rel="stylesheet" href="demoFiles/bootstrap.min.css">
-    <title>Bootstrap Modal Dynamic Demo</title>
+    <title>bootstrap-modal-js dynamic demo</title>
     <meta name="description"
           content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
     <meta name="keywords"
@@ -215,25 +215,23 @@
         </div>
 
         <div class="mb-3 p-3 border border-secondary rounded">
-            <div>选项预留 （开发中）</div>
-            <div>Options Reserved (In development)</div>
+            <div>选项</div>
+            <div>Options</div>
             <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="backdrop" value="backdrop" checked disabled>
-                <label class="custom-control-label btn btn-sm btn-outline-primary disabled"
-                       for="backdrop">backdrop</label>
+                <input type="checkbox" class="custom-control-input" id="backdrop" checked>
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="backdrop">backdrop</label>
             </div>
             <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="keyboard" value="keyboard" checked disabled>
-                <label class="custom-control-label btn btn-sm btn-outline-primary disabled"
-                       for="keyboard">keyboard</label>
+                <input type="checkbox" class="custom-control-input" id="keyboard" checked>
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="keyboard">keyboard</label>
             </div>
             <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="focus" value="focus" checked disabled>
-                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="focus">focus</label>
+                <input type="checkbox" class="custom-control-input" id="focus" checked>
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="focus">focus</label>
             </div>
             <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="show" value="show" checked disabled>
-                <label class="custom-control-label btn btn-sm btn-outline-primary disabled" for="show">show</label>
+                <input type="checkbox" class="custom-control-input" id="show" checked>
+                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="show">show</label>
             </div>
         </div>
 
@@ -304,6 +302,7 @@ function return_html_obj() {
     <script src="demoFiles/popper.min.js"></script>
     <script src="demoFiles/bootstrap.min.js"></script>
     <script src="dist/bootstrap-modal-js.min.js"></script>
+    <!--<script src="src/bootstrap-modal-js.js"></script>-->
 
     <script>
         $("label").tooltip({
@@ -375,9 +374,19 @@ function return_html_obj() {
             const EventType_value = radio_value("EventType");
             const CallbackFunction = select_value("CallbackFunction");
             const CallbackFunction_value = CallbackFunction ? eval(CallbackFunction) : "";
+            const Options_obj_value = get_checkbox_arr_value(["backdrop", "keyboard", "focus", "show"]);
 
-            bootstrapModalJs(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, EventType_value, CallbackFunction_value);
+            bootstrapModalJs(title_value, body_value, footer_value, ModalSizes_value, VerticallyCentered_value, LongContentType_value, EventType_value, CallbackFunction_value, Options_obj_value);
         });
+
+        function get_checkbox_arr_value(arr) {
+            const obj = {};
+            for (const i of arr) {
+                const dom = document.querySelector("#" + i);
+                dom.checked ? obj[i] = true : obj[i] = false;
+            }
+            return obj;
+        }
 
         function checkbox_status(id) {
             const checkbox = document.querySelector("#" + id + "Switch");
