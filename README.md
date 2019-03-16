@@ -3,7 +3,7 @@
 
 Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/modal/" title="Modal">"Modal"</a>
 
-Currently relying on Bootstrap and jQuery environments, because it is a function extension of Bootstrap.
+Currently relying on Bootstrap and jQuery environments, because it is a function package of Bootstrap modal.
 
 Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
