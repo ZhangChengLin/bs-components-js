@@ -1,6 +1,6 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 0.0.1-beta.1
+ * Version: 0.0.1-beta.2
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
@@ -22,7 +22,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     Options = Options ? (typeof Options === "function" ? Options() : Options) : "";
 
     const document_body = document.querySelector("body");
-    const TimeID = new Date().getTime();
+    const TimeID = new Date().getTime().toString();
     const modal_ID = "Modal_" + TimeID;
     const modal_title_ID = "modalTitle_" + TimeID;
     const modal_body_ID = "modalBody_" + TimeID;

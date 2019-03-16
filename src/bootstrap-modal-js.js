@@ -10,7 +10,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     Options = Options ? (typeof Options === "function" ? Options() : Options) : "";
 
     const document_body = document.querySelector("body");
-    const TimeID = new Date().getTime();
+    const TimeID = new Date().getTime().toString();
     const modal_ID = "Modal_" + TimeID;
     const modal_title_ID = "modalTitle_" + TimeID;
     const modal_body_ID = "modalBody_" + TimeID;

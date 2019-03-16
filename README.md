@@ -80,6 +80,12 @@ OR
 bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options)
 ```
 
+**Return Values**
+
+|   type   | such as       | Description          |
+|  :----:  | :------------:| :-------------------:|
+|  string  | 1552756356601 | modal element number |
+
 - **title**
 
 Type: String \|\| Function \|\| Object HTML DOM Element
@@ -181,7 +187,7 @@ Type: Object
 
 Default value: undefined
 
-Description: [modal options](https://getbootstrap.com/docs/4.3/components/modal/#options)
+Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
 
 | parameter | default |
 | :-------: | :-----: | 
