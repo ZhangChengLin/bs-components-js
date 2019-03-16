@@ -33,14 +33,13 @@
             </div>
             <div class="input-group mb-3 d-none">
                 <div class="input-group-prepend">
-                    <label class="input-group-text bg-success" for="titleFunctionSelect">Function Examples</label>
+                    <label class="input-group-text bg-success text-white" for="titleFunctionSelect">Function Examples</label>
                 </div>
                 <select class="custom-select border-success" id="titleFunctionSelect">
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body">return_body</option>
                     <option class="custom-select-lg" value="return_footer">return_footer</option>
-                    <option class="custom-select-lg" value="return_obj">return_obj</option>
-                    <option class="custom-select-lg" value="return_html_obj">return_html_obj</option>
+                    <option class="custom-select-lg" value="return_obj_html_dom_element">return_obj_html_dom_element</option>
                 </select>
             </div>
         </div>
@@ -62,14 +61,13 @@
             </div>
             <div class="input-group mb-3 d-none">
                 <div class="input-group-prepend">
-                    <label class="input-group-text bg-success" for="bodyFunctionSelect">Function Examples</label>
+                    <label class="input-group-text bg-success text-white" for="bodyFunctionSelect">Function Examples</label>
                 </div>
                 <select class="custom-select border-success" id="bodyFunctionSelect">
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body" selected>return_body</option>
                     <option class="custom-select-lg" value="return_footer">return_footer</option>
-                    <option class="custom-select-lg" value="return_obj">return_obj</option>
-                    <option class="custom-select-lg" value="return_html_obj">return_html_obj</option>
+                    <option class="custom-select-lg" value="return_obj_html_dom_element">return_obj_html_dom_element</option>
                 </select>
             </div>
         </div>
@@ -95,14 +93,13 @@
             </div>
             <div class="input-group mb-3 d-none">
                 <div class="input-group-prepend">
-                    <label class="input-group-text bg-success" for="footerFunctionSelect">Function Examples</label>
+                    <label class="input-group-text bg-success text-white" for="footerFunctionSelect">Function Examples</label>
                 </div>
                 <select class="custom-select border-success" id="footerFunctionSelect">
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body">return_body</option>
                     <option class="custom-select-lg" value="return_footer" selected>return_footer</option>
-                    <option class="custom-select-lg" value="return_obj">return_obj</option>
-                    <option class="custom-select-lg" value="return_html_obj">return_html_obj</option>
+                    <option class="custom-select-lg" value="return_obj_html_dom_element">return_obj_html_dom_element</option>
                 </select>
             </div>
         </div>
@@ -161,8 +158,8 @@
             </div>
         </div>
 
-        <div class="d-lg-flex justify-content-around">
-            <div class="mb-3 p-3 border border-secondary rounded">
+        <div class="mb-3 p-3 d-lg-flex justify-content-around border border-secondary rounded">
+            <div class="p-3 border rounded">
                 <div>事件类型</div>
                 <span class="d-block">如果使用的时候，EventType 和 CallbackFunction 必须同时存在</span>
                 <div>EventType</div>
@@ -192,7 +189,7 @@
             </div>
 
 
-            <div class="mb-3 p-3 border border-secondary rounded">
+            <div class="p-3 border rounded">
                 <div>
                     <span class="d-block">事件回调函数</span>
                     <span class="d-block">如果使用的时候，EventType 和 CallbackFunction 必须同时存在</span>
@@ -272,15 +269,7 @@ function return_footer() {
     return "function footer";
 }
 
-function return_obj() {
-    return {
-        "aaa": "111",
-        "bbb": "222",
-        "ccc": "333",
-    };
-}
-
-function return_html_obj() {
+function return_obj_html_dom_element() {
     const html = document.createElement("div");
     const p = document.createElement("p");
     html.className = "bg-success";
@@ -347,7 +336,7 @@ function return_html_obj() {
                 };
             }
 
-            function return_html_obj() {
+            function return_obj_html_dom_element() {
                 const html = document.createElement("div");
                 const p = document.createElement("p");
                 html.className = "bg-success";
