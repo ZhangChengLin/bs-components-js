@@ -82,7 +82,7 @@ bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongConten
 
 - **title**
 
-Type: String || Function || Object HTML DOM Element
+Type: String \|\| Function \|\| Object HTML DOM Element
 
 Default value: undefined
 
@@ -91,7 +91,7 @@ Description:
 ---
 - **body**
 
-Type: String || Function || Object HTML DOM Element
+Type: String \|\| Function \|\| Object HTML DOM Element
 
 Default value: undefined
 
@@ -100,7 +100,7 @@ Description:
 ---
 - **footer**
 
-Type: String || Function || Object HTML DOM Element
+Type: String \|\| Function \|\| Object HTML DOM Element
 
 Default value: undefined
 
