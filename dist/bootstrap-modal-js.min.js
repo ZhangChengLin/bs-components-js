@@ -1,6 +1,6 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 0.0.1-alpha.beta.9
+ * Version: 0.0.1-beta.1
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
