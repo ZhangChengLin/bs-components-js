@@ -87,6 +87,8 @@ bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongConten
 |  :----:  | :------------:| :-------------------:|
 |  string  | 1552756356601 | modal element number |
 
+---
+
 - **title**
 
 Type: String \| Function \| Object HTML DOM Element
@@ -186,16 +188,16 @@ Description:
 
 Type: Object
 
-Default value: undefined
+Default value:
 
 Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
 
-| parameter | default value (boolean) | other (boolean) | 
-| :-------: | :---------------------: | :-------------: | 
-| backdrop  | true &#124; "static"    | false           |
-| keyboard  | true                    | false           |
-| focus     | true                    | false           |
-| show      | true                    | false           |
+| parameter | default value (boolean) | other                 | 
+| :-------: | :---------------------: | :-------------------: | 
+| backdrop  | true                    | false &#124; "static" |
+| keyboard  | true                    | false                 |
+| focus     | true                    | false                 |
+| show      | true                    | false                 |
 
 ---
 
