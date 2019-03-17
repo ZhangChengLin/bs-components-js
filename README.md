@@ -10,15 +10,36 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 <p align="center">
 <a href="https://github.com/zhangchenglin/bootstrap-modal-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/zhangchenglin/bootstrap-modal-js.svg?style=social"></a>
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/zhangchenglin/bootstrap-modal-js.svg">
 <img alt="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-modal-js.svg">
 <img alt="GitHub License" src="https://img.shields.io/github/license/zhangchenglin/bootstrap-modal-js.svg">
 </p>
+
 <p align="center">
 <a href="https://www.npmjs.com/package/bootstrap-modal-js" target="_blank"><img alt="NPM Version" title="NPM Package" src="https://img.shields.io/npm/v/bootstrap-modal-js.svg"></a>
-<img alt="NPM License" src="https://img.shields.io/npm/l/bootstrap-modal-js.svg">
+<img alt="npm download number" src="https://img.shields.io/npm/dt/bootstrap-modal-js.svg">
+<img alt="npm download number" src="https://img.shields.io/npm/dy/bootstrap-modal-js.svg">
+<img alt="npm download number" src="https://img.shields.io/npm/dm/bootstrap-modal-js.svg">
+<img alt="npm download number" src="https://img.shields.io/npm/dw/bootstrap-modal-js.svg">
+<img alt="npm License" src="https://img.shields.io/npm/l/bootstrap-modal-js.svg">
 </p>
+
 <p align="center">
-<a href="https://www.jsdelivr.com/package/npm/bootstrap-modal-js" target="_blank"><img src="https://data.jsdelivr.com/v1/package/npm/bootstrap-modal-js/badge?style=rounded" alt="jsDelivr" title="jsDelivr"></a>
+<a href="https://npm.taobao.org/package/bootstrap-modal-js" target="_blank" title="taonpm version"><img src="https://npm.taobao.org/badge/v/bootstrap-modal-js.svg" alt="taonpm version" title="taonpm version"></a>
+<img src="https://npm.taobao.org/badge/d/bootstrap-modal-js.svg" alt="taonpm download number">
+</p>
+
+<p align="center">
+<a href="https://cnpmjs.org/package/bootstrap-modal-js" target="_blank" title="cnpm version"><img src="https://cnpmjs.org/badge/v/bootstrap-modal-js.svg" alt="cnpm version" title="cnpm version"></a>
+<img src="https://cnpmjs.org/badge/d/bootstrap-modal-js.svg" alt="cnpm download number">
+</p>
+
+<p align="center">
+<a href="https://www.jsdelivr.com/package/npm/bootstrap-modal-js" target="_blank" title="jsDelivr"><img src="https://img.shields.io/badge/jsDelivr-jsDelivr-orange.svg" alt="jsDelivr" title="jsDelivr"></a>
+<img src="https://img.shields.io/jsdelivr/npm/hd/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) day" title="jsDelivr hits (npm) day">
+<img src="https://img.shields.io/jsdelivr/npm/hw/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) week" title="jsDelivr hits (npm) week">
+<img src="https://img.shields.io/jsdelivr/npm/hm/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) month" title="jsDelivr hits (npm) month">
+<img src="https://img.shields.io/jsdelivr/npm/hy/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year">
 </p>
 
 ---
