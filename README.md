@@ -21,6 +21,14 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 <a href="https://www.jsdelivr.com/package/npm/bootstrap-modal-js" target="_blank"><img src="https://data.jsdelivr.com/v1/package/npm/bootstrap-modal-js/badge?style=rounded" alt="jsDelivr" title="jsDelivr"></a>
 </p>
 
+# Table of Contents
+[Demo](#Demo)
+[How to use it](#How-to-use-it)
+[How to install](#How-to-install)
+[CDN](#CDN)
+[Parameter Description](#Parameter-Description)
+[License](#License)
+
 
 ## Demo
 
