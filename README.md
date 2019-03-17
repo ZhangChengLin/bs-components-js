@@ -9,6 +9,7 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 
 <p align="center">
+<a href="https://github.com/zhangchenglin/bootstrap-toasts" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/zhangchenglin/bootstrap-modal-js.svg?style=social"></a>
 <img alt="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-modal-js.svg">
 <img alt="GitHub License" src="https://img.shields.io/github/license/zhangchenglin/bootstrap-modal-js.svg">
 </p>
@@ -30,13 +31,13 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 ```
 <script src="./dist/bootstrap-modal-js.js"></script>
 
-<a href="javascript:" onclick="bootstrapModalJs(parameter)">text</a>
+<a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
 ```
 
 OR
 
 ```
-<a href="javascript:" id="xx">text</a>
+<a href="javascript:;" id="xx">text</a>
 <script src="./dist/bootstrap-modal-js.js"></script>
 <script>
     const xx = document.querySelector("#xx");
