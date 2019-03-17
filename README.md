@@ -27,13 +27,13 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 |                                                 |
 | :---------------------------------------------- | 
-| [Demo](#Demo)                                   |
-| [How to use it](#How-to-use-it)                 |
-| [How to install](#How-to-install)               |
-| [CDN](#CDN)                                     |
-| [Parameter Description](#Parameter-Description) |
-| [Donate](#Donate)                               |
-| [License](#License)                             |
+| [Demo](#demo)                                   |
+| [How to use it](#how-to-use-it)                 |
+| [How to install](#how-to-install)               |
+| [CDN](#cdn)                                     |
+| [Parameter Description](#parameter-description) |
+| [Donate](#donate)                               |
+| [License](#license)                             |
 
 
 ## Demo
