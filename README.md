@@ -8,6 +8,12 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 ---
 
+## Demo
+
+<a href="https://zhangchenglin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
+
+---
+
 <p align="center">
 <a href="https://github.com/zhangchenglin/bootstrap-modal-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/zhangchenglin/bootstrap-modal-js.svg?style=social"></a>
 <img alt="GitHub issues" src="https://img.shields.io/github/issues/zhangchenglin/bootstrap-modal-js.svg">
@@ -48,7 +54,6 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 |                                                 |
 | :---------------------------------------------- | 
-| [Demo](#demo)                                   |
 | [How to use it](#how-to-use-it)                 |
 | [How to install](#how-to-install)               |
 | [CDN](#cdn)                                     |
@@ -56,10 +61,6 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 | [Donate](#donate)                               |
 | [License](#license)                             |
 
-
-## Demo
-
-<a href="https://zhangchenglin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
 
 ## How to use it
 
