@@ -108,10 +108,12 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 }
 
 function removeBootstrapModalJs(modal_id) {
-    const modal = document.querySelector("#" + modal_id);
-    $("#" + modal_id).on("hidden.bs.modal", function () {
+    const modal_element = document.querySelector("#" + modal_id);
+    const $modal = $("#" + modal_id);
+    $modal.on("hidden.bs.modal", function () {
+        $modal.modal("dispose");
         setTimeout(function () {
-            modal.parentElement.removeChild(modal);
+            modal_element.parentElement.removeChild(modal_element);
         }, 5e2);
     });
 }

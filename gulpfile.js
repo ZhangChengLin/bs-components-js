@@ -8,6 +8,7 @@ const jquery_path = './node_modules/jquery/dist/jquery.min.js';
 const bootstrap_css_path = './node_modules/bootstrap/dist/css/bootstrap.min.css';
 const bootstrap_js_path = './node_modules/bootstrap/dist/js/bootstrap.min.js';
 const popper_js_path = './node_modules/popper.js/dist/umd/popper.min.js';
+
 const bootstrap_modal_js_path = "./src/bootstrap-modal-js.js";
 
 //header Copyright

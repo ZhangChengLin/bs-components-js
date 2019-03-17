@@ -89,7 +89,7 @@ bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongConten
 
 - **title**
 
-Type: String \|\| Function \|\| Object HTML DOM Element
+Type: String \| Function \| Object HTML DOM Element
 
 Default value: undefined
 
@@ -98,7 +98,7 @@ Description:
 ---
 - **body**
 
-Type: String \|\| Function \|\| Object HTML DOM Element
+Type: String \| Function \| Object HTML DOM Element
 
 Default value: undefined
 
@@ -107,7 +107,7 @@ Description:
 ---
 - **footer**
 
-Type: String \|\| Function \|\| Object HTML DOM Element
+Type: String \| Function \| Object HTML DOM Element
 
 Default value: undefined
 
@@ -190,12 +190,12 @@ Default value: undefined
 
 Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
 
-| parameter | default |
-| :-------: | :-----: | 
-| backdrop  | true    |
-| keyboard  | true    |
-| focus     | true    |
-| show      | true    |
+| parameter | default value (boolean) | other    | 
+| :-------: | :---------------------: | :------: | 
+| backdrop  | true &#124; "static"    | false    |
+| keyboard  | true                    | false    |
+| focus     | true                    | false    |
+| show      | true                    | false    |
 
 ---
 
