@@ -1,7 +1,6 @@
-## last beta time
+## bootstrap-modal-js
 
-
-Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/modal/" title="Modal">"Modal"</a>
+Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/modal/" title="Modal" target="_blank">"Modal"</a>
 
 Currently relying on Bootstrap and jQuery environments, because it is a function package of Bootstrap modal.
 
@@ -26,7 +25,7 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 ## Table of Contents
 
-| parameter                                       |
+|                                                 |
 | :---------------------------------------------- | 
 | [Demo](#Demo)                                   |
 | [How to use it](#How-to-use-it)                 |
@@ -35,7 +34,6 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 | [Parameter Description](#Parameter-Description) |
 | [Donate](#Donate)                               |
 | [License](#License)                             |
-|                                                 |
 
 
 ## Demo
@@ -223,8 +221,8 @@ Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#option
 | :---------------- | :-------------------------------------------------------------: |
 | alipay （支付宝） | [QR code](https://zhangchenglin.github.io/image/pay-alipay.jpg) |
 | QQ                | [QR code](https://zhangchenglin.github.io/image/pay-qq.png)     |
-| WeChat （微信）   | |
-| PayPal （贝宝）   | [PayPal.Me](https://www.paypal.me/zhangchenglin)|
+| WeChat （微信）   |                                                                 |
+| PayPal （贝宝）   | [PayPal.Me](https://www.paypal.me/zhangchenglin)                |
 
 ---
 
@@ -233,5 +231,4 @@ Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#option
 **MIT**
 
 under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-
 
