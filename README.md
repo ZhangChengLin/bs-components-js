@@ -190,12 +190,12 @@ Default value: undefined
 
 Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
 
-| parameter | default value (boolean) | other    | 
-| :-------: | :---------------------: | :------: | 
-| backdrop  | true &#124; "static"    | false    |
-| keyboard  | true                    | false    |
-| focus     | true                    | false    |
-| show      | true                    | false    |
+| parameter | default value (boolean) | other (boolean) | 
+| :-------: | :---------------------: | :-------------: | 
+| backdrop  | true &#124; "static"    | false           |
+| keyboard  | true                    | false           |
+| focus     | true                    | false           |
+| show      | true                    | false           |
 
 ---
 
