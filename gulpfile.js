@@ -11,6 +11,9 @@ const popper_js_path = './node_modules/popper.js/dist/umd/popper.min.js';
 
 const bootstrap_modal_js_path = "./src/bootstrap-modal-js.js";
 
+//watch
+
+
 //header Copyright
 const pkg = require('./package.json');
 const Copyright = {
@@ -25,6 +28,7 @@ const Copyright = {
         ' * Licenses: <%= package.license %>\n' +
         ' * under the MIT License (license terms are at https://opensource.org/licenses/MIT).\n' +
         ' * GitHub: <%= package.github %>\n' +
+        ' * issues: <%= package.bugs.url %>\n' +
         ' */\n\n',
     min: ""
 };

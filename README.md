@@ -8,6 +8,10 @@ Supports arbitrary calls of 9 parameters, supports callback functions based on m
 
 ---
 
+If it helps you, please **star** this repository
+
+---
+
 ## Demo
 
 <a href="https://zhangchenglin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
