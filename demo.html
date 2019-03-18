@@ -38,11 +38,11 @@
                         Examples</label>
                 </div>
                 <select class="custom-select border-success" id="titleFunctionSelect">
-                    <option class="custom-select-lg" value="return_title">return_title</option>
+                    <option class="custom-select-lg" value="return_title" selected>return_title</option>
                     <option class="custom-select-lg" value="return_body">return_body</option>
                     <option class="custom-select-lg" value="return_footer">return_footer</option>
-                    <option class="custom-select-lg" value="return_obj_html_dom_element">return_obj_html_dom_element
-                    </option>
+                    <option class="custom-select-lg" value="calc_number">calc_number</option>
+                    <option class="custom-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
                 </select>
             </div>
         </div>
@@ -72,8 +72,8 @@
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body" selected>return_body</option>
                     <option class="custom-select-lg" value="return_footer">return_footer</option>
-                    <option class="custom-select-lg" value="return_obj_html_dom_element">return_obj_html_dom_element
-                    </option>
+                    <option class="custom-select-lg" value="calc_number">calc_number</option>
+                    <option class="custom-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
                 </select>
             </div>
         </div>
@@ -108,8 +108,8 @@
                     <option class="custom-select-lg" value="return_title">return_title</option>
                     <option class="custom-select-lg" value="return_body">return_body</option>
                     <option class="custom-select-lg" value="return_footer" selected>return_footer</option>
-                    <option class="custom-select-lg" value="return_obj_html_dom_element">return_obj_html_dom_element
-                    </option>
+                    <option class="custom-select-lg" value="calc_number">calc_number</option>
+                    <option class="custom-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
                 </select>
             </div>
         </div>
@@ -268,6 +268,10 @@ function get_number() {
     alert(return_number());
 }
 
+function calc_number() {
+    return (1 + 2 + 3).toString();
+}
+
 function return_title() {
     return "function title";
 }
@@ -280,7 +284,7 @@ function return_footer() {
     return "function footer";
 }
 
-function return_obj_html_dom_element() {
+function return_Fun_HTML_Element() {
     const html = document.createElement("div");
     const p = document.createElement("p");
     html.className = "bg-success";
@@ -327,6 +331,10 @@ function return_obj_html_dom_element() {
                 alert(return_number());
             }
 
+            function calc_number() {
+                return (1 + 2 + 3).toString();
+            }
+
             function return_title() {
                 return "function title";
             }
@@ -347,7 +355,7 @@ function return_obj_html_dom_element() {
                 };
             }
 
-            function return_obj_html_dom_element() {
+            function return_Fun_HTML_Element() {
                 const html = document.createElement("div");
                 const p = document.createElement("p");
                 html.className = "bg-success";

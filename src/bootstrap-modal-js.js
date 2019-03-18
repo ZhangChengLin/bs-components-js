@@ -85,11 +85,11 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
     modal_body.className = "modal-body";
     modal_body.id = modal_body_ID;
-    typeof body === "object" ? modal_body.appendChild(body) : modal_body.innerHTML = body;
+    body instanceof HTMLElement ? modal_body.appendChild(body) : modal_body.innerHTML = body;
 
     modal_footer.className = "modal-footer";
     modal_footer.id = modal_footer_ID;
-    typeof footer === "object" ? modal_footer.appendChild(footer) : modal_footer.innerHTML = footer;
+    footer instanceof HTMLElement ? modal_footer.appendChild(footer) : modal_footer.innerHTML = footer;
 
     title ? modal_close_btn.appendChild(modal_close_span) : "";
     typeof title === "string" ? modal_header.appendChild(modal_title) : "";
