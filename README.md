@@ -121,22 +121,24 @@ bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongConten
 
 |   type   | such as       | Description          |
 |  :----:  | :------------:| :-------------------:|
-|  string  | 1552756356601 | modal element number |
+|  String  | 1552756356601 | modal element number |
 
 ---
 
 - **title**
 
-Type: String \| Function \| Object HTML DOM Element
+Type: String \| Function \| Function HTMLElement
 
 Default value: undefined
 
-Description:
+Description: If you want to add a child element to the '.modal-header' element, use the Function HTMLElement.
+
+说明： 如果要向 ".modal-header" 元素添加子元素，请使用 Function HTMLElement。
 
 ---
 - **body**
 
-Type: String \| Function \| Object HTML DOM Element
+Type: String \| Function \| Function HTMLElement
 
 Default value: undefined
 
@@ -145,7 +147,7 @@ Description:
 ---
 - **footer**
 
-Type: String \| Function \| Object HTML DOM Element
+Type: String \| Function \| Function HTMLElement
 
 Default value: undefined
 
