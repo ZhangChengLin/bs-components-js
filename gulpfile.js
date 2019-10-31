@@ -31,19 +31,24 @@ const Copyright = {
     min: ""
 };
 
-gulp.task("min", min);
+gulp.task("dist", dist);
+gulp.task("dist_min", dist_min);
 gulp.task("copy_static", copy_static);
 
-function min(done) {
+function dist(done) {
+    gulp.src([bootstrap_modal_js_path])
+        .pipe(header(Copyright.full, {package: pkg}))
+        .pipe(gulp.dest("./dist/"));
+    done();
+}
+
+function dist_min(done) {
     gulp.src([bootstrap_modal_js_path])
         .pipe(terser({}))
         .pipe(header(Copyright.full, {package: pkg}))
         .pipe(rename({
             suffix: ".min"
         }))
-        .pipe(gulp.dest("./dist/"));
-    gulp.src([bootstrap_modal_js_path])
-        .pipe(header(Copyright.full, {package: pkg}))
         .pipe(gulp.dest("./dist/"));
     done();
 }
