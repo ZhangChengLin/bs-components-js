@@ -1,10 +1,9 @@
 {
   "name": "bootstrap-modal-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bootstrap modal",
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -36,9 +35,7 @@
     "gulp-terser": "^1.1.7"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.7"
+    "bootstrap": "^4.3.1"
   },
   "files": [
     "dist/*.js",

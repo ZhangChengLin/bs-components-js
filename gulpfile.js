@@ -11,8 +11,6 @@ const popper_js_path = './node_modules/popper.js/dist/umd/popper.min.js';
 
 const bootstrap_modal_js_path = "./src/bootstrap-modal-js.js";
 
-//watch
-
 
 //header Copyright
 const pkg = require('./package.json');
@@ -51,6 +49,7 @@ function min(done) {
 }
 
 function copy_static(done) {
-    gulp.src([jquery_path, bootstrap_js_path, bootstrap_css_path, popper_js_path]).pipe(gulp.dest('./demoFiles/'));
+    gulp.src([jquery_path, bootstrap_js_path, bootstrap_css_path, popper_js_path])
+        .pipe(gulp.dest('./demoFiles/'));
     done();
 }
