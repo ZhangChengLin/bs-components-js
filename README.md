@@ -26,6 +26,11 @@ If it helps you, please **star** this repository
 </p>
 
 <p align="center">
+<a href="https://nodei.co/npm/bootstrap-modal-js" target="_blank"><img src="https://nodei.co/npm/bootstrap-modal-js.png?downloads=true&downloadRank=true&stars=true&compact=false&mini=false"></a>
+<a href="https://nodei.co/npm/bootstrap-modal-js/"><img src="https://nodei.co/npm-dl/bootstrap-modal-js.png?months=12&height=2"></a>
+</p>
+
+<p align="center">
 <a href="https://www.npmjs.com/package/bootstrap-modal-js" target="_blank"><img alt="NPM Version" title="NPM Package" src="https://img.shields.io/npm/v/bootstrap-modal-js.svg"></a>
 <img alt="npm download number" src="https://img.shields.io/npm/dt/bootstrap-modal-js.svg">
 <img alt="npm download number" src="https://img.shields.io/npm/dy/bootstrap-modal-js.svg">
@@ -106,14 +111,15 @@ cnpm i bootstrap-modal-js --save
 - **jsDelivr**
 
 ```
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
+```
+
+```
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.js"></script>
 ```
 
-OR
+OR Other
 
-```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-```
 
 ## Parameter Description
 
