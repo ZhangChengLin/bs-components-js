@@ -114,14 +114,13 @@ cnpm i bootstrap-modal-js --save
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
 ```
 
+OR
+
 ```
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.js"></script>
 ```
 
-
-
 - **UNPKG**
-
 
 View all versions
 
@@ -134,9 +133,6 @@ After the browser parses, get the latest version address
 ```
 https://unpkg.com/bootstrap-modal-js
 ```
-
-OR Other
-
 
 ## Parameter Description
 
