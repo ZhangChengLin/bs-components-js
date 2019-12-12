@@ -26,8 +26,8 @@ If it helps you, please **star** this repository
 </p>
 
 <p align="center">
-<a href="https://nodei.co/npm/bootstrap-modal-js" target="_blank"><img src="https://nodei.co/npm/bootstrap-modal-js.png?downloads=true&downloadRank=true&stars=true&compact=false&mini=false"></a>
-<a href="https://nodei.co/npm/bootstrap-modal-js/"><img src="https://nodei.co/npm-dl/bootstrap-modal-js.png?months=12&height=2"></a>
+<a href="https://nodei.co/npm/bootstrap-modal-js" target="_blank" title="NPM package info"><img src="https://nodei.co/npm/bootstrap-modal-js.png?downloads=true&downloadRank=true&stars=true&compact=false&mini=false" alt="NPM package info" title="NPM package info"></a>
+<a href="https://nodei.co/npm/bootstrap-modal-js/" title="NPM package down info"><img src="https://nodei.co/npm-dl/bootstrap-modal-js.png?months=12&height=2" alt="NPM package down info" title="NPM package down info"></a>
 </p>
 
 <p align="center">
@@ -55,6 +55,10 @@ If it helps you, please **star** this repository
 <img src="https://img.shields.io/jsdelivr/npm/hw/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) week" title="jsDelivr hits (npm) week">
 <img src="https://img.shields.io/jsdelivr/npm/hm/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) month" title="jsDelivr hits (npm) month">
 <img src="https://img.shields.io/jsdelivr/npm/hy/bootstrap-modal-js.svg" alt="jsDelivr hits (npm) year" title="jsDelivr hits (npm) year">
+</p>
+
+<p align="center">
+<img src="https://badgen.net/badgesize/normal/https/unpkg.com/bootstrap-modal-js/dist/bootstrap-modal-js.min.js" alt="UNPKG minified size" title="UNPKG minified size">
 </p>
 
 ---
