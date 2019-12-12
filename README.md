@@ -118,6 +118,23 @@ cnpm i bootstrap-modal-js --save
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.js"></script>
 ```
 
+
+
+- **UNPKG**
+
+
+View all versions
+
+```
+https://unpkg.com/bootstrap-modal-js/
+```
+
+After the browser parses, get the latest version address
+
+```
+https://unpkg.com/bootstrap-modal-js
+```
+
 OR Other
 
 
