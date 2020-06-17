@@ -103,18 +103,18 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
     EventType && CallbackFunction ? bootstrap_modal_js_events(modal_ID, EventType, CallbackFunction) : "";
 
-    const $modal_ID = $("#" + modal_ID);
-    Options ? $modal_ID.modal(Options) : "";
-    $modal_ID.modal("show");
+    const modal_element = document.querySelector("#" + modal_ID);
+    const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
+    xxx.show();
     removeBootstrapModalJs(modal_ID);
     return TimeID;
 }
 
 function removeBootstrapModalJs(modal_id) {
     const modal_element = document.querySelector("#" + modal_id);
-    const $modal = $("#" + modal_id);
-    $modal.on("hidden.bs.modal", function () {
-        $modal.modal("dispose");
+    modal_element.addEventListener("hidden.bs.modal", function () {
+        let x = bootstrap.Modal.getInstance(modal_element);
+        x.dispose();
         setTimeout(function () {
             modal_element.parentElement.removeChild(modal_element);
         }, 5e2);
@@ -122,28 +122,34 @@ function removeBootstrapModalJs(modal_id) {
 }
 
 function bootstrap_modal_js_events(modal_id, type, fun) {
-    const modal = $("#" + modal_id);
+    const modal = document.querySelector("#" + modal_id);
     switch (type) {
         case "show":
-            modal.on("show.bs.modal", function () {
+            modal.addEventListener("show.bs.modal", function () {
                 return fun();
             });
             break;
         case "shown":
-            modal.on("shown.bs.modal", function () {
+            modal.addEventListener("shown.bs.modal", function () {
                 return fun();
             });
             break;
         case "hide":
-            modal.on("hide.bs.modal", function () {
+            modal.addEventListener("hide.bs.modal", function () {
                 return fun();
             });
             break;
         case "hidden":
-            modal.on("hidden.bs.modal", function () {
+            modal.addEventListener("hidden.bs.modal", function () {
+                return fun();
+            });
+            break;
+        case "hidePrevented":
+            modal.addEventListener("hidePrevented.bs.modal", function () {
                 return fun();
             });
             break;
         default:
+            break;
     }
 }

@@ -1,8 +1,8 @@
 ## bootstrap-modal-js
 
-Bootstrap components <a href="https://getbootstrap.com/docs/4.3/components/modal/" title="Modal" target="_blank">"Modal"</a>
+Bootstrap 5 components <a href="https://v5.getbootstrap.com/docs/5.0/components/modal/" title="Modal" target="_blank">"Modal"</a>
 
-Currently relying on Bootstrap and jQuery environments, because it is a function package of Bootstrap modal.
+Currently relying on Bootstrap v5, because it is a function package of Bootstrap modal.
 
 Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
@@ -78,6 +78,7 @@ If it helps you, please **star** this repository
 ## How to use it
 
 ```
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
 <script src="./dist/bootstrap-modal-js.js"></script>
 
 <a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
@@ -87,6 +88,8 @@ OR
 
 ```
 <a href="javascript:;" id="xx">text</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
 <script src="./dist/bootstrap-modal-js.js"></script>
 <script>
     const xx = document.querySelector("#xx");

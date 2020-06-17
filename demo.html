@@ -10,7 +10,17 @@
     <meta name="description"
           content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
     <meta name="keywords"
-          content="Bootstrap,Bootstrap4,Modal,dynamic,show.bs.modal,shown.bs.modal,hide.bs.modal,hidden.bs.modal">
+          content="Bootstrap,Bootstrap5,Modal,dynamic,show.bs.modal,shown.bs.modal,hide.bs.modal,hidden.bs.modal">
+    <script>
+        function close_all_modals() {
+            let all_modals = document.querySelectorAll('.modal');
+            let all_modals_length = all_modals.length;
+            for (let i = 0; i < all_modals_length; i++) {
+                let x = bootstrap.Modal.getInstance(all_modals[i]);
+                x.hide();
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -21,28 +31,24 @@
             <label for="title">标题</label>
             <label for="title">title</label>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text bg-success text-white">title</span>
-                </div>
+                <span class="input-group-text bg-success text-white">title</span>
                 <input type="text" class="form-control border-success" id="title" placeholder="请输入标题"
                        value="default title">
             </div>
             <div class="mb-2 custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="titleFunctionSwitch">
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="titleFunctionSwitch">Use
-                    Function control title content. （使用函数控制title内容）</label>
+                <input type="checkbox" class="form-check-input" id="titleFunctionSwitch">
+                <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.
+                    （使用函数控制title内容）</label>
             </div>
-            <div class="input-group mb-3 d-none">
-                <div class="input-group-prepend">
-                    <label class="input-group-text bg-success text-white" for="titleFunctionSelect">Function
-                        Examples</label>
-                </div>
-                <select class="custom-select border-success" id="titleFunctionSelect">
-                    <option class="custom-select-lg" value="return_title" selected>return_title</option>
-                    <option class="custom-select-lg" value="return_body">return_body</option>
-                    <option class="custom-select-lg" value="return_footer">return_footer</option>
-                    <option class="custom-select-lg" value="calc_number">calc_number</option>
-                    <option class="custom-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+            <div class="w-75 input-group mb-3 d-none">
+                <label class="input-group-text bg-success text-white" for="titleFunctionSelect">Function
+                    Examples</label>
+                <select class="form-select border-success" id="titleFunctionSelect">
+                    <option class="form-select-lg" value="return_title" selected>return_title</option>
+                    <option class="form-select-lg" value="return_body">return_body</option>
+                    <option class="form-select-lg" value="return_footer">return_footer</option>
+                    <option class="form-select-lg" value="calc_number">calc_number</option>
+                    <option class="form-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
                 </select>
             </div>
         </div>
@@ -53,27 +59,23 @@
             <div>测试长内容的时候请增加body的内容来查看效果。</div>
             <div>When testing long content, please increase the content of the body to see the effect.</div>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text bg-success text-white">body</span>
-                </div>
+                <span class="input-group-text bg-success text-white">body</span>
                 <textarea rows="4" class="form-control border-success" id="body" placeholder="请输入正文内容">this is default body content.</textarea>
             </div>
             <div class="mb-2 custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="bodyFunctionSwitch">
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="bodyFunctionSwitch">Use
+                <input type="checkbox" class="form-check-input" id="bodyFunctionSwitch">
+                <label class="form-check-label" for="bodyFunctionSwitch">Use
                     Function control body content. （使用函数控制body内容）</label>
             </div>
-            <div class="input-group mb-3 d-none">
-                <div class="input-group-prepend">
-                    <label class="input-group-text bg-success text-white" for="bodyFunctionSelect">Function
-                        Examples</label>
-                </div>
-                <select class="custom-select border-success" id="bodyFunctionSelect">
-                    <option class="custom-select-lg" value="return_title">return_title</option>
-                    <option class="custom-select-lg" value="return_body" selected>return_body</option>
-                    <option class="custom-select-lg" value="return_footer">return_footer</option>
-                    <option class="custom-select-lg" value="calc_number">calc_number</option>
-                    <option class="custom-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+            <div class="w-75 input-group mb-3 d-none">
+                <label class="input-group-text bg-success text-white" for="bodyFunctionSelect">Function
+                    Examples</label>
+                <select class="form-select border-success" id="bodyFunctionSelect">
+                    <option class="form-select-lg" value="return_title">return_title</option>
+                    <option class="form-select-lg" value="return_body" selected>return_body</option>
+                    <option class="form-select-lg" value="return_footer">return_footer</option>
+                    <option class="form-select-lg" value="calc_number">calc_number</option>
+                    <option class="form-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
                 </select>
             </div>
         </div>
@@ -82,34 +84,30 @@
             <label for="footer">底部</label>
             <label for="footer">footer</label>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text bg-success text-white">footer</span>
-                </div>
+                <span class="input-group-text bg-success text-white">footer</span>
                 <textarea rows="9" class="form-control border-success" id="footer" placeholder="请输入底部内容">
 <div>
 <div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/4.3/utilities/flex/" target="_blank">&nbsp;flexbox</a>
 </div>
 <input type="button" class="btn btn-outline-success" data-dismiss="modal" value="Close">
-<input type="button" class="btn btn-outline-success" onclick="$('.modal').modal('hide')" value="Close All">
+<input type="button" class="btn btn-outline-success" onclick="close_all_modals()" value="Close All">
 <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
 </div></textarea>
             </div>
             <div class="mb-2 custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="footerFunctionSwitch">
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="footerFunctionSwitch">Use
+                <input type="checkbox" class="form-check-input" id="footerFunctionSwitch">
+                <label class="form-check-label" for="footerFunctionSwitch">Use
                     Function control footer content. （使用函数控制footer内容）</label>
             </div>
-            <div class="input-group mb-3 d-none">
-                <div class="input-group-prepend">
-                    <label class="input-group-text bg-success text-white" for="footerFunctionSelect">Function
-                        Examples</label>
-                </div>
-                <select class="custom-select border-success" id="footerFunctionSelect">
-                    <option class="custom-select-lg" value="return_title">return_title</option>
-                    <option class="custom-select-lg" value="return_body">return_body</option>
-                    <option class="custom-select-lg" value="return_footer" selected>return_footer</option>
-                    <option class="custom-select-lg" value="calc_number">calc_number</option>
-                    <option class="custom-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
+            <div class="w-75 input-group mb-3 d-none">
+                <label class="input-group-text bg-success text-white" for="footerFunctionSelect">Function
+                    Examples</label>
+                <select class="form-select border-success" id="footerFunctionSelect">
+                    <option class="form-select-lg" value="return_title">return_title</option>
+                    <option class="form-select-lg" value="return_body">return_body</option>
+                    <option class="form-select-lg" value="return_footer" selected>return_footer</option>
+                    <option class="form-select-lg" value="calc_number">calc_number</option>
+                    <option class="form-select-lg" value="return_Fun_HTML_Element">return_Fun_HTML_Element</option>
                 </select>
             </div>
         </div>
@@ -118,10 +116,8 @@
             <div>模态框尺寸</div>
             <div>ModalSizes</div>
             <div class="input-group">
-                <div class="input-group-prepend">
-                    <label class="input-group-text bg-success text-white" for="ModalSizes">ModalSizes</label>
-                </div>
-                <select class="custom-select border-success" id="ModalSizes">
+                <label class="input-group-text bg-success text-white" for="ModalSizes">ModalSizes</label>
+                <select class="form-select border-success" id="ModalSizes">
                     <option value="">default</option>
                     <option value="sm">sm</option>
                     <option value="lg">lg</option>
@@ -135,18 +131,18 @@
             <div class="mb-3 p-3 border border-secondary rounded">
                 <div>模态框垂直居中</div>
                 <div>VerticallyCentered</div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="VerticallyCentered"
+                <div class="custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="VerticallyCentered"
                            id="VerticallyCentered_true"
                            value="1">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_true"
+                    <label class="form-check-label" for="VerticallyCentered_true"
                            title="true"> true </label>
                 </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="VerticallyCentered"
+                <div class="custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="VerticallyCentered"
                            id="VerticallyCentered_false"
                            value="">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="VerticallyCentered_false"
+                    <label class="form-check-label" for="VerticallyCentered_false"
                            title="default"> false </label>
                 </div>
             </div>
@@ -154,16 +150,16 @@
             <div class="mb-3 p-3 border border-secondary rounded">
                 <div>长内容滚动方式</div>
                 <div>LongContentType</div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="LongContentType" id="LongContentType_true"
+                <div class="custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_true"
                            value="1">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="LongContentType_true"
+                    <label class="form-check-label" for="LongContentType_true"
                            title="true"> true </label>
                 </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="LongContentType" id="LongContentType_false"
+                <div class="custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_false"
                            value="">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="LongContentType_false"
+                    <label class="form-check-label" for="LongContentType_false"
                            title="default"> false </label>
                 </div>
             </div>
@@ -175,27 +171,32 @@
                 <span class="d-block">如果使用的时候，EventType 和 CallbackFunction 必须同时存在</span>
                 <div>EventType</div>
                 <span class="d-block">EventType and CallbackFunction must exist at the same time if used</span>
-                <div class="mb-2 custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_show" value="show">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_show"
+                <div class="mb-2 custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_show" value="show">
+                    <label class="form-check-label" for="EventType_show"
                            title="show.bs.modal"> show </label>
                 </div>
-                <div class="mb-2 custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_shown"
+                <div class="mb-2 custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_shown"
                            value="shown">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_shown"
+                    <label class="form-check-label" for="EventType_shown"
                            title="shown.bs.modal"> shown </label>
                 </div>
-                <div class="mb-2 custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_hide" value="hide">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_hide"
+                <div class="mb-2 custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hide" value="hide">
+                    <label class="form-check-label" for="EventType_hide"
                            title="hide.bs.modal"> hide </label>
                 </div>
-                <div class="mb-2 custom-control custom-radio custom-control-inline">
-                    <input class="custom-control-input" type="radio" name="EventType" id="EventType_hidden"
-                           value="hidden">
-                    <label class="custom-control-label btn btn-sm btn-outline-secondary" for="EventType_hidden"
+                <div class="mb-2 custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hidden" value="hidden">
+                    <label class="form-check-label" for="EventType_hidden"
                            title="hidden.bs.modal"> hidden </label>
+                </div>
+                <div class="mb-2 custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hidePrevented"
+                           value="hidePrevented">
+                    <label class="form-check-label" for="EventType_hidePrevented" title="hidePrevented.bs.modal">
+                        hidePrevented </label>
                 </div>
             </div>
 
@@ -208,15 +209,13 @@
                     <span class="d-block">EventType and CallbackFunction must exist at the same time if used</span>
                 </div>
                 <div class="my-2 input-group rounded">
-                    <div class="input-group-prepend">
-                        <label class="input-group-text bg-success text-white"
-                               for="CallbackFunction">CallbackFunction</label>
-                    </div>
-                    <select class="custom-select border-success" id="CallbackFunction">
-                        <option class="custom-select-lg" value="">default</option>
-                        <option class="custom-select-lg" value="alert_some_text">alert_some_text</option>
-                        <option class="custom-select-lg" value="console_log_some_text">console_log_some_text</option>
-                        <option class="custom-select-lg" value="get_number">get_number</option>
+                    <label class="input-group-text bg-success text-white"
+                           for="CallbackFunction">CallbackFunction</label>
+                    <select class="form-select border-success" id="CallbackFunction">
+                        <option class="form-select-lg" value="">default</option>
+                        <option class="form-select-lg" value="alert_some_text">alert_some_text</option>
+                        <option class="form-select-lg" value="console_log_some_text">console_log_some_text</option>
+                        <option class="form-select-lg" value="get_number">get_number</option>
                     </select>
                 </div>
             </div>
@@ -225,21 +224,27 @@
         <div class="mb-3 p-3 border border-secondary rounded">
             <div>选项</div>
             <div>Options</div>
-            <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="backdrop" checked>
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="backdrop">backdrop</label>
+            <div class="mb-2 p-2 border">
+                <div class="form-check form-switch form-check-inline">
+                    <input type="checkbox" name="backdrop" class="form-check-input" id="backdrop" checked>
+                    <label class="form-check-label" for="backdrop">backdrop</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" name="backdrop" class="form-check-input" id="backdrop_static" disabled>
+                    <label class="form-check-label" for="backdrop_static">backdrop_static</label>
+                </div>
             </div>
-            <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="keyboard" checked>
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="keyboard">keyboard</label>
+            <div class="mb-2 form-check form-switch form-check-inline">
+                <input type="checkbox" class="form-check-input" id="keyboard" checked>
+                <label class="form-check-label" for="keyboard">keyboard</label>
             </div>
-            <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="focus" checked>
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="focus">focus</label>
+            <div class="mb-2 form-check form-switch form-check-inline">
+                <input type="checkbox" class="form-check-input" id="focus" checked>
+                <label class="form-check-label" for="focus">focus</label>
             </div>
-            <div class="mb-2 custom-control custom-switch custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="show" checked>
-                <label class="custom-control-label btn btn-sm btn-outline-secondary" for="show">show</label>
+            <div class="mb-2 form-check form-switch form-check-inline">
+                <input type="checkbox" class="form-check-input" id="show" checked>
+                <label class="form-check-label" for="show">show</label>
             </div>
         </div>
 
@@ -302,17 +307,10 @@ function return_Fun_HTML_Element() {
 
 
 <div>
-    <script src="demoFiles/jquery.min.js"></script>
-    <script src="demoFiles/popper.min.js"></script>
-    <script src="demoFiles/bootstrap.min.js"></script>
+    <script src="demoFiles/bootstrap.bundle.min.js"></script>
     <script src="dist/bootstrap-modal-js.min.js"></script>
     <!--<script src="src/bootstrap-modal-js.js"></script>-->
 
-    <script>
-        $("label").tooltip({
-            placement: "bottom"
-        });
-    </script>
     <div>
         <script>
             function alert_some_text() {
@@ -391,9 +389,28 @@ function return_Fun_HTML_Element() {
             const obj = {};
             for (const i of arr) {
                 const dom = document.querySelector("#" + i);
-                dom.checked ? obj[i] = true : obj[i] = false;
+                dom.checked ? obj[i] = true : (dom.id !== 'backdrop' ? obj[i] = false : obj[i] = get_backdrop_static_checkbox_value());
             }
             return obj;
+        }
+
+        let backdrop_switch = document.querySelector('#backdrop');
+        let backdrop_static_checkbox = document.querySelector('#backdrop_static');
+        backdrop_switch.addEventListener('click', function () {
+            if (backdrop_switch.checked === false) {
+                backdrop_static_checkbox.removeAttribute('disabled');
+            } else {
+                backdrop_static_checkbox.checked = false;
+                backdrop_static_checkbox.setAttribute('disabled', '');
+            }
+        });
+
+        function get_backdrop_static_checkbox_value() {
+            if (backdrop_static_checkbox.checked === true) {
+                return 'static';
+            } else {
+                return false;
+            }
         }
 
         function checkbox_status(id) {
