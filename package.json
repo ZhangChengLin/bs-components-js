@@ -5,6 +5,7 @@
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
     "build": "npm run copy && npm run dist",
+    "watch": "gulp watch_file",
     "dist": "gulp dist_min",
     "copy": "npm run npm_install && npm run gulp_copy_static",
     "npm_install": "npm i",
