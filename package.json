@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-modal-js",
-  "version": "1.0.1",
+  "version": "2.0.0-alpha1",
   "description": "Bootstrap modal",
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "keywords": [
     "bootstrap",
     "modal",
-    "bootstrap4",
+    "bootstrap5",
     "components"
   ],
   "author": {
@@ -28,17 +28,15 @@
     "url": "https://zhangchenglin.github.io"
   },
   "license": "MIT",
-  "engines": {
-    "bootstrap": "4.2.1 - 4.3.1"
-  },
+  "engines": {},
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
-    "gulp-rename": "^1.4.0",
+    "gulp-rename": "^2.0.0",
     "gulp-terser": "^1.2.0"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^5.0.0-alpha1"
   },
   "files": [
     "dist/*.js",
