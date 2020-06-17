@@ -1,10 +1,10 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 1.0.1
+ * Version: 2.0.0-alpha1
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
- * Copyright (c) 2019 张成林
+ * Copyright (c) 2020 张成林
  * Licenses: MIT
  * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
  * GitHub: https://github.com/zhangchenglin/bootstrap-modal-js
