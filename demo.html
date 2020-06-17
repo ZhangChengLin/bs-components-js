@@ -11,6 +11,16 @@
           content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
     <meta name="keywords"
           content="Bootstrap,Bootstrap5,Modal,dynamic,show.bs.modal,shown.bs.modal,hide.bs.modal,hidden.bs.modal">
+    <script>
+        function close_all_modals() {
+            let all_modals = document.querySelectorAll('.modal');
+            let all_modals_length = all_modals.length;
+            for (let i = 0; i < all_modals_length; i++) {
+                let x = bootstrap.Modal.getInstance(all_modals[i]);
+                x.hide();
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="container">
@@ -27,7 +37,8 @@
             </div>
             <div class="mb-2 custom-control custom-switch">
                 <input type="checkbox" class="form-check-input" id="titleFunctionSwitch">
-                <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content. （使用函数控制title内容）</label>
+                <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.
+                    （使用函数控制title内容）</label>
             </div>
             <div class="w-75 input-group mb-3 d-none">
                 <label class="input-group-text bg-success text-white" for="titleFunctionSelect">Function
@@ -79,7 +90,7 @@
 <div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/4.3/utilities/flex/" target="_blank">&nbsp;flexbox</a>
 </div>
 <input type="button" class="btn btn-outline-success" data-dismiss="modal" value="Close">
-<input type="button" class="btn btn-outline-success" onclick="$('.modal').modal('hide')" value="Close All">
+<input type="button" class="btn btn-outline-success" onclick="close_all_modals()" value="Close All">
 <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
 </div></textarea>
             </div>
@@ -177,10 +188,15 @@
                            title="hide.bs.modal"> hide </label>
                 </div>
                 <div class="mb-2 custom-control custom-radio form-check-inline">
-                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hidden"
-                           value="hidden">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hidden" value="hidden">
                     <label class="form-check-label" for="EventType_hidden"
                            title="hidden.bs.modal"> hidden </label>
+                </div>
+                <div class="mb-2 custom-control custom-radio form-check-inline">
+                    <input class="form-check-input" type="radio" name="EventType" id="EventType_hidePrevented"
+                           value="hidePrevented">
+                    <label class="form-check-label" for="EventType_hidePrevented" title="hidePrevented.bs.modal">
+                        hidePrevented </label>
                 </div>
             </div>
 
@@ -208,9 +224,15 @@
         <div class="mb-3 p-3 border border-secondary rounded">
             <div>选项</div>
             <div>Options</div>
-            <div class="mb-2 form-check form-switch form-check-inline">
-                <input type="checkbox" class="form-check-input" id="backdrop" checked>
-                <label class="form-check-label" for="backdrop">backdrop</label>
+            <div class="mb-2 p-2 border">
+                <div class="form-check form-switch form-check-inline">
+                    <input type="checkbox" name="backdrop" class="form-check-input" id="backdrop" checked>
+                    <label class="form-check-label" for="backdrop">backdrop</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" name="backdrop" class="form-check-input" id="backdrop_static" disabled>
+                    <label class="form-check-label" for="backdrop_static">backdrop_static</label>
+                </div>
             </div>
             <div class="mb-2 form-check form-switch form-check-inline">
                 <input type="checkbox" class="form-check-input" id="keyboard" checked>
@@ -367,9 +389,28 @@ function return_Fun_HTML_Element() {
             const obj = {};
             for (const i of arr) {
                 const dom = document.querySelector("#" + i);
-                dom.checked ? obj[i] = true : obj[i] = false;
+                dom.checked ? obj[i] = true : (dom.id !== 'backdrop' ? obj[i] = false : obj[i] = get_backdrop_static_checkbox_value());
             }
             return obj;
+        }
+
+        let backdrop_switch = document.querySelector('#backdrop');
+        let backdrop_static_checkbox = document.querySelector('#backdrop_static');
+        backdrop_switch.addEventListener('click', function () {
+            if (backdrop_switch.checked === false) {
+                backdrop_static_checkbox.removeAttribute('disabled');
+            } else {
+                backdrop_static_checkbox.checked = false;
+                backdrop_static_checkbox.setAttribute('disabled', '');
+            }
+        });
+
+        function get_backdrop_static_checkbox_value() {
+            if (backdrop_static_checkbox.checked === true) {
+                return 'static';
+            } else {
+                return false;
+            }
         }
 
         function checkbox_status(id) {
