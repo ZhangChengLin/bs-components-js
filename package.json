@@ -31,7 +31,9 @@
     "url": "https://zhangchenglin.github.io"
   },
   "license": "MIT",
-  "engines": {},
+  "engines": {
+    "bootstrap": "^5.0.0-alpha1"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
