@@ -66,7 +66,7 @@ If it helps you, please **star** this repository
 ## Table of Contents
 
 |                                                 |
-| :---------------------------------------------- | 
+| :---------------------------------------------- |
 | [How to use it](#how-to-use-it)                 |
 | [How to install](#how-to-install)               |
 | [CDN](#cdn)                                     |
@@ -193,7 +193,7 @@ Default value: undefined
 Description:
 
 | parameter|
-| :-------:| 
+| :-------:|
 | sm       |
 | lg       |
 | xl       |
@@ -208,7 +208,7 @@ Default value: false
 Description:
 
 | parameter|
-| :-------:| 
+| :-------:|
 | true     |
 | false    |
 
@@ -222,7 +222,7 @@ Default value: false
 Description:
 
 | parameter|
-| :-------:| 
+| :-------:|
 | true     |
 | false    |
 
@@ -236,7 +236,7 @@ Default value: undefined
 Description:
 
 | parameter|
-| :-------:| 
+| :-------:|
 | show     |
 | shown    |
 | hide     |
