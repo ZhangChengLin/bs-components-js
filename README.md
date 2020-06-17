@@ -20,9 +20,9 @@ If it helps you, please **star** this repository
 
 <p align="center">
 <a href="https://github.com/zhangchenglin/bootstrap-modal-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/zhangchenglin/bootstrap-modal-js.svg?style=social"></a>
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/zhangchenglin/bootstrap-modal-js.svg">
-<img alt="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-modal-js.svg">
-<img alt="GitHub License" src="https://img.shields.io/github/license/zhangchenglin/bootstrap-modal-js.svg">
+<a href="https://github.com/zhangchenglin/bootstrap-modal-js/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/zhangchenglin/bootstrap-modal-js.svg"></a>
+<a href="https://github.com/zhangchenglin/bootstrap-modal-js/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-modal-js.svg"></a>
+<a href="https://github.com/zhangchenglin/bootstrap-modal-js/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/zhangchenglin/bootstrap-modal-js.svg"></a>
 </p>
 
 <p align="center">
