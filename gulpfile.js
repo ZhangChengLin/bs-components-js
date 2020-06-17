@@ -1,4 +1,4 @@
-const gulp = require("gulp");
+const {task, src, dest, parallel, lastRun, watch} = require('gulp');
 const terser = require("gulp-terser");
 const header = require("gulp-header");
 const rename = require("gulp-rename");
@@ -29,25 +29,29 @@ const Copyright = {
     min: ""
 };
 
-gulp.task("dist_min", dist_min);
-gulp.task("copy_static", copy_static);
+task("dist_min", dist_min);
+task("copy_static", copy_static);
+task("watch_file", watch_file);
 
 function dist_min(done) {
-    gulp.src([bootstrap_modal_js_path])
+    src([bootstrap_modal_js_path], {since: lastRun(dist_min)})
         .pipe(header(Copyright.full, {package: pkg}))
-        .pipe(gulp.dest("./dist/"));
-    gulp.src([bootstrap_modal_js_path])
+        .pipe(dest("./dist/"));
+    src([bootstrap_modal_js_path])
         .pipe(terser({}))
         .pipe(header(Copyright.full, {package: pkg}))
-        .pipe(rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest("./dist/"));
+        .pipe(rename({suffix: ".min"}))
+        .pipe(dest("./dist/"));
     done();
 }
 
 function copy_static(done) {
-    gulp.src([bootstrap_bundle_js_path, bootstrap_css_path])
-        .pipe(gulp.dest('./demoFiles/'));
+    src([bootstrap_bundle_js_path, bootstrap_css_path])
+        .pipe(dest('./demoFiles/'));
+    done();
+}
+
+function watch_file(done) {
+    watch(bootstrap_modal_js_path, task("dist_min"));
     done();
 }
