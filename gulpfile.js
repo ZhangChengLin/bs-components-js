@@ -4,10 +4,8 @@ const header = require("gulp-header");
 const rename = require("gulp-rename");
 
 //path
-const jquery_path = './node_modules/jquery/dist/jquery.min.js';
 const bootstrap_css_path = './node_modules/bootstrap/dist/css/bootstrap.min.css';
-const bootstrap_js_path = './node_modules/bootstrap/dist/js/bootstrap.min.js';
-const popper_js_path = './node_modules/popper.js/dist/umd/popper.min.js';
+const bootstrap_bundle_js_path = './node_modules/bootstrap/dist/js/bootstrap.bundle.*';
 
 const bootstrap_modal_js_path = "./src/bootstrap-modal-js.js";
 
@@ -31,18 +29,13 @@ const Copyright = {
     min: ""
 };
 
-gulp.task("dist", dist);
 gulp.task("dist_min", dist_min);
 gulp.task("copy_static", copy_static);
 
-function dist(done) {
+function dist_min(done) {
     gulp.src([bootstrap_modal_js_path])
         .pipe(header(Copyright.full, {package: pkg}))
         .pipe(gulp.dest("./dist/"));
-    done();
-}
-
-function dist_min(done) {
     gulp.src([bootstrap_modal_js_path])
         .pipe(terser({}))
         .pipe(header(Copyright.full, {package: pkg}))
@@ -54,7 +47,7 @@ function dist_min(done) {
 }
 
 function copy_static(done) {
-    gulp.src([jquery_path, bootstrap_js_path, bootstrap_css_path, popper_js_path])
+    gulp.src([bootstrap_bundle_js_path, bootstrap_css_path])
         .pipe(gulp.dest('./demoFiles/'));
     done();
 }

@@ -4,9 +4,11 @@
   "description": "Bootstrap modal",
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
-    "build": "",
-    "dist": "gulp dist dist_min",
-    "copy": "gulp copy_static"
+    "build": "npm run copy && npm run dist",
+    "dist": "gulp dist_min",
+    "copy": "npm run npm_install && npm run gulp_copy_static",
+    "npm_install": "npm i",
+    "gulp_copy_static": "gulp copy_static"
   },
   "repository": {
     "type": "git",
