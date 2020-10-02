@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-  <link rel="stylesheet" href="demoFiles/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/css/bootstrap.min.css">
+<!--  <link rel="stylesheet" href="demoFiles/bootstrap.min.css">-->
   <title>bootstrap-modal-js dynamic demo</title>
   <meta name="description"
         content="Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.">
@@ -310,65 +311,62 @@ function return_Fun_HTML_Element() {
   </div>
 </div>
 
-
 <div>
-  <script src="demoFiles/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+<!--  <script src="demoFiles/bootstrap.bundle.min.js"></script>-->
   <script src="dist/bootstrap-modal-js.min.js"></script>
   <!--<script src="src/bootstrap-modal-js.js"></script>-->
+  <script>
+    function alert_some_text() {
+      alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+    }
 
-  <div>
-    <script>
-      function alert_some_text() {
-        alert("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
-      }
+    function console_log_some_text() {
+      console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
+    }
 
-      function console_log_some_text() {
-        console.log("Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content");
-      }
+    function return_number() {
+      return 222 + 333;
+    }
 
-      function return_number() {
-        return 222 + 333;
-      }
+    function get_number() {
+      alert(return_number());
+    }
 
-      function get_number() {
-        alert(return_number());
-      }
+    function calc_number() {
+      return (1 + 2 + 3).toString();
+    }
 
-      function calc_number() {
-        return (1 + 2 + 3).toString();
-      }
+    function return_title() {
+      return "function title";
+    }
 
-      function return_title() {
-        return "function title";
-      }
+    function return_body() {
+      return "function body";
+    }
 
-      function return_body() {
-        return "function body";
-      }
+    function return_footer() {
+      return "function footer";
+    }
 
-      function return_footer() {
-        return "function footer";
-      }
+    function return_obj() {
+      return {
+        "aaa": "111",
+        "bbb": "222",
+        "ccc": "333",
+      };
+    }
 
-      function return_obj() {
-        return {
-          "aaa": "111",
-          "bbb": "222",
-          "ccc": "333",
-        };
-      }
-
-      function return_Fun_HTML_Element() {
-        const html = document.createElement("div");
-        const p = document.createElement("p");
-        html.className = "bg-success";
-        p.className = "text-center";
-        p.innerHTML = "this is html obj.";
-        html.appendChild(p);
-        return html;
-      }
-    </script>
-  </div>
+    function return_Fun_HTML_Element() {
+      const html = document.createElement("div");
+      const p = document.createElement("p");
+      html.className = "bg-success";
+      p.className = "text-center";
+      p.innerHTML = "this is html obj.";
+      html.appendChild(p);
+      return html;
+    }
+  </script>
 </div>
 
 <script>
