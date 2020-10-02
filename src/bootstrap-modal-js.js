@@ -46,6 +46,21 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
     case "xl":
       modal_dialog.className += " modal-xl";
       break;
+    case "full":
+      modal_dialog.className += " modal-fullscreen";
+      break;
+    case "full-sm":
+      modal_dialog.className += " modal-fullscreen-sm-down";
+      break;
+    case "full-md":
+      modal_dialog.className += " modal-fullscreen-md-down";
+      break;
+    case "full-lg":
+      modal_dialog.className += " modal-fullscreen-lg-down";
+      break;
+    case "full-xl":
+      modal_dialog.className += " modal-fullscreen-xl-down";
+      break;
     default:
       modal_dialog.className += " " + ModalSizes;
   }
@@ -75,13 +90,12 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
   typeof title === "string" ? modal_title.id = modal_title_ID : "";
   title instanceof HTMLElement ? modal_header.appendChild(title) : modal_title.innerHTML = title;
 
-  modal_close_btn.className = "close";
+  modal_close_btn.className = "btn-close";
   modal_close_btn.type = "button";
   modal_close_btn.setAttribute("data-dismiss", "modal");
   modal_close_btn.setAttribute("aria-label", "Close");
 
   modal_close_span.setAttribute("aria-hidden", "true");
-  modal_close_span.innerHTML = "&times;";
 
   modal_body.className = "modal-body";
   modal_body.id = modal_body_ID;
