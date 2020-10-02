@@ -43,7 +43,6 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
   modal.className = "modal fade";
   modal.tabIndex = "-1";
   modal.role = "dialog";
-  modal.setAttribute("aria-hidden", "true");
   typeof title === "string" ? modal.setAttribute("aria-labelledby", modal_title_ID) : "";
 
   modal_dialog.className = "modal-dialog";
@@ -144,7 +143,7 @@ function removeBootstrapModalJs(modal_id) {
     x.dispose();
     setTimeout(function () {
       modal_element.parentElement.removeChild(modal_element);
-    }, 5e2);
+    }, 3e3);
   });
 }
 
