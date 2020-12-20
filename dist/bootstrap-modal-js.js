@@ -1,6 +1,6 @@
 /*!
  * Name: bootstrap-modal-js
- * Version: 2.0.0-alpha2
+ * Version: 2.0.0-beta1
  * Author: 张成林
  * Email: 469946668@qq.com
  * Description: Bootstrap modal
@@ -104,7 +104,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
   modal_close_btn.className = "btn-close";
   modal_close_btn.type = "button";
-  modal_close_btn.setAttribute("data-dismiss", "modal");
+  modal_close_btn.setAttribute("data-bs-dismiss", "modal");
   modal_close_btn.setAttribute("aria-label", "Close");
 
   modal_close_span.setAttribute("aria-hidden", "true");
