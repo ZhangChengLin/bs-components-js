@@ -1,8 +1,8 @@
 ## bootstrap-modal-js
 
-Currently supports bootstrap v5 beta1
+Currently supports bootstrap v5 beta2
 
-Bootstrap 5 components <a href="https://v5.getbootstrap.com/docs/5.0/components/modal/" title="Modal" target="_blank">"Modal"</a>
+Bootstrap 5 components <a href="https://getbootstrap.com/docs/5.0/components/modal/" title="Modal" target="_blank">"Modal"</a>
 
 Currently relying on Bootstrap v5, because it is a function package of Bootstrap modal.
 
@@ -199,6 +199,12 @@ Description:
 | sm       |
 | lg       |
 | xl       |
+| full     |
+| full-sm  |
+| full-md  |
+| full-lg  |
+| full-xl  |
+| full-xxl |
 
 ---
 - **VerticallyCentered**

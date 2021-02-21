@@ -15,11 +15,11 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
   title = title ? (typeof title === "function" ? title() : (typeof title === "string" ? title : (typeof title === "object" ? title : ""))) : "";
   body = body ? (typeof body === "function" ? body() : (typeof body === "string" ? body : (typeof body === "object" ? body : ""))) : "";
   footer = footer ? (typeof footer === "function" ? footer() : (typeof footer === "string" ? footer : (typeof footer === "object" ? footer : ""))) : "";
-  ModalSizes = ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean" ? ModalSizes : "default";
-  VerticallyCentered = VerticallyCentered && typeof VerticallyCentered === "boolean" ? VerticallyCentered : false;
-  LongContentType = LongContentType && typeof LongContentType === "boolean" ? LongContentType : false;
-  EventType = EventType && typeof EventType === "string" ? EventType : "";
-  CallbackFunction = CallbackFunction && typeof CallbackFunction === "function" ? CallbackFunction : "";
+  ModalSizes = (ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean") ? ModalSizes : "default";
+  VerticallyCentered = (VerticallyCentered && typeof VerticallyCentered === "boolean") ? VerticallyCentered : false;
+  LongContentType = (LongContentType && typeof LongContentType === "boolean") ? LongContentType : false;
+  EventType = (EventType && typeof EventType === "string") ? EventType : "";
+  CallbackFunction = (CallbackFunction && typeof CallbackFunction === "function") ? CallbackFunction : "";
   Options = Options ? (typeof Options === "function" ? Options() : Options) : "";
 
   const document_body = document.querySelector("body");
