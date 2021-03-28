@@ -1,6 +1,6 @@
 ## bootstrap-modal-js
 
-Currently supports bootstrap v5 beta2
+Currently supports bootstrap v5 beta3
 
 Bootstrap 5 components <a href="https://getbootstrap.com/docs/5.0/components/modal/" title="Modal" target="_blank">"Modal"</a>
 

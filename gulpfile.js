@@ -1,11 +1,11 @@
-const {task, src, dest, parallel, lastRun, watch} = require('gulp');
+const {task, src, dest, lastRun, watch} = require('gulp');
 const terser = require("gulp-terser");
 const header = require("gulp-header");
 const rename = require("gulp-rename");
 
 //path
-const bootstrap_css_path = './node_modules/bootstrap/dist/css/bootstrap.min.css';
-const bootstrap_bundle_js_path = './node_modules/bootstrap/dist/js/bootstrap.bundle.*';
+const bootstrap_css_path = './node_modules/bootstrap/dist/css/bootstrap.*css';
+const bootstrap_bundle_js_path = './node_modules/bootstrap/dist/js/bootstrap.bundle*.js';
 
 const bootstrap_modal_js_path = "./src/bootstrap-modal-js.js";
 
