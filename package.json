@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-modal-js",
-  "version": "2.0.0-beta3",
-  "description": "Bootstrap modal",
+  "version": "2.0.0",
+  "description": "Bootstrap Modal",
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
     "build": "npm run copy && npm run dist",
@@ -26,13 +26,13 @@
     "components"
   ],
   "author": {
-    "name": "张成林",
+    "name": "ZhangChengLin",
     "email": "469946668@qq.com",
-    "url": "https://zhangchenglin.github.io"
+    "url": "https://ZhangChengLin.github.io"
   },
   "license": "MIT",
   "engines": {
-    "bootstrap": "^5.0.0-beta3"
+    "bootstrap": "^5.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
@@ -41,7 +41,7 @@
     "gulp-terser": "^2.0.1"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3"
+    "bootstrap": "^5.0.1"
   },
   "files": [
     "dist/*.js",

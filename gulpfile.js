@@ -20,7 +20,7 @@ const Copyright = {
     ' * Author: <%= package.author.name %>\n' +
     ' * Email: <%= package.author.email %>\n' +
     ' * Description: <%= package.description %>\n' +
-    ' * Copyright (c) ' + new Date().getFullYear() + ' <%= package.author.name %>\n' +
+    ' * Copyright (c) 2020 - ' + new Date().getFullYear() + ' <%= package.author.name %>\n' +
     ' * Licenses: <%= package.license %>\n' +
     ' * under the MIT License (license terms are at https://opensource.org/licenses/MIT).\n' +
     ' * GitHub: <%= package.github %>\n' +
