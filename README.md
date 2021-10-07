@@ -1,8 +1,8 @@
 ## bootstrap-modal-js
 
-Currently supports bootstrap v5.0.1
+Currently supports bootstrap v5.1.2
 
-Bootstrap 5 components <a href="https://getbootstrap.com/docs/5.0/components/modal/" title="Modal" target="_blank">"Modal"</a>
+Bootstrap 5 components <a href="https://getbootstrap.com/docs/5.1/components/modal/" title="Modal" target="_blank">"Modal"</a>
 
 Currently relying on Bootstrap v5, because it is a function package of Bootstrap modal.
 
@@ -16,15 +16,15 @@ If it helps you, please **star** this repository
 
 ## Demo
 
-<a href="https://zhangchenglin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://zhangchenglin.github.io/bootstrap-modal-js/demo.html</a>
+<a href="https://ZhangChengLin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://ZhangChengLin.github.io/bootstrap-modal-js/demo.html</a>
 
 ---
 
 <p align="center">
-<a href="https://github.com/zhangchenglin/bootstrap-modal-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/zhangchenglin/bootstrap-modal-js.svg?style=social"></a>
-<a href="https://github.com/zhangchenglin/bootstrap-modal-js/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/zhangchenglin/bootstrap-modal-js.svg"></a>
-<a href="https://github.com/zhangchenglin/bootstrap-modal-js/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/zhangchenglin/bootstrap-modal-js.svg"></a>
-<a href="https://github.com/zhangchenglin/bootstrap-modal-js/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/zhangchenglin/bootstrap-modal-js.svg"></a>
+<a href="https://github.com/ZhangChengLin/bootstrap-modal-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/bootstrap-modal-js.svg?style=social"></a>
+<a href="https://github.com/ZhangChengLin/bootstrap-modal-js/issues" target="_blank"><img alt="GitHub Issues" title="GitHub Issues" src="https://img.shields.io/github/issues/ZhangChengLin/bootstrap-modal-js.svg"></a>
+<a href="https://github.com/ZhangChengLin/bootstrap-modal-js/releases" target="_blank"><img alt="GitHub Release" title="GitHub Release" src="https://img.shields.io/github/release/ZhangChengLin/bootstrap-modal-js.svg"></a>
+<a href="https://github.com/ZhangChengLin/bootstrap-modal-js/blob/master/LICENSE" target="_blank"><img alt="GitHub License" title="GitHub License" src="https://img.shields.io/github/license/ZhangChengLin/bootstrap-modal-js.svg"></a>
 </p>
 
 <p align="center">
@@ -281,10 +281,10 @@ Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#option
 
 | Method (priority) | type                                                            |
 | :---------------- | :-------------------------------------------------------------: |
-| alipay （支付宝） | [QR code](https://zhangchenglin.github.io/image/pay-alipay.jpg) |
-| QQ                | [QR code](https://zhangchenglin.github.io/image/pay-qq.png)     |
+| alipay （支付宝） | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
+| QQ                | [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)     |
 | WeChat （微信）   |                                                                 |
-| PayPal （贝宝）   | [PayPal.Me](https://www.paypal.me/zhangchenglin)                |
+| PayPal （贝宝）   | [PayPal.Me](https://www.paypal.me/ZhangChengLin)                |
 
 ---
 

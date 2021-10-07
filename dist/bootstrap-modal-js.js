@@ -7,8 +7,8 @@
  * Copyright (c) 2020 - 2021 ZhangChengLin
  * Licenses: MIT
  * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
- * GitHub: https://github.com/zhangchenglin/bootstrap-modal-js
- * issues: https://github.com/zhangchenglin/bootstrap-modal-js/issues
+ * GitHub: https://github.com/ZhangChengLin/bootstrap-modal-js
+ * issues: https://github.com/ZhangChengLin/bootstrap-modal-js/issues
  */
 
 function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
