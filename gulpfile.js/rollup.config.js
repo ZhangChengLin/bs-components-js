@@ -1,6 +1,6 @@
 'use strict'
 
-const {terser} = require('rollup-plugin-terser')
+import {terser} from "rollup-plugin-terser";
 
 const banner = require('./banner.js')
 const {paths} = require('./gulpfile.paths')
@@ -26,7 +26,10 @@ const rollupConfig = {
   ]
 }
 
-rollupConfig.output[0].name = 'bootstrapOffcanvasJs'
-rollupConfig.output[1].name = 'bootstrapOffcanvasJs'
+
+rollupConfig.output.forEach(currentOutput => {
+  currentOutput.name = 'bootstrapOffcanvasJs'
+})
+
 
 module.exports = rollupConfig
