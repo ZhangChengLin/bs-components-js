@@ -1,4 +1,48 @@
-function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) {
+function removeBootstrapModalJs(modal_id) {
+  const modal_element = document.querySelector("#" + modal_id);
+  modal_element.addEventListener("hidden.bs.modal", function () {
+    let x = bootstrap.Modal.getInstance(modal_element);
+    x.dispose();
+    setTimeout(function () {
+      modal_element.parentElement.removeChild(modal_element);
+    }, 3e3);
+  });
+}
+
+function bootstrap_modal_js_events(modal_id, type, fun) {
+  const modal = document.querySelector("#" + modal_id);
+  switch (type) {
+    case "show":
+      modal.addEventListener("show.bs.modal", function () {
+        return fun();
+      });
+      break;
+    case "shown":
+      modal.addEventListener("shown.bs.modal", function () {
+        return fun();
+      });
+      break;
+    case "hide":
+      modal.addEventListener("hide.bs.modal", function () {
+        return fun();
+      });
+      break;
+    case "hidden":
+      modal.addEventListener("hidden.bs.modal", function () {
+        return fun();
+      });
+      break;
+    case "hidePrevented":
+      modal.addEventListener("hidePrevented.bs.modal", function () {
+        return fun();
+      });
+      break;
+    default:
+      break;
+  }
+}
+
+const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) => {
   title = title ? (typeof title === "function" ? title() : (typeof title === "string" ? title : (typeof title === "object" ? title : ""))) : "";
   body = body ? (typeof body === "function" ? body() : (typeof body === "string" ? body : (typeof body === "object" ? body : ""))) : "";
   footer = footer ? (typeof footer === "function" ? footer() : (typeof footer === "string" ? footer : (typeof footer === "object" ? footer : ""))) : "";
@@ -28,7 +72,7 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
 
   modal.id = modal_ID;
   modal.className = "modal fade";
-  modal.tabIndex = "-1";
+  modal.tabIndex = -1;
   modal.role = "dialog";
   typeof title === "string" ? modal.setAttribute("aria-labelledby", modal_title_ID) : "";
 
@@ -121,48 +165,6 @@ function bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, L
   xxx.show();
   removeBootstrapModalJs(modal_ID);
   return TimeID;
-}
+};
 
-function removeBootstrapModalJs(modal_id) {
-  const modal_element = document.querySelector("#" + modal_id);
-  modal_element.addEventListener("hidden.bs.modal", function () {
-    let x = bootstrap.Modal.getInstance(modal_element);
-    x.dispose();
-    setTimeout(function () {
-      modal_element.parentElement.removeChild(modal_element);
-    }, 3e3);
-  });
-}
-
-function bootstrap_modal_js_events(modal_id, type, fun) {
-  const modal = document.querySelector("#" + modal_id);
-  switch (type) {
-    case "show":
-      modal.addEventListener("show.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "shown":
-      modal.addEventListener("shown.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hide":
-      modal.addEventListener("hide.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hidden":
-      modal.addEventListener("hidden.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hidePrevented":
-      modal.addEventListener("hidePrevented.bs.modal", function () {
-        return fun();
-      });
-      break;
-    default:
-      break;
-  }
-}
+export default bootstrapModalJs
