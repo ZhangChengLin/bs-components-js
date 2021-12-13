@@ -22,6 +22,7 @@
   "keywords": [
     "bootstrap",
     "modal",
+    "offcanvas",
     "bootstrap5",
     "components"
   ],
@@ -54,6 +55,6 @@
   },
   "files": [
     "dist/**/*.{js,css,map}",
-    "gh-pages/demo.html"
+    "gh-pages/*.html"
   ]
 }
