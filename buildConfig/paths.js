@@ -4,7 +4,7 @@ const gulpfile = root + 'gulpfile.js/'
 const src = root + 'src/'
 const dist = root + 'dist/'
 
-export default {
+module.exports = {
   root: root,
   node_modules: node_modules,
   gulpfile: gulpfile,

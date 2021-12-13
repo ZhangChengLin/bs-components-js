@@ -1,1 +1,1 @@
-export bootstrapOffcanvasJs from "./bootstrap-offcanvas-js";
+export {default as bootstrapOffcanvasJs} from "./bootstrap-offcanvas-js";

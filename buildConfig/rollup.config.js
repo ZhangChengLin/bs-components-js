@@ -2,27 +2,28 @@
 
 import {terser} from "rollup-plugin-terser";
 import banner from "./banner.js";
-import paths from "./paths";
+
+const paths = require('./paths')
 
 const ESM = process.env.ESM === 'true'
 const BsNAME = process.env.BsNAME
 
 const toUpperCase = (str) => {
-  return str.slice(-1).toUpperCase()
+  return str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
 }
 
 const inputOptions = [paths.src + `${BsNAME}/index.${ESM ? 'esm' : 'umd'}.js`]
 const outputOptions = [
   {
     banner,
-    file: paths.dist + `bootstrap-${BsNAME}-js.js`,
+    file: paths.dist + `bootstrap-${BsNAME}-js${ESM ? '.esm' : ''}.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     sourcemap: true
   },
   {
     banner,
-    file: paths.dist + `bootstrap-${BsNAME}-js.min.js`,
+    file: paths.dist + `bootstrap-${BsNAME}-js${ESM ? '.esm' : ''}.min.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     plugins: [terser()],

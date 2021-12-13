@@ -4,10 +4,12 @@
   "description": "Bootstrap Modal",
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
+    "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
     "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
     "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
     "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
-    "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js"
+    "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js",
+    "copyBsFiles": "gulp copyBsFiles"
   },
   "repository": {
     "type": "git",
@@ -43,6 +45,8 @@
     "gulp-eslint-new": "^1.1.0",
     "gulp-npm-dist": "^1.0.3",
     "gulp-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "rollup": "^2.61.1",
     "rollup-plugin-terser": "^7.0.2",

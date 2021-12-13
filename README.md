@@ -2,9 +2,13 @@
 
 Currently supports bootstrap v5.1.3
 
-Bootstrap 5 components <a href="https://getbootstrap.com/docs/5.1/components/modal/" title="Modal" target="_blank">"Modal"</a>
 
-Currently relying on Bootstrap v5, because it is a function package of Bootstrap modal.
+support Bootstrap 5 components
+
+<a href="https://getbootstrap.com/docs/5.1/components/modal/" title="Modal" target="_blank">Modal</a>
+<a href="https://getbootstrap.com/docs/5.1/components/offcanvas/" title="Offcanvas" target="_blank">Offcanvas</a>
+
+Currently, relying on Bootstrap v5, because it is a function package of Bootstrap modal.
 
 Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
