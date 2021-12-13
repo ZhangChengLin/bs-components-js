@@ -1,22 +1,22 @@
 'use strict'
 
 import {terser} from "rollup-plugin-terser";
+import banner from "./banner.js";
+import paths from "./paths";
 
-const banner = require('./banner.js')
-const {paths} = require('./paths')
 
 const inputOptions = [paths.src + 'offcanvas/index.umd.js']
 const outputOptions = [
   {
     banner,
-    file: paths.dist + 'bootstrapOffcanvasJs.js',
+    file: paths.dist + 'bootstrap-offcanvas-js.js',
     format: 'umd',
     generatedCode: 'es2015',
     sourcemap: true
   },
   {
     banner,
-    file: paths.dist + 'bootstrapOffcanvasJs.min.js',
+    file: paths.dist + 'bootstrap-offcanvas-js.min.js',
     format: 'umd',
     generatedCode: 'es2015',
     plugins: [terser()],
@@ -28,7 +28,6 @@ const rollupConfig = {
   input: inputOptions,
   output: outputOptions
 }
-
 
 rollupConfig.output.forEach(currentOutput => {
   currentOutput.name = 'bootstrapOffcanvasJs'

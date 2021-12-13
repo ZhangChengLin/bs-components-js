@@ -18,4 +18,4 @@ function getBanner() {
 */`
 }
 
-module.exports = getBanner
+export default getBanner

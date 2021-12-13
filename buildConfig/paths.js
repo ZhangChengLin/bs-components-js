@@ -4,12 +4,10 @@ const gulpfile = root + 'gulpfile.js/'
 const src = root + 'src/'
 const dist = root + 'dist/'
 
-module.exports = {
-  paths: {
-    root: root,
-    node_modules: node_modules,
-    gulpfile: gulpfile,
-    src: src,
-    dist: dist,
-  }
+export default {
+  root: root,
+  node_modules: node_modules,
+  gulpfile: gulpfile,
+  src: src,
+  dist: dist,
 }

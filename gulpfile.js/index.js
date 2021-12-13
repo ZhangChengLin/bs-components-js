@@ -2,7 +2,7 @@ const {src, dest, lastRun, watch, series, parallel} = require('gulp')
 const rollup = require("rollup")
 const npmDist = require('gulp-npm-dist')
 
-const rollupConfig = require('../buildConfig/rollup.config')
+const {rollupConfig} = require('../buildConfig/rollup.config')
 const {paths} = require('../buildConfig/paths')
 
 const npmDistConfig = {
@@ -16,11 +16,6 @@ const copyBsFiles = () => {
     .pipe(dest(paths.dist))
 }
 
-const rollupBuild = () => {
-  return rollup.rollup(rollupConfig)
-}
-
 module.exports = {
   copyBsFiles,
-  rollupBuild,
 }
