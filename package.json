@@ -4,7 +4,10 @@
   "description": "Bootstrap Modal",
   "main": "dist/bootstrap-modal-js.min.js",
   "scripts": {
-    "js-compile": "rollup --config buildConfig/rollup.config.js"
+    "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
+    "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
+    "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
+    "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js"
   },
   "repository": {
     "type": "git",
