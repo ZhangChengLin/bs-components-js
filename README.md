@@ -72,39 +72,14 @@ If it helps you, please **star** this repository
 ## Table of Contents
 
 |                                                 |
-| :---------------------------------------------- |
-| [How to use it](#how-to-use-it)                 |
+|:------------------------------------------------|
 | [How to install](#how-to-install)               |
 | [CDN](#cdn)                                     |
+| [How to use](#how-to-use-it)                    |
 | [Parameter Description](#parameter-description) |
 | [Donate](#donate)                               |
 | [License](#license)                             |
 
-
-## How to use it
-
-```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-<script src="./dist/bootstrap-modal-js.js"></script>
-
-<a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
-```
-
-OR
-
-```
-<a href="javascript:;" id="xx">text</a>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-<script src="./dist/bootstrap-modal-js.js"></script>
-<script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bootstrapModalJs(parameter);
-    }
-</script>
-```
-OR MORE
 
 
 ## How to install
@@ -118,6 +93,7 @@ OR
 ```
 cnpm i bootstrap-modal-js --save
 ```
+
 
 ## CDN
 
@@ -147,6 +123,33 @@ After the browser parses, get the latest version address
 https://unpkg.com/bootstrap-modal-js
 ```
 
+
+## How to use
+
+```
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
+<script src="./dist/bootstrap-modal-js.js"></script>
+
+<a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
+```
+
+OR
+
+```
+<a href="javascript:;" id="xx">text</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
+<script src="./dist/bootstrap-modal-js.js"></script>
+<script>
+    const xx = document.querySelector("#xx");
+    xx.addEventListener("click", function () {
+        bootstrapModalJs(parameter);
+    })
+</script>
+```
+OR MORE
+
+
 ## Parameter Description
 
 ```
@@ -155,9 +158,9 @@ bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongConten
 
 **Return Values**
 
-|   type   | such as       | Description          |
-|  :----:  | :------------:| :-------------------:|
-|  String  | 1552756356601 | modal element number |
+|  type  |    such as    |     Description      |
+|:------:|:-------------:|:--------------------:|
+| String | 1552756356601 | modal element number |
 
 ---
 
@@ -198,17 +201,17 @@ Default value: undefined
 
 Description:
 
-| parameter|
-| :-------:|
-| sm       |
-| lg       |
-| xl       |
-| full     |
-| full-sm  |
-| full-md  |
-| full-lg  |
-| full-xl  |
-| full-xxl |
+| parameter |
+|:---------:|
+|    sm     |
+|    lg     |
+|    xl     |
+|   full    |
+|  full-sm  |
+|  full-md  |
+|  full-lg  |
+|  full-xl  |
+| full-xxl  |
 
 ---
 - **VerticallyCentered**
@@ -219,10 +222,10 @@ Default value: false
 
 Description:
 
-| parameter|
-| :-------:|
-| true     |
-| false    |
+| parameter |
+|:---------:|
+|   true    |
+|   false   |
 
 ---
 - **LongContentType**
@@ -233,10 +236,10 @@ Default value: false
 
 Description:
 
-| parameter|
-| :-------:|
-| true     |
-| false    |
+| parameter |
+|:---------:|
+|   true    |
+|   false   |
 
 ---
 - **EventType**
@@ -247,12 +250,12 @@ Default value: undefined
 
 Description:
 
-| parameter|
-| :-------:|
-| show     |
-| shown    |
-| hide     |
-| hidden   |
+| parameter |
+|:---------:|
+|   show    |
+|   shown   |
+|   hide    |
+|  hidden   |
 
 ---
 - **CallbackFunction**
@@ -272,23 +275,23 @@ Default value:
 
 Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
 
-| parameter | default value (boolean) | other                 |
-| :-------: | :---------------------: | :-------------------: |
-| backdrop  | true                    | false &#124; "static" |
-| keyboard  | true                    | false                 |
-| focus     | true                    | false                 |
-| show      | true                    | false                 |
+| parameter | default value (boolean) |         other         |
+|:---------:|:-----------------------:|:---------------------:|
+| backdrop  |          true           | false &#124; "static" |
+| keyboard  |          true           |         false         |
+|   focus   |          true           |         false         |
+|   show    |          true           |         false         |
 
 ---
 
 ## Donate
 
-| Method (priority) | type                                                            |
-| :---------------- | :-------------------------------------------------------------: |
-| alipay （支付宝） | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
-| QQ                | [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)     |
-| WeChat （微信）   |                                                                 |
-| PayPal （贝宝）   | [PayPal.Me](https://www.paypal.me/ZhangChengLin)                |
+| Method (priority) |                              type                               |
+|:------------------|:---------------------------------------------------------------:|
+| alipay （支付宝）      | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
+| QQ                |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
+| WeChat （微信）       |                                                                 |
+| PayPal （贝宝）       |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
 
 ---
 
