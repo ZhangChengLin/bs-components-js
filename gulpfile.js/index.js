@@ -1,11 +1,9 @@
 const {src, dest, lastRun, watch, series, parallel} = require('gulp')
-const terser = require("gulp-terser")
 const rollup = require("rollup")
-const rename = require("gulp-rename");
 const npmDist = require('gulp-npm-dist')
 
-const rollupConfig = require('./rollup.config')
-const {paths} = require('./gulpfile.paths')
+const rollupConfig = require('../buildConfig/rollup.config')
+const {paths} = require('../buildConfig/paths')
 
 const npmDistConfig = {
   copyUnminified: true,
