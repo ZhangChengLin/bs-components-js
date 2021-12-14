@@ -14,11 +14,31 @@
         content="Bootstrap,Bootstrap5,Offcanvas,dynamic,backdrop,keyboard,scroll,getInstance,getOrCreateInstance,show.bs.offcanvas,shown.bs.offcanvas,hide.bs.offcanvas,hidden.bs.offcanvas">
 </head>
 <body>
-<div class="container"></div>
+<div class="container">
+  <div>
+    <button class="btn btn-outline-primary" type="button" id="offcanvas_left">offcanvas left</button>
+    <button class="btn btn-outline-primary" type="button" id="offcanvas_top">offcanvas top</button>
+    <button class="btn btn-outline-primary" type="button" id="offcanvas_right">offcanvas right</button>
+    <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom">offcanvas bottom</button>
+  </div>
+</div>
 <div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!--    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+  <script src="../dist/bootstrap-offcanvas-js.min.js"></script>
 </div>
+
+<script>
+  let btnList = document.querySelectorAll("[id^=offcanvas_]")
+  console.log(btnList);
+  btnList.forEach(currentBtn => {
+    console.log(currentBtn.textContent);
+    currentBtn.addEventListener('click', () => {
+      let x = bootstrapOffcanvasJs('11111111', '22222222222','end')
+      console.log('x== ', x);
+    })
+  })
+</script>
 
 </body>
 </html>

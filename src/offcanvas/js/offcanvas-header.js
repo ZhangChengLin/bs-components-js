@@ -9,6 +9,7 @@ const offcanvasHeader = (HeaderTitleElement) => {
   header.className = 'offcanvas-header'
 
   title.className = 'offcanvas-title'
+  title.id = 'offcanvasLabel'
   title.append(HeaderTitleElement)
 
   btn.className = 'btn-close text-reset'
