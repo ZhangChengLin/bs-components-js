@@ -15,11 +15,13 @@
 </head>
 <body>
 <div class="container">
-  <div>
-    <button class="btn btn-outline-primary" type="button" id="offcanvas_left">offcanvas left</button>
-    <button class="btn btn-outline-primary" type="button" id="offcanvas_top">offcanvas top</button>
-    <button class="btn btn-outline-primary" type="button" id="offcanvas_right">offcanvas right</button>
-    <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom">offcanvas bottom</button>
+  <div class="position-relative min-vh-100">
+    <div class="position-absolute top-50 start-50 translate-middle">
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_left" data-offcanvas-placement="start">offcanvas start</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_top" data-offcanvas-placement="top">offcanvas top</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_right" data-offcanvas-placement="end">offcanvas end</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">offcanvas bottom</button>
+    </div>
   </div>
 </div>
 <div>
@@ -34,7 +36,7 @@
   btnList.forEach(currentBtn => {
     console.log(currentBtn.textContent);
     currentBtn.addEventListener('click', () => {
-      let x = bootstrapOffcanvasJs('11111111', '22222222222','end')
+      let x = bootstrapOffcanvasJs(currentBtn.textContent, currentBtn.textContent,currentBtn.dataset['offcanvasPlacement'])
       console.log('x== ', x);
     })
   })
