@@ -15,12 +15,115 @@
 </head>
 <body>
 <div class="container">
+  <div class="my-5 p-3 border rounded">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+      <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <div class="small">
+        <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+      </div>
+    </div>
+    <div class="mb-3 p-2 border rounded">
+      <div class="mb-1">offcanvas-header</div>
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-success text-white" for="offcanvasTitle">offcanvas-title</label>
+        <input type="text" class="form-control" id="offcanvasTitle" placeholder="请输入标题" value="default title">
+      </div>
+    </div>
+
+    <div class="mb-3 p-2 border rounded">
+      <div class="mb-1">offcanvas-body</div>
+      <div class="input-group mb-3">
+        <label class="input-group-text bg-success text-white" for="offcanvasBody">offcanvas-body</label>
+        <input type="text" class="form-control" id="offcanvasBody" placeholder="请输入内容" value="default body">
+      </div>
+    </div>
+
+    <div class="mb-3 p-2 border rounded">
+      <div class="mb-1">
+        <div>placement</div>
+        <span class="small text-muted">Placed, null value defaults to 'start' </span>
+      </div>
+      <div class="form-check form-switch form-check-inline">
+        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_start" checked>
+        <label class="form-check-label" for="placement_start">start</label>
+      </div>
+      <div class="form-check form-switch form-check-inline">
+        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_top">
+        <label class="form-check-label" for="placement_top">top</label>
+      </div>
+      <div class="form-check form-switch form-check-inline">
+        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_end">
+        <label class="form-check-label" for="placement_end">end</label>
+      </div>
+      <div class="form-check form-switch form-check-inline">
+        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_bottom">
+        <label class="form-check-label" for="placement_bottom">bottom</label>
+      </div>
+    </div>
+
+    <div class="mb-3 p-2 border rounded">
+      <div class="mb-1">
+        <div>options</div>
+        <span class="small text-muted">The boolean value is true when it is turned on, and it is false when it is turned off</span>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
+        <div class="col">
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="radio" role="switch" name="backdrop_radio" id="backdrop_radio_true" checked>
+            <label class="form-check-label" for="backdrop_radio_true">true</label>
+          </div>
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="radio" role="switch" name="backdrop_radio" id="backdrop_radio_false">
+            <label class="form-check-label" for="backdrop_radio_false">false</label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
+        <div class="col">
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="radio" role="switch" name="keyboard_radio" id="keyboard_radio_true" checked>
+            <label class="form-check-label" for="keyboard_radio_true">true</label>
+          </div>
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="radio" role="switch" name="keyboard_radio" id="keyboard_radio_false">
+            <label class="form-check-label" for="keyboard_radio_false">false</label>
+          </div>
+        </div>
+      </div>
+      <div class="my-3 row">
+        <div class="col-4 col-sm-2 col-lg-1">scroll</div>
+        <div class="col">
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="radio" role="switch" name="scroll_radio" id="scroll_radio_true">
+            <label class="form-check-label" for="scroll_radio_true">true</label>
+          </div>
+          <div class="form-check form-switch form-check-inline">
+            <input class="form-check-input" type="radio" role="switch" name="scroll_radio" id="scroll_radio_false" checked>
+            <label class="form-check-label" for="scroll_radio_false">false</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <div class="position-relative min-vh-100">
     <div class="position-absolute top-50 start-50 translate-middle">
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_left" data-offcanvas-placement="start">offcanvas start</button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_top" data-offcanvas-placement="top">offcanvas top</button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_right" data-offcanvas-placement="end">offcanvas end</button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">offcanvas bottom</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_left" data-offcanvas-placement="start">
+        offcanvas start
+      </button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_top" data-offcanvas-placement="top">offcanvas
+        top
+      </button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_right" data-offcanvas-placement="end">
+        offcanvas end
+      </button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">
+        offcanvas bottom
+      </button>
     </div>
   </div>
 </div>
@@ -34,9 +137,9 @@
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
   console.log(btnList);
   btnList.forEach(currentBtn => {
-    console.log(currentBtn.textContent);
+    console.log(currentBtn.innerText);
     currentBtn.addEventListener('click', () => {
-      let x = bootstrapOffcanvasJs(currentBtn.textContent, currentBtn.textContent,currentBtn.dataset['offcanvasPlacement'])
+      let x = bootstrapOffcanvasJs(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
       console.log('x== ', x);
     })
   })
