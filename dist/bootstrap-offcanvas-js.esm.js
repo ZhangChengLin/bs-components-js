@@ -11,9 +11,9 @@
     * issues: https://github.com/ZhangChengLin/bootstrap-modal-js/issues
 */
 /**
- * @param {Node | string} HeaderTitleElement
+ * @param {Node|string} titleElement
  */
-const offcanvasHeader = (HeaderTitleElement) => {
+const offcanvasHeader = (titleElement) => {
   let header = document.createElement('div');
   let title = document.createElement('h5');
   let btn = document.createElement('button');
@@ -22,7 +22,7 @@ const offcanvasHeader = (HeaderTitleElement) => {
 
   title.className = 'offcanvas-title';
   title.id = 'offcanvasLabel';
-  title.append(HeaderTitleElement);
+  title.append(titleElement);
 
   btn.className = 'btn-close text-reset';
   btn.type = 'button';
@@ -34,20 +34,54 @@ const offcanvasHeader = (HeaderTitleElement) => {
 };
 
 /**
- * @param {Node | string} BodyContentElement
+ * @param {Node|string} contentElement
  */
-const offcanvasBody = (BodyContentElement) => {
+const offcanvasBody = (contentElement) => {
   let offcanvas_body = document.createElement('div');
 
   offcanvas_body.className = 'offcanvas-body';
 
-  offcanvas_body.append(BodyContentElement);
+  offcanvas_body.append(contentElement);
 
   return offcanvas_body
 };
 
 const getTimeString = () => {
   return new Date().getTime().toString()
+};
+
+
+/**
+ * @param {string} offcanvasId
+ * @param {string} eventName
+ * @param {function} eventFunction
+ */
+const offcanvasEvents = (offcanvasId, eventName, eventFunction) => {
+  const offcanvas = document.querySelector("#Offcanvas_" + offcanvasId);
+  switch (eventName) {
+    case "show":
+      offcanvas.addEventListener("show.bs.modal", function () {
+        return eventFunction();
+      });
+      break;
+    case "shown":
+      offcanvas.addEventListener("shown.bs.modal", function () {
+        return eventFunction();
+      });
+      break;
+    case "hide":
+      offcanvas.addEventListener("hide.bs.modal", function () {
+        return eventFunction();
+      });
+      break;
+    case "hidden":
+      offcanvas.addEventListener("hidden.bs.modal", function () {
+        return eventFunction();
+      });
+      break;
+    default:
+      throw 'eventName error'
+  }
 };
 
 /**
@@ -81,10 +115,25 @@ const offcanvas = (headerElement, bodyElement, placement = 'start') => {
   return _offcanvas
 };
 
-const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, CallbackFunction) => {
+/**
+ * @param {string} headerNodeElement
+ * @param {string} bodyNodeElement
+ * @param {string} Placement
+ * @param Options
+ * @param {string} EventType
+ * @param {Function} EventFunction
+ */
+const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
   let timeString = getTimeString();
 
-  document.body.append(offcanvas(headerNodeElement, bodyNodeElement, Placement));
+  let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement);
+  document.body.append(_offcanvas);
+
+  let x = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas);
+  x.show();
+
+  EventType && EventFunction ? offcanvasEvents(timeString, EventType, EventFunction) : '';
+
   return timeString
 };
 

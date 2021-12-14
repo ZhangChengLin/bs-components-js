@@ -1,17 +1,26 @@
 import offcanvas from "./offcanvas";
-import {getTimeString} from "./util/index";
+import {getTimeString, offcanvasEvents} from "./util/index";
 
 
 /**
  * @param {string} headerNodeElement
  * @param {string} bodyNodeElement
  * @param {string} Placement
- * @param {*} Options
+ * @param Options
+ * @param {string} EventType
+ * @param {Function} EventFunction
  */
-const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, CallbackFunction) => {
+const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
   let timeString = getTimeString()
 
-  document.body.append(offcanvas(headerNodeElement, bodyNodeElement, Placement, Options))
+  let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement)
+  document.body.append(_offcanvas)
+
+  let x = Options ? new bootstrap.Offcanvas(_offcanvas, Options) : new bootstrap.Offcanvas(_offcanvas)
+  x.show()
+
+  EventType && EventFunction ? offcanvasEvents(timeString, EventType, EventFunction) : ''
+
   return timeString
 };
 

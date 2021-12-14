@@ -1,7 +1,7 @@
 /**
- * @param {Node | string} HeaderTitleElement
+ * @param {Node|string} titleElement
  */
-const offcanvasHeader = (HeaderTitleElement) => {
+const offcanvasHeader = (titleElement) => {
   let header = document.createElement('div')
   let title = document.createElement('h5')
   let btn = document.createElement('button')
@@ -10,7 +10,7 @@ const offcanvasHeader = (HeaderTitleElement) => {
 
   title.className = 'offcanvas-title'
   title.id = 'offcanvasLabel'
-  title.append(HeaderTitleElement)
+  title.append(titleElement)
 
   btn.className = 'btn-close text-reset'
   btn.type = 'button'
