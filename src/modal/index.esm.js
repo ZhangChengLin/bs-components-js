@@ -1,1 +1,1 @@
-export {default as bootstrapModalJs} from "./bootstrap-modal-js";
+export {default as bootstrapModalJs} from "./js/bootstrap-modal-js";

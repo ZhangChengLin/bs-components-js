@@ -55,6 +55,7 @@
   },
   "files": [
     "dist/**/*.{js,css,map}",
+    "src/**/*.js",
     "gh-pages/*.html"
   ]
 }

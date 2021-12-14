@@ -1,3 +1,3 @@
-import bootstrapModalJs from "./bootstrap-modal-js";
+import bootstrapModalJs from "./js/bootstrap-modal-js";
 
 export default bootstrapModalJs
