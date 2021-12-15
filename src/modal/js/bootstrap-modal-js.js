@@ -1,46 +1,4 @@
-function removeBootstrapModalJs(modal_id) {
-  const modal_element = document.querySelector("#" + modal_id);
-  modal_element.addEventListener("hidden.bs.modal", function () {
-    let x = bootstrap.Modal.getInstance(modal_element);
-    x.dispose();
-    setTimeout(function () {
-      modal_element.parentElement.removeChild(modal_element);
-    }, 3e3);
-  });
-}
-
-function bootstrap_modal_js_events(modal_id, type, fun) {
-  const modal = document.querySelector("#" + modal_id);
-  switch (type) {
-    case "show":
-      modal.addEventListener("show.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "shown":
-      modal.addEventListener("shown.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hide":
-      modal.addEventListener("hide.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hidden":
-      modal.addEventListener("hidden.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hidePrevented":
-      modal.addEventListener("hidePrevented.bs.modal", function () {
-        return fun();
-      });
-      break;
-    default:
-      break;
-  }
-}
+import {removeBootstrapModalJs, bootstrap_modal_js_events} from "./util/index";
 
 const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) => {
   title = title ? (typeof title === "function" ? title() : (typeof title === "string" ? title : (typeof title === "object" ? title : ""))) : "";
@@ -135,7 +93,7 @@ const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, L
 
   modal_close_btn.className = "btn-close";
   modal_close_btn.type = "button";
-  modal_close_btn.setAttribute("data-bs-dismiss", "modal");
+  modal_close_btn.dataset['bsDismiss'] = 'modal';
   modal_close_btn.setAttribute("aria-label", "Close");
 
   modal_close_span.setAttribute("aria-hidden", "true");

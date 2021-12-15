@@ -85,16 +85,17 @@ const offcanvasEvents = (offcanvasId, eventName, eventFunction) => {
 };
 
 /**
- * @param {Node|string} headerElement
- * @param {Node|string} bodyElement
- * @param {string} placement
+ * @param {Node|string|null} headerElement
+ * @param {Node|string|null} bodyElement
+ * @param {string|null} placement
  */
-const offcanvas = (headerElement, bodyElement, placement = 'start') => {
+const offcanvas = (headerElement = null, bodyElement = null, placement) => {
   let _offcanvas = document.createElement('div');
   let header = offcanvasHeader(headerElement);
   let body = offcanvasBody(bodyElement);
   let timeString = getTimeString();
 
+  placement = placement ?? 'start';
   switch (placement) {
     case 'start':
     case 'top':
@@ -102,7 +103,7 @@ const offcanvas = (headerElement, bodyElement, placement = 'start') => {
     case 'bottom':
       break;
     default:
-      throw `placement 参数错误`
+    throw `placement 参数错误`
   }
 
   _offcanvas.className = `offcanvas offcanvas-${placement}`;
@@ -116,12 +117,12 @@ const offcanvas = (headerElement, bodyElement, placement = 'start') => {
 };
 
 /**
- * @param {string} headerNodeElement
- * @param {string} bodyNodeElement
+ * @param {string|null} headerNodeElement
+ * @param {string|null} bodyNodeElement
  * @param {string} Placement
- * @param Options
- * @param {string} EventType
- * @param {Function} EventFunction
+ * @param {object|null} Options
+ * @param {string|null} EventType
+ * @param {Function|null} EventFunction
  */
 const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
   let timeString = getTimeString();

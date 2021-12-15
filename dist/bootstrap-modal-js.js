@@ -147,7 +147,7 @@
 
     modal_close_btn.className = "btn-close";
     modal_close_btn.type = "button";
-    modal_close_btn.setAttribute("data-bs-dismiss", "modal");
+    modal_close_btn.dataset['bsDismiss'] = 'modal';
     modal_close_btn.setAttribute("aria-label", "Close");
 
     modal_close_span.setAttribute("aria-hidden", "true");

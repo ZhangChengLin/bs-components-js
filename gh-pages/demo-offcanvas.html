@@ -109,9 +109,11 @@
     </div>
 
   </div>
-
   <div class="position-relative min-vh-100">
     <div class="position-absolute top-50 start-50 translate-middle">
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_null">
+        offcanvas null
+      </button>
       <button class="btn btn-outline-primary" type="button" id="offcanvas_left" data-offcanvas-placement="start">
         offcanvas start
       </button>
@@ -127,12 +129,10 @@
     </div>
   </div>
 </div>
-<div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!--    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
-  <script src="../dist/bootstrap-offcanvas-js.min.js"></script>
-</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!--    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+<script src="../dist/bootstrap-offcanvas-js.min.js"></script>
 <script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
   console.log(btnList);
@@ -140,6 +140,7 @@
     console.log(currentBtn.innerText);
     currentBtn.addEventListener('click', () => {
       let x = bootstrapOffcanvasJs(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
+      console.log('placement ', currentBtn.dataset['offcanvasPlacement']);
       console.log('x== ', x);
     })
   })
