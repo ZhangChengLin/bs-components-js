@@ -28,8 +28,7 @@
       <div class="mb-1">offcanvas-header</div>
       <div class="input-group mb-3">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
-        <input type="text" class="form-control" id="offcanvasTitle"
-               placeholder="When empty, there will be no offcanvas header" value="default title">
+        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
       </div>
     </div>
 
@@ -37,8 +36,7 @@
       <div class="mb-1">offcanvas-body</div>
       <div class="input-group mb-3">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
-        <textarea class="form-control" rows="4" id="offcanvasBody"
-                  placeholder="Please enter content">default body</textarea>
+        <textarea class="form-control" rows="4" id="offcanvasBody" placeholder="Please enter content">default body</textarea>
       </div>
     </div>
 
@@ -84,12 +82,12 @@
         <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="backdrop_radio" value="1" id="backdrop_radio_true" checked>
-            <label class="form-check-label" for="backdrop_radio_true">true</label>
+            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="1" id="offcanvasBackdrop_true" checked>
+            <label class="form-check-label" for="offcanvasBackdrop_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="backdrop_radio" value="0" id="backdrop_radio_false">
-            <label class="form-check-label" for="backdrop_radio_false">false</label>
+            <input class="form-check-input" type="radio" name="offcanvasBackdrop" value="" id="offcanvasBackdrop_false">
+            <label class="form-check-label" for="offcanvasBackdrop_false">false</label>
           </div>
         </div>
       </div>
@@ -97,12 +95,12 @@
         <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="keyboard_radio" value="1" id="keyboard_radio_true" checked>
-            <label class="form-check-label" for="keyboard_radio_true">true</label>
+            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="1" id="offcanvasKeyboard_true" checked>
+            <label class="form-check-label" for="offcanvasKeyboard_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="keyboard_radio" value="0" id="keyboard_radio_false">
-            <label class="form-check-label" for="keyboard_radio_false">false</label>
+            <input class="form-check-input" type="radio" name="offcanvasKeyboard" value="" id="offcanvasKeyboard_false">
+            <label class="form-check-label" for="offcanvasKeyboard_false">false</label>
           </div>
         </div>
       </div>
@@ -110,12 +108,12 @@
         <div class="col-4 col-sm-2 col-lg-1">scroll</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="scroll_radio" value="1" id="scroll_radio_true">
-            <label class="form-check-label" for="scroll_radio_true">true</label>
+            <input class="form-check-input" type="radio" name="offcanvasScroll" value="1" id="offcanvasScroll_true">
+            <label class="form-check-label" for="offcanvasScroll_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="scroll_radio" value="0" id="scroll_radio_false" checked>
-            <label class="form-check-label" for="scroll_radio_false">false</label>
+            <input class="form-check-input" type="radio" name="offcanvasScroll" value="" id="offcanvasScroll_false" checked>
+            <label class="form-check-label" for="offcanvasScroll_false">false</label>
           </div>
         </div>
       </div>
@@ -141,10 +139,11 @@
   let renderOffcanvas = document.querySelector('#renderOffcanvas')
   renderOffcanvas.addEventListener('click', () => {
     let options = {
-      backdrop: true,
-      keyboard: false,
-      scroll: true
+      backdrop: getRadio('offcanvasBackdrop', 'bool'),
+      keyboard: getRadio('offcanvasKeyboard', 'bool'),
+      scroll: getRadio('offcanvasScroll', 'bool')
     }
+    console.log(options);
 
     let offcanvasTitle = document.querySelector('#offcanvasTitle')
     let offcanvasBody = document.querySelector('#offcanvasBody')
