@@ -1,28 +1,3 @@
-## bootstrap-modal-js
-
-Currently supports bootstrap v5.1.3
-
-
-support Bootstrap 5 components
-
-<a href="https://getbootstrap.com/docs/5.1/components/modal/" title="Modal" target="_blank">Modal</a>
-<a href="https://getbootstrap.com/docs/5.1/components/offcanvas/" title="Offcanvas" target="_blank">Offcanvas</a>
-
-Currently, relying on Bootstrap v5, because it is a function package of Bootstrap modal.
-
-Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
-
----
-
-If it helps you, please **star** this repository
-
----
-
-## Demo
-
-<a href="https://ZhangChengLin.github.io/bootstrap-modal-js/demo.html" target="_blank" title="bootstrap-modal-js DEMO">https://ZhangChengLin.github.io/bootstrap-modal-js/demo.html</a>
-
----
 
 <p align="center">
 <a href="https://github.com/ZhangChengLin/bootstrap-modal-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/bootstrap-modal-js.svg?style=social"></a>
@@ -69,218 +44,30 @@ If it helps you, please **star** this repository
 
 ---
 
-## Table of Contents
+## bootstrap-modal-js
 
-|                                                 |
-|:------------------------------------------------|
-| [How to install](#how-to-install)               |
-| [CDN](#cdn)                                     |
-| [How to use](#how-to-use-it)                    |
-| [Parameter Description](#parameter-description) |
-| [Donate](#donate)                               |
-| [License](#license)                             |
+Currently supports bootstrap v5.1.3
 
 
+support Bootstrap 5 components
 
-## How to install
+<a href="https://getbootstrap.com/docs/5.1/components/modal/" title="Modal" target="_blank">Modal</a>
+<a href="https://getbootstrap.com/docs/5.1/components/offcanvas/" title="Offcanvas" target="_blank">Offcanvas</a>
 
-```
-npm i bootstrap-modal-js --save
-```
+Currently, relying on Bootstrap v5, because it is a function package of Bootstrap modal.
 
-OR
-
-```
-cnpm i bootstrap-modal-js --save
-```
-
-
-## CDN
-
-- **jsDelivr**
-
-```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-```
-
-OR
-
-```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.js"></script>
-```
-
-- **UNPKG**
-
-View all versions
-
-```
-https://unpkg.com/bootstrap-modal-js/
-```
-
-After the browser parses, get the latest version address
-
-```
-https://unpkg.com/bootstrap-modal-js
-```
-
-
-## How to use
-
-```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-<script src="./dist/bootstrap-modal-js.js"></script>
-
-<a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
-```
-
-OR
-
-```
-<a href="javascript:;" id="xx">text</a>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-<script src="./dist/bootstrap-modal-js.js"></script>
-<script>
-    const xx = document.querySelector("#xx");
-    xx.addEventListener("click", function () {
-        bootstrapModalJs(parameter);
-    })
-</script>
-```
-OR MORE
-
-
-## Parameter Description
-
-```
-bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options)
-```
-
-**Return Values**
-
-|  type  |    such as    |     Description      |
-|:------:|:-------------:|:--------------------:|
-| String | 1552756356601 | modal element number |
+Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
 ---
 
-- **title**
-
-Type: String \| Function \| Function HTMLElement
-
-Default value: undefined
-
-Description: If you want to add a child element to the '.modal-header' element, use the Function HTMLElement.
-
-说明： 如果要向 ".modal-header" 元素添加子元素，请使用 Function HTMLElement。
+If it helps you, please **star** this repository
 
 ---
-- **body**
 
-Type: String \| Function \| Function HTMLElement
+## Demo
 
-Default value: undefined
+<a href="https://ZhangChengLin.github.io/bootstrap-modal-js/index.html" target="_blank" title="bootstrap-modal-js DEMO">https://ZhangChengLin.github.io/bootstrap-modal-js/index.html </a>
 
-Description:
-
----
-- **footer**
-
-Type: String \| Function \| Function HTMLElement
-
-Default value: undefined
-
-Description:
-
----
-- **ModalSizes**
-
-Type: String
-
-Default value: undefined
-
-Description:
-
-| parameter |
-|:---------:|
-|    sm     |
-|    lg     |
-|    xl     |
-|   full    |
-|  full-sm  |
-|  full-md  |
-|  full-lg  |
-|  full-xl  |
-| full-xxl  |
-
----
-- **VerticallyCentered**
-
-Type: Boolean
-
-Default value: false
-
-Description:
-
-| parameter |
-|:---------:|
-|   true    |
-|   false   |
-
----
-- **LongContentType**
-
-Type: Boolean
-
-Default value: false
-
-Description:
-
-| parameter |
-|:---------:|
-|   true    |
-|   false   |
-
----
-- **EventType**
-
-Type: String
-
-Default value: undefined
-
-Description:
-
-| parameter |
-|:---------:|
-|   show    |
-|   shown   |
-|   hide    |
-|  hidden   |
-
----
-- **CallbackFunction**
-
-Type: Function
-
-Default value: undefined
-
-Description:
-
----
-- **Options**
-
-Type: Object
-
-Default value:
-
-Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
-
-| parameter | default value (boolean) |         other         |
-|:---------:|:-----------------------:|:---------------------:|
-| backdrop  |          true           | false &#124; "static" |
-| keyboard  |          true           |         false         |
-|   focus   |          true           |         false         |
-|   show    |          true           |         false         |
 
 ---
 
