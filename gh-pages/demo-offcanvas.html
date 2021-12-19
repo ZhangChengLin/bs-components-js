@@ -16,7 +16,8 @@
 <body>
 <div class="container">
   <div class="alert alert-primary alert-dismissible fade show" role="alert">
-    <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
+    <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank"
+       title="GitHub">GitHub</a>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     <div class="small">
       <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
@@ -27,7 +28,8 @@
       <div class="mb-1">offcanvas-header</div>
       <div class="input-group mb-3">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
-        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
+        <input type="text" class="form-control" id="offcanvasTitle"
+               placeholder="When empty, there will be no offcanvas header" value="default title">
       </div>
     </div>
 
@@ -35,7 +37,8 @@
       <div class="mb-1">offcanvas-body</div>
       <div class="input-group mb-3">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
-        <textarea class="form-control" rows="4" id="offcanvasBody" placeholder="Please enter content">default body</textarea>
+        <textarea class="form-control" rows="4" id="offcanvasBody"
+                  placeholder="Please enter content">default body</textarea>
       </div>
     </div>
 
@@ -47,26 +50,26 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
         <div class="my-1 my-md-auto col">
           <div class="form-check">
-            <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_start" checked>
-            <label class="form-check-label" for="placement_start">start</label>
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="start" id="offcanvasPlacement_start" checked>
+            <label class="form-check-label" for="offcanvasPlacement_start">start</label>
           </div>
         </div>
         <div class="my-1 my-md-auto col">
           <div class="form-check">
-          <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_top">
-          <label class="form-check-label" for="placement_top">top</label>
-        </div>
-        </div>
-        <div class="my-1 my-md-auto col">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_end">
-            <label class="form-check-label" for="placement_end">end</label>
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="top" id="offcanvasPlacement_top">
+            <label class="form-check-label" for="offcanvasPlacement_top">top</label>
           </div>
         </div>
         <div class="my-1 my-md-auto col">
           <div class="form-check">
-            <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_bottom">
-            <label class="form-check-label" for="placement_bottom">bottom</label>
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="end" id="offcanvasPlacement_end">
+            <label class="form-check-label" for="offcanvasPlacement_end">end</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="offcanvasPlacement" value="bottom" id="offcanvasPlacement_bottom">
+            <label class="form-check-label" for="offcanvasPlacement_bottom">bottom</label>
           </div>
         </div>
       </div>
@@ -81,11 +84,11 @@
         <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" role="switch" name="backdrop_radio" id="backdrop_radio_true" checked>
+            <input class="form-check-input" type="radio" name="backdrop_radio" value="1" id="backdrop_radio_true" checked>
             <label class="form-check-label" for="backdrop_radio_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" role="switch" name="backdrop_radio" id="backdrop_radio_false">
+            <input class="form-check-input" type="radio" name="backdrop_radio" value="0" id="backdrop_radio_false">
             <label class="form-check-label" for="backdrop_radio_false">false</label>
           </div>
         </div>
@@ -94,11 +97,11 @@
         <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" role="switch" name="keyboard_radio" id="keyboard_radio_true" checked>
+            <input class="form-check-input" type="radio" name="keyboard_radio" value="1" id="keyboard_radio_true" checked>
             <label class="form-check-label" for="keyboard_radio_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" role="switch" name="keyboard_radio" id="keyboard_radio_false">
+            <input class="form-check-input" type="radio" name="keyboard_radio" value="0" id="keyboard_radio_false">
             <label class="form-check-label" for="keyboard_radio_false">false</label>
           </div>
         </div>
@@ -107,11 +110,11 @@
         <div class="col-4 col-sm-2 col-lg-1">scroll</div>
         <div class="col">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" role="switch" name="scroll_radio" id="scroll_radio_true">
+            <input class="form-check-input" type="radio" name="scroll_radio" value="1" id="scroll_radio_true">
             <label class="form-check-label" for="scroll_radio_true">true</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" role="switch" name="scroll_radio" id="scroll_radio_false" checked>
+            <input class="form-check-input" type="radio" name="scroll_radio" value="0" id="scroll_radio_false" checked>
             <label class="form-check-label" for="scroll_radio_false">false</label>
           </div>
         </div>
@@ -122,21 +125,11 @@
   </div>
   <div class="position-relative min-vh-100">
     <div class="position-absolute top-50 start-50 translate-middle">
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_null">
-        offcanvas null
-      </button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_left" data-offcanvas-placement="start">
-        offcanvas start
-      </button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_top" data-offcanvas-placement="top">offcanvas
-        top
-      </button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_right" data-offcanvas-placement="end">
-        offcanvas end
-      </button>
-      <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">
-        offcanvas bottom
-      </button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_null">offcanvas null</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_left" data-offcanvas-placement="start">offcanvas start</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_top" data-offcanvas-placement="top">offcanvas top</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_right" data-offcanvas-placement="end">offcanvas end</button>
+      <button class="btn btn-outline-primary" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">offcanvas bottom</button>
     </div>
   </div>
 </div>
@@ -152,8 +145,37 @@
       keyboard: false,
       scroll: true
     }
-    bootstrapOffcanvasJs('', 'xxx', null, options)
+
+    let offcanvasTitle = document.querySelector('#offcanvasTitle')
+    let offcanvasBody = document.querySelector('#offcanvasBody')
+
+    bootstrapOffcanvasJs(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
   })
+
+  function getRadio(name, returnType = 'val') {
+    let radio = document.querySelectorAll("[name='" + name + "']");
+    let radioValue;
+    let returnValue
+
+    for (let i = 0; i < radio.length; i++) {
+      if (radio[i].checked === true) {
+        radioValue = radio[i].value;
+        break;
+      }
+    }
+    switch (returnType) {
+      case "val":
+        returnValue = radioValue
+        break
+      case 'bool':
+      default:
+        returnValue = Boolean(radioValue)
+        break
+    }
+
+    return returnValue;
+  }
+
 </script>
 <script>
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
