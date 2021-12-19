@@ -44,21 +44,31 @@
         <div>placement</div>
         <span class="small text-muted">Placed, null value defaults to 'start' </span>
       </div>
-      <div class="form-check form-switch form-check-inline">
-        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_start" checked>
-        <label class="form-check-label" for="placement_start">start</label>
-      </div>
-      <div class="form-check form-switch form-check-inline">
-        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_top">
-        <label class="form-check-label" for="placement_top">top</label>
-      </div>
-      <div class="form-check form-switch form-check-inline">
-        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_end">
-        <label class="form-check-label" for="placement_end">end</label>
-      </div>
-      <div class="form-check form-switch form-check-inline">
-        <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_bottom">
-        <label class="form-check-label" for="placement_bottom">bottom</label>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_start" checked>
+            <label class="form-check-label" for="placement_start">start</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+          <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_top">
+          <label class="form-check-label" for="placement_top">top</label>
+        </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_end">
+            <label class="form-check-label" for="placement_end">end</label>
+          </div>
+        </div>
+        <div class="my-1 my-md-auto col">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" role="switch" name="placement_radio" id="placement_bottom">
+            <label class="form-check-label" for="placement_bottom">bottom</label>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -70,11 +80,11 @@
       <div class="my-3 row">
         <div class="col-4 col-sm-2 col-lg-1">backdrop</div>
         <div class="col">
-          <div class="form-check form-switch form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" role="switch" name="backdrop_radio" id="backdrop_radio_true" checked>
             <label class="form-check-label" for="backdrop_radio_true">true</label>
           </div>
-          <div class="form-check form-switch form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" role="switch" name="backdrop_radio" id="backdrop_radio_false">
             <label class="form-check-label" for="backdrop_radio_false">false</label>
           </div>
@@ -83,11 +93,11 @@
       <div class="my-3 row">
         <div class="col-4 col-sm-2 col-lg-1">keyboard</div>
         <div class="col">
-          <div class="form-check form-switch form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" role="switch" name="keyboard_radio" id="keyboard_radio_true" checked>
             <label class="form-check-label" for="keyboard_radio_true">true</label>
           </div>
-          <div class="form-check form-switch form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" role="switch" name="keyboard_radio" id="keyboard_radio_false">
             <label class="form-check-label" for="keyboard_radio_false">false</label>
           </div>
@@ -96,11 +106,11 @@
       <div class="my-3 row">
         <div class="col-4 col-sm-2 col-lg-1">scroll</div>
         <div class="col">
-          <div class="form-check form-switch form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" role="switch" name="scroll_radio" id="scroll_radio_true">
             <label class="form-check-label" for="scroll_radio_true">true</label>
           </div>
-          <div class="form-check form-switch form-check-inline">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" role="switch" name="scroll_radio" id="scroll_radio_false" checked>
             <label class="form-check-label" for="scroll_radio_false">false</label>
           </div>
@@ -108,6 +118,7 @@
       </div>
     </div>
 
+    <button class="my-4 mx-auto d-block btn btn-outline-primary" type="button">Render Offcanvas effect</button>
   </div>
   <div class="position-relative min-vh-100">
     <div class="position-absolute top-50 start-50 translate-middle">
