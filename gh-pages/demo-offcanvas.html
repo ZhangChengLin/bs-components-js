@@ -25,14 +25,14 @@
   <div class="py-4 container border rounded">
     <div class="my-4 p-4 border rounded">
       <div class="mb-1">offcanvas-header</div>
-      <div class="input-group mb-3">
+      <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
         <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
       </div>
     </div>
     <div class="my-4 p-4 border rounded">
       <div class="mb-1">offcanvas-body</div>
-      <div class="input-group mb-3">
+      <div class="input-group">
         <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
         <textarea class="form-control" rows="4" id="offcanvasBody" placeholder="Please enter content">default body </textarea>
       </div>
@@ -110,6 +110,58 @@
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="offcanvasScroll" value="" id="offcanvasScroll_false" checked>
             <label class="form-check-label" for="offcanvasScroll_false">false</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-4 p-4 border rounded">
+      <div class="d-flex flex-column flex-md-row gap-2 gap-sm-3 gap-md-4">
+        <div>
+          <div class="mb-1">
+            <div>Event Type</div>
+            <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="start" id="offcanvasEvents_start">
+                <label class="form-check-label" for="offcanvasEvents_start">show</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="top" id="offcanvasEvents_top">
+                <label class="form-check-label" for="offcanvasEvents_top">shown</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="end" id="offcanvasEvents_end">
+                <label class="form-check-label" for="offcanvasEvents_end">hide</label>
+              </div>
+            </div>
+            <div class="my-1 my-md-auto col">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="offcanvasEvents" value="bottom" id="offcanvasEvents_bottom">
+                <label class="form-check-label" for="offcanvasEvents_bottom">hidden</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="d-block d-md-none dropdown-divider border-light"></span>
+        <span class="d-none d-md-block vr bg-white"></span>
+        <div>
+          <div class="mb-1">
+            <div>Event Function</div>
+            <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
+          </div>
+          <div class="input-group">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="eventFunctions">Functions</label>
+            <select class="form-select" id="eventFunctions">
+              <option selected>Choose...</option>
+              <option value="eventFun_1">Event Function 1</option>
+              <option value="eventFun_2">Event Function 2</option>
+            </select>
           </div>
         </div>
       </div>
