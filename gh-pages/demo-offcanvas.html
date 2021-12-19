@@ -15,27 +15,27 @@
 </head>
 <body>
 <div class="container">
-  <div class="my-5 p-3 border rounded">
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-      <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      <div class="small">
-        <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
-      </div>
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="small">
+      <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
     </div>
+  </div>
+  <div class="my-5 p-3 border rounded">
     <div class="mb-3 p-2 border rounded">
       <div class="mb-1">offcanvas-header</div>
       <div class="input-group mb-3">
-        <label class="input-group-text bg-success text-white" for="offcanvasTitle">offcanvas-title</label>
-        <input type="text" class="form-control" id="offcanvasTitle" placeholder="请输入标题" value="default title">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasTitle">offcanvas-title</label>
+        <input type="text" class="form-control" id="offcanvasTitle" placeholder="When empty, there will be no offcanvas header" value="default title">
       </div>
     </div>
 
     <div class="mb-3 p-2 border rounded">
       <div class="mb-1">offcanvas-body</div>
       <div class="input-group mb-3">
-        <label class="input-group-text bg-success text-white" for="offcanvasBody">offcanvas-body</label>
-        <input type="text" class="form-control" id="offcanvasBody" placeholder="请输入内容" value="default body">
+        <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="offcanvasBody">offcanvas-body</label>
+        <textarea class="form-control" rows="4" id="offcanvasBody" placeholder="Please enter content">default body</textarea>
       </div>
     </div>
 
@@ -137,7 +137,6 @@
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
   console.log(btnList);
   btnList.forEach(currentBtn => {
-    console.log(currentBtn.innerText);
     currentBtn.addEventListener('click', () => {
       let x = bootstrapOffcanvasJs(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
       console.log('placement ', currentBtn.dataset['offcanvasPlacement']);

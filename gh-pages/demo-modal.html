@@ -25,25 +25,26 @@
 </head>
 <body>
 <div class="container">
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <a class="alert-link small" href="https://zhangchenglin.github.io/bootstrap-modal-js/" target="_blank" title="GitHub">GitHub</a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div class="small">
+      <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
+    </div>
+  </div>
   <div class="my-5 p-3 border rounded">
-    <a class="my-2 btn btn-block btn-outline-secondary" href="https://zhangchenglin.github.io/bootstrap-modal-js/"
-       target="_blank" title="How To Use">How To Use</a>
     <div class="mb-3 p-2 border rounded">
-      <label for="title">标题</label>
       <label for="title">title</label>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success text-white">title</span>
-        <input type="text" class="form-control border-success" id="title" placeholder="请输入标题"
-               value="default title">
+        <input type="text" class="form-control border-success" id="title" placeholder="When empty, there will be no offcanvas header" value="default title">
       </div>
       <div class="mb-2 custom-control custom-switch">
         <input type="checkbox" class="form-check-input" id="titleFunctionSwitch">
-        <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.
-          （使用函数控制title内容）</label>
+        <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success text-white" for="titleFunctionSelect">Function
-          Examples</label>
+        <label class="input-group-text bg-success text-white" for="titleFunctionSelect">Function Examples</label>
         <select class="form-select border-success" id="titleFunctionSelect">
           <option class="form-select-lg" value="return_title" selected>return_title</option>
           <option class="form-select-lg" value="return_body">return_body</option>
@@ -55,22 +56,18 @@
     </div>
 
     <div class="mb-3 p-2 border rounded">
-      <label for="body">内容</label>
       <label for="body">body</label>
-      <div>测试长内容的时候请增加body的内容来查看效果。</div>
       <div>When testing long content, please increase the content of the body to see the effect.</div>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success text-white">body</span>
-        <textarea rows="4" class="form-control border-success" id="body" placeholder="请输入正文内容">this is default body content.</textarea>
+        <textarea rows="4" class="form-control border-success" id="body" placeholder="Please enter content">this is default body content.</textarea>
       </div>
       <div class="mb-2 custom-control custom-switch">
         <input type="checkbox" class="form-check-input" id="bodyFunctionSwitch">
-        <label class="form-check-label" for="bodyFunctionSwitch">Use
-          Function control body content. （使用函数控制body内容）</label>
+        <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success text-white" for="bodyFunctionSelect">Function
-          Examples</label>
+        <label class="input-group-text bg-success text-white" for="bodyFunctionSelect">Function Examples</label>
         <select class="form-select border-success" id="bodyFunctionSelect">
           <option class="form-select-lg" value="return_title">return_title</option>
           <option class="form-select-lg" value="return_body" selected>return_body</option>
@@ -82,11 +79,10 @@
     </div>
 
     <div class="mb-3 p-2 border rounded">
-      <label for="footer">底部</label>
       <label for="footer">footer</label>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success text-white">footer</span>
-        <textarea rows="9" class="form-control border-success" id="footer" placeholder="请输入底部内容">
+        <textarea rows="9" class="form-control border-success" id="footer" placeholder="Please enter content">
 <div>
 <div>this is some code. footer is built with<a href="https://getbootstrap.com/docs/4.3/utilities/flex/" target="_blank">&nbsp;flexbox</a>
 </div>
@@ -97,12 +93,10 @@
       </div>
       <div class="mb-2 custom-control custom-switch">
         <input type="checkbox" class="form-check-input" id="footerFunctionSwitch">
-        <label class="form-check-label" for="footerFunctionSwitch">Use
-          Function control footer content. （使用函数控制footer内容）</label>
+        <label class="form-check-label" for="footerFunctionSwitch">Use Function control footer content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
-        <label class="input-group-text bg-success text-white" for="footerFunctionSelect">Function
-          Examples</label>
+        <label class="input-group-text bg-success text-white" for="footerFunctionSelect">Function Examples</label>
         <select class="form-select border-success" id="footerFunctionSelect">
           <option class="form-select-lg" value="return_title">return_title</option>
           <option class="form-select-lg" value="return_body">return_body</option>
@@ -114,7 +108,6 @@
     </div>
 
     <div class="mb-3 p-2 border rounded">
-      <div>模态框尺寸</div>
       <div>ModalSizes</div>
       <div class="input-group">
         <label class="input-group-text bg-success text-white" for="ModalSizes">ModalSizes</label>
@@ -135,82 +128,59 @@
 
     <div class="d-lg-flex justify-content-around">
       <div class="mb-3 p-3 border border-secondary rounded">
-        <div>模态框垂直居中</div>
         <div>VerticallyCentered</div>
         <div class="custom-control custom-radio form-check-inline">
-          <input class="form-check-input" type="radio" name="VerticallyCentered"
-                 id="VerticallyCentered_true"
-                 value="1">
-          <label class="form-check-label" for="VerticallyCentered_true"
-                 title="true"> true </label>
+          <input class="form-check-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_true" value="1">
+          <label class="form-check-label" for="VerticallyCentered_true" title="true"> true </label>
         </div>
         <div class="custom-control custom-radio form-check-inline">
-          <input class="form-check-input" type="radio" name="VerticallyCentered"
-                 id="VerticallyCentered_false"
-                 value="">
-          <label class="form-check-label" for="VerticallyCentered_false"
-                 title="default"> false </label>
+          <input class="form-check-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_false" value="">
+          <label class="form-check-label" for="VerticallyCentered_false" title="default"> false </label>
         </div>
       </div>
 
       <div class="mb-3 p-3 border border-secondary rounded">
-        <div>长内容滚动方式</div>
         <div>LongContentType</div>
         <div class="custom-control custom-radio form-check-inline">
-          <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_true"
-                 value="1">
-          <label class="form-check-label" for="LongContentType_true"
-                 title="true"> true </label>
+          <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_true" value="1">
+          <label class="form-check-label" for="LongContentType_true" title="true"> true </label>
         </div>
         <div class="custom-control custom-radio form-check-inline">
-          <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_false"
-                 value="">
-          <label class="form-check-label" for="LongContentType_false"
-                 title="default"> false </label>
+          <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_false" value="">
+          <label class="form-check-label" for="LongContentType_false" title="default"> false </label>
         </div>
       </div>
     </div>
 
     <div class="mb-3 p-3 d-lg-flex justify-content-around border border-secondary rounded">
       <div class="p-3 border rounded">
-        <div>事件类型</div>
-        <span class="d-block">如果使用的时候，EventType 和 CallbackFunction 必须同时存在</span>
         <div>EventType</div>
         <span class="d-block">EventType and CallbackFunction must exist at the same time if used</span>
         <div class="mb-2 custom-control custom-radio form-check-inline">
           <input class="form-check-input" type="radio" name="EventType" id="EventType_show" value="show">
-          <label class="form-check-label" for="EventType_show"
-                 title="show.bs.modal"> show </label>
+          <label class="form-check-label" for="EventType_show" title="show.bs.modal"> show </label>
         </div>
         <div class="mb-2 custom-control custom-radio form-check-inline">
-          <input class="form-check-input" type="radio" name="EventType" id="EventType_shown"
-                 value="shown">
-          <label class="form-check-label" for="EventType_shown"
-                 title="shown.bs.modal"> shown </label>
+          <input class="form-check-input" type="radio" name="EventType" id="EventType_shown" value="shown">
+          <label class="form-check-label" for="EventType_shown" title="shown.bs.modal"> shown </label>
         </div>
         <div class="mb-2 custom-control custom-radio form-check-inline">
           <input class="form-check-input" type="radio" name="EventType" id="EventType_hide" value="hide">
-          <label class="form-check-label" for="EventType_hide"
-                 title="hide.bs.modal"> hide </label>
+          <label class="form-check-label" for="EventType_hide" title="hide.bs.modal"> hide </label>
         </div>
         <div class="mb-2 custom-control custom-radio form-check-inline">
           <input class="form-check-input" type="radio" name="EventType" id="EventType_hidden" value="hidden">
-          <label class="form-check-label" for="EventType_hidden"
-                 title="hidden.bs.modal"> hidden </label>
+          <label class="form-check-label" for="EventType_hidden" title="hidden.bs.modal"> hidden </label>
         </div>
         <div class="mb-2 custom-control custom-radio form-check-inline">
-          <input class="form-check-input" type="radio" name="EventType" id="EventType_hidePrevented"
-                 value="hidePrevented">
-          <label class="form-check-label" for="EventType_hidePrevented" title="hidePrevented.bs.modal">
-            hidePrevented </label>
+          <input class="form-check-input" type="radio" name="EventType" id="EventType_hidePrevented" value="hidePrevented">
+          <label class="form-check-label" for="EventType_hidePrevented" title="hidePrevented.bs.modal">hidePrevented </label>
         </div>
       </div>
 
 
       <div class="p-3 border rounded">
         <div>
-          <span class="d-block">事件回调函数</span>
-          <span class="d-block">如果使用的时候，EventType 和 CallbackFunction 必须同时存在</span>
           <span class="d-block">CallbackFunction</span>
           <span class="d-block">EventType and CallbackFunction must exist at the same time if used</span>
         </div>
@@ -228,7 +198,6 @@
     </div>
 
     <div class="mb-3 p-3 border border-secondary rounded">
-      <div>选项</div>
       <div>Options</div>
       <div class="my-1 p-2">
         <div class="form-check form-switch form-check-inline">
@@ -258,7 +227,6 @@
 
     <div>
       <hr class="mt-5 border border-dark">
-      <span class="d-block">CallbackFunction代码示例</span>
       <span class="d-block">CallbackFunction code example</span>
       <div class="input-group">
 <textarea rows="21" class="form-control" disabled readonly aria-label="Functions Raw Code">
