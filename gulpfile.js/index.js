@@ -1,4 +1,4 @@
-const {src, dest, lastRun, watch, series, parallel} = require('gulp')
+const {src, dest} = require('gulp')
 const npmDist = require('gulp-npm-dist')
 
 const paths = require('../buildConfig/paths')
