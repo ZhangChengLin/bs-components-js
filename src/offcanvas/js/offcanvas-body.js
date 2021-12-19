@@ -6,7 +6,7 @@ const offcanvasBody = (contentElement) => {
 
   offcanvas_body.className = 'offcanvas-body'
 
-  offcanvas_body.append(contentElement)
+  contentElement instanceof HTMLElement ? offcanvas_body.append(contentElement) : offcanvas_body.innerHTML = contentElement
 
   return offcanvas_body
 }

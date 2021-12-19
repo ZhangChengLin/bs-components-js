@@ -10,7 +10,7 @@ const offcanvasHeader = (titleElement) => {
 
   title.className = 'offcanvas-title'
   title.id = 'offcanvasLabel'
-  title.append(titleElement)
+  titleElement instanceof HTMLElement ? title.append(titleElement) : title.innerHTML = titleElement
 
   btn.className = 'btn-close text-reset'
   btn.type = 'button'

@@ -22,7 +22,7 @@ const offcanvasHeader = (titleElement) => {
 
   title.className = 'offcanvas-title';
   title.id = 'offcanvasLabel';
-  title.append(titleElement);
+  titleElement instanceof HTMLElement ? title.append(titleElement) : title.innerHTML = titleElement;
 
   btn.className = 'btn-close text-reset';
   btn.type = 'button';
@@ -41,7 +41,7 @@ const offcanvasBody = (contentElement) => {
 
   offcanvas_body.className = 'offcanvas-body';
 
-  offcanvas_body.append(contentElement);
+  contentElement instanceof HTMLElement ? offcanvas_body.append(contentElement) : offcanvas_body.innerHTML = contentElement;
 
   return offcanvas_body
 };

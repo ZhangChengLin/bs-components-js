@@ -37,7 +37,7 @@
       <label for="title">title</label>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success text-white">title</span>
-        <input type="text" class="form-control border-success" id="title" placeholder="When empty, there will be no offcanvas header" value="default title">
+        <input type="text" class="form-control border-success" id="title" placeholder="When empty, there will be no modal header" value="default title">
       </div>
       <div class="mb-2 custom-control custom-switch">
         <input type="checkbox" class="form-check-input" id="titleFunctionSwitch">
@@ -355,7 +355,11 @@ function return_Fun_HTML_Element() {
       const obj = {};
       for (const i of arr) {
         const dom = document.querySelector("#" + i);
-        dom.checked ? obj[i] = true : (dom.id !== 'backdrop' ? obj[i] = false : obj[i] = get_backdrop_static_checkbox_value());
+        dom.checked
+          ? obj[i] = true
+          : dom.id !== 'backdrop'
+            ? obj[i] = false
+            : obj[i] = get_backdrop_static_checkbox_value();
       }
       return obj;
     }

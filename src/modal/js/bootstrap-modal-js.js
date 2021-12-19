@@ -1,15 +1,27 @@
 import {removeBootstrapModalJs, bootstrap_modal_js_events} from "./util/index";
 
 const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) => {
-  title = title ? (typeof title === "function" ? title() : (typeof title === "string" ? title : (typeof title === "object" ? title : ""))) : "";
-  body = body ? (typeof body === "function" ? body() : (typeof body === "string" ? body : (typeof body === "object" ? body : ""))) : "";
-  footer = footer ? (typeof footer === "function" ? footer() : (typeof footer === "string" ? footer : (typeof footer === "object" ? footer : ""))) : "";
-  ModalSizes = (ModalSizes && typeof ModalSizes !== "undefined" && typeof ModalSizes !== "boolean") ? ModalSizes : "default";
-  VerticallyCentered = (VerticallyCentered && typeof VerticallyCentered === "boolean") ? VerticallyCentered : false;
-  LongContentType = (LongContentType && typeof LongContentType === "boolean") ? LongContentType : false;
-  EventType = (EventType && typeof EventType === "string") ? EventType : "";
-  CallbackFunction = (CallbackFunction && typeof CallbackFunction === "function") ? CallbackFunction : "";
-  Options = Options ? (typeof Options === "function" ? Options() : Options) : "";
+  title = typeof title === 'function'
+    ? title()
+    : typeof title === 'string'
+      ? title
+      : '';
+  body = typeof body === 'function'
+    ? body()
+    : typeof body === 'string'
+      ? body
+      : '';
+  footer = typeof footer === 'function'
+    ? footer()
+    : typeof footer === 'string'
+      ? footer
+      : '';
+  ModalSizes = typeof ModalSizes === "string" ? ModalSizes : "default";
+  VerticallyCentered = typeof VerticallyCentered === "boolean" ? VerticallyCentered : false;
+  LongContentType = typeof LongContentType === "boolean" ? LongContentType : false;
+  EventType = typeof EventType === "string" ? EventType : "";
+  CallbackFunction = typeof CallbackFunction === "function" ? CallbackFunction : "";
+  Options = typeof Options === "object" ? Options : "";
 
   const document_body = document.querySelector("body");
   const TimeID = new Date().getTime().toString();
