@@ -64,7 +64,6 @@
   },
   "files": [
     "dist/**/*.{js,css,map}",
-    "src/**/*.js",
-    "docs/**/*"
+    "src/**/*.js"
   ]
 }
