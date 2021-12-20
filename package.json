@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ZhangChengLin/bootstrap-modal-js.git"
+    "url": "git@github.com:ZhangChengLin/bs-components-js.git"
   },
-  "github": "https://github.com/ZhangChengLin/bootstrap-modal-js",
+  "github": "https://github.com/ZhangChengLin/bs-components-js",
   "bugs": {
-    "url": "https://github.com/ZhangChengLin/bootstrap-modal-js/issues"
+    "url": "https://github.com/ZhangChengLin/bs-components-js/issues"
   },
   "keywords": [
     "bootstrap",
