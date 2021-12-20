@@ -13,7 +13,7 @@
 |:------------------------------------------------|
 | [How to install](#how-to-install)               |
 | [CDN](#cdn)                                     |
-| [How to use](#how-to-use-it)                    |
+| [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
 
 

@@ -44,9 +44,9 @@
 
 ---
 
-## bootstrap-modal-js
+## bs-components-js
 
-Currently supports bootstrap v5.1.3
+Currently, supports bootstrap v5.x
 
 
 support Bootstrap 5 components
@@ -74,11 +74,11 @@ If it helps you, please **star** this repository
 ## Donate
 
 | Method (priority) |                              type                               |
-|:------------------|:---------------------------------------------------------------:|
-| alipay （支付宝）      | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
-| QQ                |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
-| WeChat （微信）       |                                                                 |
-| PayPal （贝宝）       |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
+|:-----------------:|:---------------------------------------------------------------:|
+|   alipay （支付宝）    | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
+|        QQ         |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
+|    PayPal （贝宝）    |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
+|    WeChat （微信）    ||
 
 ---
 
