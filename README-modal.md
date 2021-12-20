@@ -2,7 +2,7 @@
 #bootstrapModalJs
 
 ## Demo
-<a href="https://ZhangChengLin.github.io/bootstrap-modal-js/demo-modal.html" target="_blank" title="bootstrap-modal-js DEMO">https://ZhangChengLin.github.io/bootstrap-modal-js/demo.html </a>
+<a href="https://ZhangChengLin.github.io/bs-components-js/demo-modal.html" target="_blank" title="bs-components-js DEMO">https://ZhangChengLin.github.io/bs-components-js/demo.html </a>
 
 ---
 ## Table of Contents
@@ -19,13 +19,13 @@
 ## How to install
 
 ```
-npm i bootstrap-modal-js --save
+npm i bs-components-js --save
 ```
 
 OR
 
 ```
-cnpm i bootstrap-modal-js --save
+cnpm i bs-components-js --save
 ```
 
 
@@ -34,13 +34,13 @@ cnpm i bootstrap-modal-js --save
 - **jsDelivr**
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
 ```
 
 View all versions
 
 ```
-https://cdn.jsdelivr.net/npm/bootstrap-modal-js/
+https://cdn.jsdelivr.net/npm/bs-components-js/
 ```
 
 
@@ -49,21 +49,21 @@ https://cdn.jsdelivr.net/npm/bootstrap-modal-js/
 View all versions
 
 ```
-https://unpkg.com/bootstrap-modal-js/
+https://unpkg.com/bs-components-js/
 ```
 
 After the browser parses, get the latest version address
 
 ```
-https://unpkg.com/bootstrap-modal-js
+https://unpkg.com/bs-components-js
 ```
 
 
 ## How to use
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-<script src="./dist/bootstrap-modal-js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
+<script src="./dist/bs-components-js.js"></script>
 
 <a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
 ```
@@ -73,8 +73,8 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-modal-js/dist/bootstrap-modal-js.min.js"></script>
-<script src="./dist/bootstrap-modal-js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
+<script src="./dist/bs-components-js.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
