@@ -2,7 +2,7 @@
 
 ## Demo
 
-[https://ZhangChengLin.github.io/bs-components-js/demo-modal.html]()
+[https://ZhangChengLin.github.io/bs-components-js/demo-modal.html](https://ZhangChengLin.github.io/bs-components-js/demo-modal.html)
 
 
 ---
