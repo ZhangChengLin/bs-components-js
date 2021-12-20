@@ -147,4 +147,4 @@
   return bootstrapOffcanvasJs;
 
 }));
-//# sourceMappingURL=bootstrap-offcanvas-js.js.map
+//# sourceMappingURL=bs-offcanvas-js.js.map

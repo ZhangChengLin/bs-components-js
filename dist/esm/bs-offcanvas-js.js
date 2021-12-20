@@ -139,4 +139,4 @@ const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Opt
 };
 
 export { bootstrapOffcanvasJs };
-//# sourceMappingURL=bootstrap-offcanvas-js.esm.js.map
+//# sourceMappingURL=bs-offcanvas-js.js.map

@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <link rel="icon" href="../docs/assets/img/favicons/favicon.ico">
-  <link rel="stylesheet" href="../docs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../docs/assets/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/styles/atom-one-dark.min.css">
   <title>Modal demo</title>
   <meta name="description"
@@ -30,7 +30,7 @@
   <div class="small">
     <span class="small text-muted">If you are not a novice, you can click the link above for more detailed information.</span>
   </div>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  <button aria-label="Close" class="btn-close" data-bs-dismiss="alert" type="button"></button>
 </div>
 <div class="py-sm-5 min-vh-100 bg-primary bg-opacity-50">
   <div class="py-4 container border rounded">
@@ -38,10 +38,10 @@
       <label for="title">title</label>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">modal-title</span>
-        <input type="text" class="form-control border-success" id="title" placeholder="When empty, there will be no modal header" value="default title">
+        <input type="text" class="form-control" id="title" placeholder="When empty, there will be no modal header" value="default title">
       </div>
-      <div class="mb-2 custom-control custom-switch">
-        <input type="checkbox" class="form-check-input" id="titleFunctionSwitch">
+      <div class="mb-2 form-check form-switch">
+        <input class="form-check-input" id="titleFunctionSwitch" role="switch" type="checkbox">
         <label class="form-check-label" for="titleFunctionSwitch">Use Function control title content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
@@ -60,10 +60,10 @@
       <div>When testing long content, please increase the content of the body to see the effect.</div>
       <div class="input-group mb-3">
         <span class="input-group-text bg-success bg-gradient text-opacity-50 text-white">body</span>
-        <textarea rows="4" class="form-control" id="body" placeholder="Please enter content">this is default body content.</textarea>
+        <textarea class="form-control" id="body" placeholder="Please enter content" rows="4">this is default body content.</textarea>
       </div>
-      <div class="mb-2 custom-control custom-switch">
-        <input type="checkbox" class="form-check-input" id="bodyFunctionSwitch">
+      <div class="mb-2 form-check form-switch">
+        <input class="form-check-input" id="bodyFunctionSwitch" role="switch" type="checkbox">
         <label class="form-check-label" for="bodyFunctionSwitch">Use Function control body content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
@@ -90,8 +90,8 @@
 <button type="button" class="btn btn-primary" onclick="alert('Saved');">Save changes</button>
 </div></textarea>
       </div>
-      <div class="mb-2 custom-control custom-switch">
-        <input type="checkbox" class="form-check-input" id="footerFunctionSwitch">
+      <div class="mb-2 form-check form-switch">
+        <input class="form-check-input" id="footerFunctionSwitch" role="switch" type="checkbox">
         <label class="form-check-label" for="footerFunctionSwitch">Use Function control footer content.</label>
       </div>
       <div class="w-75 input-group mb-3 d-none">
@@ -119,7 +119,7 @@
           <option value="modal-fullscreen-md-down">modal-fullscreen-md-down</option>
           <option value="modal-fullscreen-lg-down">modal-fullscreen-lg-down</option>
           <option value="modal-fullscreen-xl-down">modal-fullscreen-xl-down</option>
-          <option value="custom" disabled>custom (disabled)</option>
+          <option disabled value="custom">custom (disabled)</option>
         </select>
       </div>
     </div>
@@ -129,11 +129,11 @@
         <span class="small text-muted"></span>
       </div>
       <div class="custom-control custom-radio form-check-inline">
-        <input class="form-check-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_true" value="1">
+        <input class="form-check-input" id="VerticallyCentered_true" name="VerticallyCentered" type="radio" value="1">
         <label class="form-check-label" for="VerticallyCentered_true" title="true"> true </label>
       </div>
       <div class="custom-control custom-radio form-check-inline">
-        <input class="form-check-input" type="radio" name="VerticallyCentered" id="VerticallyCentered_false" value="">
+        <input checked class="form-check-input" id="VerticallyCentered_false" name="VerticallyCentered" type="radio" value="">
         <label class="form-check-label" for="VerticallyCentered_false" title="default"> false </label>
       </div>
     </div>
@@ -143,11 +143,11 @@
         <span class="small text-muted"></span>
       </div>
       <div class="custom-control custom-radio form-check-inline">
-        <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_true" value="1">
+        <input class="form-check-input" id="LongContentType_true" name="LongContentType" type="radio" value="1">
         <label class="form-check-label" for="LongContentType_true" title="true"> true </label>
       </div>
       <div class="custom-control custom-radio form-check-inline">
-        <input class="form-check-input" type="radio" name="LongContentType" id="LongContentType_false" value="">
+        <input checked class="form-check-input" id="LongContentType_false" name="LongContentType" type="radio" value="">
         <label class="form-check-label" for="LongContentType_false" title="default"> false </label>
       </div>
     </div>
@@ -158,17 +158,17 @@
       </div>
       <div class="my-1 p-2">
         <div class="form-check form-switch form-check-inline">
-          <input type="checkbox" name="backdrop" class="form-check-input" id="backdrop" checked>
+          <input checked class="form-check-input" id="backdrop" name="backdrop" type="checkbox">
           <label class="form-check-label" for="backdrop">backdrop</label>
         </div>
         <div class="form-check form-check-inline">
-          <input type="checkbox" name="backdrop" class="form-check-input" id="backdrop_static" disabled>
+          <input class="form-check-input" disabled id="backdrop_static" name="backdrop" type="checkbox">
           <label class="form-check-label" for="backdrop_static">backdrop_static</label>
         </div>
       </div>
       <div class="my-1 p-2">
         <div class="mb-2 form-check form-switch">
-          <input type="checkbox" class="form-check-input" id="keyboard" checked>
+          <input checked class="form-check-input" id="keyboard" type="checkbox">
           <label class="form-check-label" for="keyboard">keyboard</label>
         </div>
       </div>
@@ -189,31 +189,31 @@
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-auto">
             <div class="my-1 my-md-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="show" id="EventsType_show">
+                <input class="form-check-input" id="EventsType_show" name="EventsType" type="radio" value="show">
                 <label class="form-check-label" for="EventsType_show" title="show.bs.modal">show</label>
               </div>
             </div>
             <div class="my-1 my-md-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="shown" id="EventsType_shown">
+                <input class="form-check-input" id="EventsType_shown" name="EventsType" type="radio" value="shown">
                 <label class="form-check-label" for="EventsType_shown" title="shown.bs.modal">shown</label>
               </div>
             </div>
             <div class="my-1 my-md-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hide" id="EventsType_hide">
+                <input class="form-check-input" id="EventsType_hide" name="EventsType" type="radio" value="hide">
                 <label class="form-check-label" for="EventsType_hide" title="hide.bs.modal">hide</label>
               </div>
             </div>
             <div class="my-1 my-md-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hidden" id="EventsType_hidden">
+                <input class="form-check-input" id="EventsType_hidden" name="EventsType" type="radio" value="hidden">
                 <label class="form-check-label" for="EventsType_hidden" title="hidden.bs.modal">hidden</label>
               </div>
             </div>
             <div class="my-1 my-md-auto col">
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="EventsType" value="hidden" id="EventsType_hidePrevented">
+                <input class="form-check-input" id="EventsType_hidePrevented" name="EventsType" type="radio" value="hidden">
                 <label class="form-check-label" for="EventsType_hidePrevented" title="hidePrevented.bs.modal">hidePrevented</label>
               </div>
             </div>
@@ -242,7 +242,6 @@
        style="z-index:1055;">Click to generate modal box</a>
   </div>
 </div>
-
 <div class="min-vh-100 bg-secondary bg-opacity-50">
   <div class="container">
     <span>Events Function code</span>
@@ -296,8 +295,8 @@ function return_Fun_HTML_Element() {
   </div>
 </div>
 
-<script src="../docs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../dist/bootstrap-modal-js.min.js"></script>
+<script src="../docs/assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../dist/umd/bs-modal-js.min.js"></script>
 <script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <script>

@@ -58,7 +58,7 @@
     }
   }
 
-  const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, EventType, CallbackFunction, Options) => {
+  const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventsType, EventsFunction) => {
     title = typeof title === 'function'
       ? title()
       : typeof title === 'string'
@@ -77,10 +77,9 @@
     ModalSizes = typeof ModalSizes === "string" ? ModalSizes : "default";
     VerticallyCentered = typeof VerticallyCentered === "boolean" ? VerticallyCentered : false;
     LongContentType = typeof LongContentType === "boolean" ? LongContentType : false;
-    EventType = typeof EventType === "string" ? EventType : "";
-    CallbackFunction = typeof CallbackFunction === "function" ? CallbackFunction : "";
     Options = typeof Options === "object" ? Options : "";
-    // Options = Options ? (typeof Options === "function" ? Options() : Options) : "";
+    EventsType = typeof EventsType === "string" ? EventsType : "";
+    EventsFunction = typeof EventsFunction === "function" ? EventsFunction : "";
 
     const document_body = document.querySelector("body");
     const TimeID = new Date().getTime().toString();
@@ -183,7 +182,7 @@
     modal.appendChild(modal_dialog);
     document_body.appendChild(modal);
 
-    EventType && CallbackFunction ? bootstrap_modal_js_events(modal_ID, EventType, CallbackFunction) : "";
+    EventsType && EventsFunction ? bootstrap_modal_js_events(modal_ID, EventsType, EventsFunction) : "";
 
     const modal_element = document.querySelector("#" + modal_ID);
     const xxx = Options ? new bootstrap.Modal(modal_element, Options) : new bootstrap.Modal(modal_element);
@@ -195,4 +194,4 @@
   return bootstrapModalJs;
 
 }));
-//# sourceMappingURL=bootstrap-modal-js.js.map
+//# sourceMappingURL=bs-modal-js.js.map

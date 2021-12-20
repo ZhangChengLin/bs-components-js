@@ -16,14 +16,14 @@ const inputOptions = [paths.src + `${BsNAME}/index.${ESM ? 'esm' : 'umd'}.js`]
 const outputOptions = [
   {
     banner,
-    file: paths.dist + `bootstrap-${BsNAME}-js${ESM ? '.esm' : ''}.js`,
+    file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `bs-${BsNAME}-js.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     sourcemap: true
   },
   {
     banner,
-    file: paths.dist + `bootstrap-${BsNAME}-js${ESM ? '.esm' : ''}.min.js`,
+    file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `bs-${BsNAME}-js.min.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     plugins: [terser()],
