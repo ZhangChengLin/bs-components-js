@@ -17,6 +17,8 @@
 
 ## How to install
 
+- Install via NPM package
+
 ```
 npm i bs-components-js --save
 ```
@@ -65,7 +67,8 @@ bsModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, 
 
 ---
 
-- **title**
+**title**
+-
 
 Type: String \| Function \| Function HTMLElement
 
@@ -77,7 +80,8 @@ Description: If you want to add a child element to the '.modal-header' element, 
 
 ---
 
-- **body**
+**body**
+-
 
 Type: String \| Function \| Function HTMLElement
 
@@ -87,7 +91,8 @@ Description:
 
 ---
 
-- **footer**
+**footer**
+-
 
 Type: String \| Function \| Function HTMLElement
 
@@ -97,7 +102,8 @@ Description:
 
 ---
 
-- **ModalSizes**
+**ModalSizes**
+-
 
 Type: String
 
@@ -119,7 +125,8 @@ Description:
 
 ---
 
-- **VerticallyCentered**
+**VerticallyCentered**
+-
 
 Type: Boolean
 
@@ -134,7 +141,8 @@ Description:
 
 ---
 
-- **LongContentType**
+**LongContentType**
+-
 
 Type: Boolean
 
@@ -149,7 +157,8 @@ Description:
 
 ---
 
-- **Options**
+**Options**
+-
 
 Type: Object
 
@@ -166,7 +175,8 @@ options</a>
 
 ---
 
-- **Events Type**
+**Events Type**
+-
 
 Type: String
 
@@ -184,7 +194,8 @@ Description:
 
 ---
 
-- **Events Function**
+**Events Function**
+-
 
 Type: Function
 

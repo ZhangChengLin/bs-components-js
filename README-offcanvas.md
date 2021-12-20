@@ -1,4 +1,3 @@
-
 # bsOffcanvasJs
 
 ## Demo
@@ -14,8 +13,6 @@
 | [How to install](#how-to-install)               |
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
-
-
 
 ## How to install
 
@@ -42,7 +39,7 @@ OR
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
-        bootstrapModalJs(parameter);
+        bsOffcanvasJs(parameter);
     })
 </script>
 ```
@@ -55,5 +52,5 @@ OR MORE
 ## Parameter Description
 
 ```
-bsOffcanvasJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventType, CallbackFunction)
+bsOffcanvasJs(headerNodeElement, bodyNodeElement, Placement, Options, EventsType, EventsFunction)
 ```

@@ -78,6 +78,8 @@ If it helps you, please **star** this repository
 
 ## How to install
 
+- **Install via NPM package**
+
 ```
 npm i bs-components-js --save
 ```
