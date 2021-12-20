@@ -1,3 +1,3 @@
-import bootstrapOffcanvasJs from "./js/bootstrap-offcanvas-js";
+import bsOffcanvasJs from "./js/bsOffcanvasJs";
 
-export default bootstrapOffcanvasJs
+export default bsOffcanvasJs

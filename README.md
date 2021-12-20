@@ -1,3 +1,4 @@
+# bs-components-js
 
 <p align="center">
 <a href="https://github.com/ZhangChengLin/bs-components-js" target="_blank"><img alt="GitHub Stars" title="GitHub Stars" src="https://img.shields.io/github/stars/ZhangChengLin/bs-components-js.svg?style=social"></a>
@@ -42,43 +43,90 @@
 <img src="https://badgen.net/badgesize/normal/https/unpkg.com/bs-components-js/dist/bs-components-js.min.js" alt="UNPKG minified size" title="UNPKG minified size">
 </p>
 
----
 
-## bs-components-js
+---
 
 Currently, supports bootstrap v5.x
 
-
 support Bootstrap 5 components
 
-<a href="https://getbootstrap.com/docs/5.1/components/modal/" title="Modal" target="_blank">Modal</a>
-<a href="https://getbootstrap.com/docs/5.1/components/offcanvas/" title="Offcanvas" target="_blank">Offcanvas</a>
+[Modal](https://getbootstrap.com/docs/5.1/components/modal/)
+[Offcanvas](https://getbootstrap.com/docs/5.1/components/offcanvas/)
 
-Currently, relying on Bootstrap v5, because it is a function package of Bootstrap modal.
-
-Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
 
 ---
 
 If it helps you, please **star** this repository
 
+
+---
+
+## MORE README
+
+[README-modal](/README-modal.md)
+
+[README-offcanvas](/README-offcanvas.md)
+
+
 ---
 
 ## Demo
 
-<a href="https://ZhangChengLin.github.io/bs-components-js/index.html" target="_blank" title="bs-components-js DEMO">https://ZhangChengLin.github.io/bs-components-js/index.html </a>
+[https://ZhangChengLin.github.io/bs-components-js/index.html]()
 
+---
+
+## How to install
+
+```
+npm i bs-components-js --save
+```
+
+OR
+
+```
+cnpm i bs-components-js --save
+```
+
+---
+
+## CDN
+
+- **jsDelivr**
+
+```
+<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
+```
+
+View all versions
+
+```
+https://cdn.jsdelivr.net/npm/bs-components-js/
+```
+
+- **UNPKG**
+
+View all versions
+
+```
+https://unpkg.com/bs-components-js/
+```
+
+After the browser parses, get the latest version address
+
+```
+https://unpkg.com/bs-components-js
+```
 
 ---
 
 ## Donate
 
-| Method (priority) |                              type                               |
-|:-----------------:|:---------------------------------------------------------------:|
-|   alipay （支付宝）    | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
-|        QQ         |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
-|    PayPal （贝宝）    |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
-|    WeChat （微信）    ||
+|   Method   |                              Type                               |
+|:----------:|:---------------------------------------------------------------:|
+|   AliPay   | [QR code](https://ZhangChengLin.github.io/image/pay-alipay.jpg) |
+|     QQ     |   [QR code](https://ZhangChengLin.github.io/image/pay-qq.png)   |
+|   PayPal   |        [PayPal.Me](https://www.paypal.me/ZhangChengLin)         |
 
 ---
 

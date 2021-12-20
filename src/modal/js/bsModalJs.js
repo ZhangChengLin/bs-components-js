@@ -1,58 +1,6 @@
-/*!
-    * Name: bs-components-js
-    * Version: 0.0.1
-    * Author: ZhangChengLin
-    * Email: 469946668@qq.com
-    * Description: Generate Bootstrap components through JavaScript
-    * Copyright (c) 2020 - 2021 ZhangChengLin
-    * Licenses: MIT
-    * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-    * GitHub: https://github.com/ZhangChengLin/bootstrap-modal-js
-    * issues: https://github.com/ZhangChengLin/bootstrap-modal-js/issues
-*/
-function removeBootstrapModalJs(modal_id) {
-  const modal_element = document.querySelector("#" + modal_id);
-  modal_element.addEventListener("hidden.bs.modal", function () {
-    let x = bootstrap.Modal.getInstance(modal_element);
-    x.dispose();
-    setTimeout(function () {
-      modal_element.parentElement.removeChild(modal_element);
-    }, 3e3);
-  });
-}
+import {removeBootstrapModalJs, bootstrap_modal_js_events} from "./util/index";
 
-function bootstrap_modal_js_events(modal_id, type, fun) {
-  const modal = document.querySelector("#" + modal_id);
-  switch (type) {
-    case "show":
-      modal.addEventListener("show.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "shown":
-      modal.addEventListener("shown.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hide":
-      modal.addEventListener("hide.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hidden":
-      modal.addEventListener("hidden.bs.modal", function () {
-        return fun();
-      });
-      break;
-    case "hidePrevented":
-      modal.addEventListener("hidePrevented.bs.modal", function () {
-        return fun();
-      });
-      break;
-  }
-}
-
-const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventsType, EventsFunction) => {
+const bsModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventsType, EventsFunction) => {
   title = typeof title === 'function'
     ? title()
     : typeof title === 'string'
@@ -134,12 +82,16 @@ const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, L
     case true:
       modal_dialog.className += " modal-dialog-centered";
       break;
+    case false:
+    default:
   }
 
   switch (LongContentType) {
     case true:
       modal_dialog.className += " modal-dialog-scrollable";
       break;
+    case false:
+    default:
   }
   modal_dialog.role = "document";
 
@@ -185,5 +137,4 @@ const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, L
   return TimeID;
 };
 
-export { bootstrapModalJs };
-//# sourceMappingURL=bs-modal-js.js.map
+export default bsModalJs

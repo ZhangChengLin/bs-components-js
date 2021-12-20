@@ -5,6 +5,7 @@ import banner from "./banner.js";
 
 const paths = require('./paths')
 
+const PREFIX = 'bs'
 const ESM = process.env.ESM === 'true'
 const BsNAME = process.env.BsNAME
 
@@ -16,14 +17,14 @@ const inputOptions = [paths.src + `${BsNAME}/index.${ESM ? 'esm' : 'umd'}.js`]
 const outputOptions = [
   {
     banner,
-    file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `bs-${BsNAME}-js.js`,
+    file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `${PREFIX}${toUpperCase(BsNAME)}Js.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     sourcemap: true
   },
   {
     banner,
-    file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `bs-${BsNAME}-js.min.js`,
+    file: paths.dist + `${ESM ? 'esm/' : 'umd/'}` + `${PREFIX}${toUpperCase(BsNAME)}Js.min.js`,
     format: `${ESM ? 'esm' : 'umd'}`,
     generatedCode: 'es2015',
     plugins: [terser()],
@@ -38,7 +39,7 @@ const rollupConfig = {
 
 if (!ESM) {
   rollupConfig.output.forEach(currentOutput => {
-    currentOutput.name = `bootstrap${toUpperCase(BsNAME)}Js`
+    currentOutput.name = `${PREFIX}${toUpperCase(BsNAME)}Js`
   })
 }
 

@@ -7,13 +7,13 @@
     * Copyright (c) 2020 - 2021 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-    * GitHub: https://github.com/ZhangChengLin/bootstrap-modal-js
-    * issues: https://github.com/ZhangChengLin/bootstrap-modal-js/issues
+    * GitHub: https://github.com/ZhangChengLin/bs-components-js
+    * issues: https://github.com/ZhangChengLin/bs-components-js/issues
 */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrapModalJs = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bsModalJs = factory());
 })(this, (function () { 'use strict';
 
   function removeBootstrapModalJs(modal_id) {
@@ -58,7 +58,7 @@
     }
   }
 
-  const bootstrapModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventsType, EventsFunction) => {
+  const bsModalJs = (title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventsType, EventsFunction) => {
     title = typeof title === 'function'
       ? title()
       : typeof title === 'string'
@@ -191,7 +191,7 @@
     return TimeID;
   };
 
-  return bootstrapModalJs;
+  return bsModalJs;
 
 }));
-//# sourceMappingURL=bs-modal-js.js.map
+//# sourceMappingURL=bsModalJs.js.map

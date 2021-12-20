@@ -7,13 +7,13 @@
     * Copyright (c) 2020 - 2021 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).
-    * GitHub: https://github.com/ZhangChengLin/bootstrap-modal-js
-    * issues: https://github.com/ZhangChengLin/bootstrap-modal-js/issues
+    * GitHub: https://github.com/ZhangChengLin/bs-components-js
+    * issues: https://github.com/ZhangChengLin/bs-components-js/issues
 */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bootstrapOffcanvasJs = factory());
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.bsOffcanvasJs = factory());
 })(this, (function () { 'use strict';
 
   /**
@@ -130,7 +130,7 @@
    * @param {string|null} EventType
    * @param {Function|null} EventFunction
    */
-  const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
+  const bsOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
     let timeString = getTimeString();
 
     let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement);
@@ -144,7 +144,7 @@
     return timeString
   };
 
-  return bootstrapOffcanvasJs;
+  return bsOffcanvasJs;
 
 }));
-//# sourceMappingURL=bs-offcanvas-js.js.map
+//# sourceMappingURL=bsOffcanvasJs.js.map

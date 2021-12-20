@@ -1,20 +1,19 @@
-
-#bootstrapModalJs
+# bsModalJs
 
 ## Demo
-<a href="https://ZhangChengLin.github.io/bs-components-js/demo-modal.html" target="_blank" title="bs-components-js DEMO">https://ZhangChengLin.github.io/bs-components-js/demo.html </a>
+
+[https://ZhangChengLin.github.io/bs-components-js/demo-modal.html]()
+
 
 ---
+
 ## Table of Contents
 
-|                                                 |
+| Contents                                        |
 |:------------------------------------------------|
 | [How to install](#how-to-install)               |
-| [CDN](#cdn)                                     |
 | [How to use](#how-to-use)                       |
 | [Parameter Description](#parameter-description) |
-
-
 
 ## How to install
 
@@ -22,50 +21,14 @@
 npm i bs-components-js --save
 ```
 
-OR
-
-```
-cnpm i bs-components-js --save
-```
-
-
-## CDN
-
-- **jsDelivr**
-
-```
-<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
-```
-
-View all versions
-
-```
-https://cdn.jsdelivr.net/npm/bs-components-js/
-```
-
-
-- **UNPKG**
-
-View all versions
-
-```
-https://unpkg.com/bs-components-js/
-```
-
-After the browser parses, get the latest version address
-
-```
-https://unpkg.com/bs-components-js
-```
-
+---
 
 ## How to use
 
 ```
-<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
-<script src="./dist/bs-components-js.js"></script>
+<a href="javascript:;" onclick="bsModalJs(parameter)">text</a>
 
-<a href="javascript:;" onclick="bootstrapModalJs(parameter)">text</a>
+<script src="./dist/umd/bsModalJs.js"></script>
 ```
 
 OR
@@ -73,22 +36,25 @@ OR
 ```
 <a href="javascript:;" id="xx">text</a>
 
-<script src="https://cdn.jsdelivr.net/npm/bs-components-js/dist/bs-components-js.min.js"></script>
-<script src="./dist/bs-components-js.js"></script>
+<script src="./dist/umd/bsOffcanvasJs.js"></script>
 <script>
     const xx = document.querySelector("#xx");
     xx.addEventListener("click", function () {
-        bootstrapModalJs(parameter);
+        bsModalJs(parameter);
     })
 </script>
 ```
-OR MORE
 
+OR MORE
 
 ## Parameter Description
 
+Currently, relying on Bootstrap v5, because it is a function package of Bootstrap modal.
+
+Supports arbitrary calls of 9 parameters, supports callback functions based on modal events.
+
 ```
-bootstrapModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventType, CallbackFunction)
+bsModalJs(title, body, footer, ModalSizes, VerticallyCentered, LongContentType, Options, EventType, CallbackFunction)
 ```
 
 **Return Values**
@@ -110,6 +76,7 @@ Description: If you want to add a child element to the '.modal-header' element, 
 说明： 如果要向 ".modal-header" 元素添加子元素，请使用 Function HTMLElement。
 
 ---
+
 - **body**
 
 Type: String \| Function \| Function HTMLElement
@@ -119,6 +86,7 @@ Default value: undefined
 Description:
 
 ---
+
 - **footer**
 
 Type: String \| Function \| Function HTMLElement
@@ -128,6 +96,7 @@ Default value: undefined
 Description:
 
 ---
+
 - **ModalSizes**
 
 Type: String
@@ -149,6 +118,7 @@ Description:
 | full-xxl  |
 
 ---
+
 - **VerticallyCentered**
 
 Type: Boolean
@@ -163,6 +133,7 @@ Description:
 |   false   |
 
 ---
+
 - **LongContentType**
 
 Type: Boolean
@@ -177,13 +148,15 @@ Description:
 |   false   |
 
 ---
+
 - **Options**
 
 Type: Object
 
 Default value:
 
-Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal options</a>
+Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#options" target="_blank">Bootstrap Modal
+options</a>
 
 | parameter | default value (boolean) |         other         |
 |:---------:|:-----------------------:|:---------------------:|
@@ -192,6 +165,7 @@ Description: <a href="https://getbootstrap.com/docs/4.3/components/modal/#option
 |   focus   |          true           |         false         |
 
 ---
+
 - **Events Type**
 
 Type: String
@@ -200,12 +174,13 @@ Default value: undefined
 
 Description:
 
-| parameter |
-|:---------:|
-|   show    |
-|   shown   |
-|   hide    |
-|  hidden   |
+|   parameter   |
+|:-------------:|
+|     show      |
+|     shown     |
+|     hide      |
+|    hidden     |
+| hidePrevented |
 
 ---
 

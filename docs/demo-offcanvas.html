@@ -192,7 +192,7 @@
 </div>
 
 <script src="../docs/assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../dist/umd/bs-offcanvas-js.min.js"></script>
+<script src="../dist/umd/bsOffcanvasJs.min.js"></script>
 <script>
   let renderOffcanvas = document.querySelector('#renderOffcanvas')
   renderOffcanvas.addEventListener('click', () => {
@@ -206,7 +206,7 @@
     let offcanvasTitle = document.querySelector('#offcanvasTitle')
     let offcanvasBody = document.querySelector('#offcanvasBody')
 
-    bootstrapOffcanvasJs(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
+    bsOffcanvasJs(offcanvasTitle.value, offcanvasBody.value, getRadio('offcanvasPlacement'), options)
   })
 
   function getRadio(name, returnType = 'val') {
@@ -238,7 +238,7 @@
   let btnList = document.querySelectorAll("[id^=offcanvas_]")
   btnList.forEach(currentBtn => {
     currentBtn.addEventListener('click', () => {
-      let x = bootstrapOffcanvasJs(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
+      let x = bsOffcanvasJs(currentBtn.textContent, currentBtn.textContent, currentBtn.dataset['offcanvasPlacement'])
       console.log('x== ', x);
     })
   })

@@ -10,7 +10,7 @@ import {getTimeString, offcanvasEvents} from "./util/index";
  * @param {string|null} EventType
  * @param {Function|null} EventFunction
  */
-const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
+const bsOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Options, EventType, EventFunction) => {
   let timeString = getTimeString()
 
   let _offcanvas = offcanvas(headerNodeElement, bodyNodeElement, Placement)
@@ -24,4 +24,4 @@ const bootstrapOffcanvasJs = (headerNodeElement, bodyNodeElement, Placement, Opt
   return timeString
 };
 
-export default bootstrapOffcanvasJs;
+export default bsOffcanvasJs;
