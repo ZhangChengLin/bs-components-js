@@ -1,9 +1,9 @@
 /*!
-    * Name: bootstrap-modal-js
-    * Version: 2.0.2
+    * Name: bs-components-js
+    * Version: 0.0.1
     * Author: ZhangChengLin
     * Email: 469946668@qq.com
-    * Description: Bootstrap Modal
+    * Description: Generate Bootstrap components through JavaScript
     * Copyright (c) 2020 - 2021 ZhangChengLin
     * Licenses: MIT
     * under the MIT License (license terms are at https://opensource.org/licenses/MIT).

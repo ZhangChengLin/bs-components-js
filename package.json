@@ -1,8 +1,8 @@
 {
-  "name": "bootstrap-modal-js",
-  "version": "2.0.2",
-  "description": "Bootstrap Modal",
-  "main": "dist/bootstrap-modal-js.min.js",
+  "name": "bs-components-js",
+  "version": "0.0.1",
+  "description": "Generate Bootstrap components through JavaScript",
+  "main": "",
   "scripts": {
     "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
     "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
@@ -21,10 +21,18 @@
   },
   "keywords": [
     "bootstrap",
+    "bootstrap5",
+    "components",
     "modal",
     "offcanvas",
-    "bootstrap5",
-    "components"
+    "Alerts",
+    "Carousel",
+    "Collapse",
+    "Dropdowns",
+    "Progress",
+    "Scrollspy",
+    "Tab",
+    "Toasts"
   ],
   "author": {
     "name": "ZhangChengLin",
