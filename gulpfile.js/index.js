@@ -11,7 +11,7 @@ const npmDistConfig = {
 
 const copyBsFiles = () => {
   return src(npmDist(npmDistConfig), {base: paths.node_modules})
-    .pipe(dest(paths.docs))
+    .pipe(dest(paths.assets))
 }
 
 module.exports = {

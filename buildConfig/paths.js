@@ -3,6 +3,7 @@ const node_modules = root + 'node_modules/'
 const gulpfile = root + 'gulpfile.js/'
 const src = root + 'src/'
 const docs = root + 'docs/'
+const assets = root + 'docs/assets/'
 const dist = root + 'dist/'
 
 module.exports = {
@@ -11,5 +12,6 @@ module.exports = {
   gulpfile: gulpfile,
   src: src,
   docs: docs,
+  assets: assets,
   dist: dist,
 }
