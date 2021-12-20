@@ -1,29 +1,38 @@
 {
-  "name": "bootstrap-modal-js",
-  "version": "2.0.1",
-  "description": "Bootstrap Modal",
-  "main": "dist/bootstrap-modal-js.min.js",
+  "name": "bs-components-js",
+  "version": "0.0.1",
+  "description": "Generate Bootstrap components through JavaScript",
+  "main": "",
   "scripts": {
-    "build": "npm run copy && npm run dist",
-    "watch": "gulp watch_file",
-    "dist": "gulp dist_min",
-    "copy": "npm run npm_install && npm run gulp_copy_static",
-    "npm_install": "npm i",
-    "gulp_copy_static": "gulp copy_static"
+    "js-compile": "npm-run-all --aggregate-output --parallel js-compile-*",
+    "js-compile-modal": "rollup --environment BsNAME:modal --config buildConfig/rollup.config.js",
+    "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
+    "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
+    "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js",
+    "copyBsFiles": "gulp copyBsFiles"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ZhangChengLin/bootstrap-modal-js.git"
+    "url": "git@github.com:ZhangChengLin/bs-components-js.git"
   },
-  "github": "https://github.com/ZhangChengLin/bootstrap-modal-js",
+  "github": "https://github.com/ZhangChengLin/bs-components-js",
   "bugs": {
-    "url": "https://github.com/ZhangChengLin/bootstrap-modal-js/issues"
+    "url": "https://github.com/ZhangChengLin/bs-components-js/issues"
   },
   "keywords": [
     "bootstrap",
-    "modal",
     "bootstrap5",
-    "components"
+    "components",
+    "modal",
+    "offcanvas",
+    "Alerts",
+    "Carousel",
+    "Collapse",
+    "Dropdowns",
+    "Progress",
+    "Scrollspy",
+    "Tab",
+    "Toasts"
   ],
   "author": {
     "name": "ZhangChengLin",
@@ -32,20 +41,30 @@
   },
   "license": "MIT",
   "engines": {
-    "bootstrap": "^5.1.2"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-header": "^2.0.9",
-    "gulp-rename": "^2.0.0",
-    "gulp-terser": "^2.1.0"
+    "bootstrap": "^5.1.3"
   },
   "dependencies": {
-    "bootstrap": "^5.1.2"
+    "bootstrap": "^5.1.3",
+    "highlight.js": "^11.3.1"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-unicorn": "^39.0.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint-new": "^1.1.0",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "rollup": "^2.61.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "terser": "^5.10.0"
   },
   "files": [
-    "dist/*.js",
-    "demoFiles/*.{js,css}",
-    "demo.html"
+    "dist/**/*.{js,css,map}",
+    "src/**/*.js",
+    "docs/**/*"
   ]
 }
