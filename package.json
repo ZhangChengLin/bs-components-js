@@ -1,6 +1,6 @@
 {
   "name": "bs-components-js",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "Generate Bootstrap components through JavaScript",
   "main": "",
   "scripts": {
@@ -9,6 +9,8 @@
     "js-compile-modal-esm": "rollup --environment BsNAME:modal,ESM:true --config buildConfig/rollup.config.js",
     "js-compile-offcanvas": "rollup --environment BsNAME:offcanvas --config buildConfig/rollup.config.js",
     "js-compile-offcanvas-esm": "rollup --environment BsNAME:offcanvas,ESM:true --config buildConfig/rollup.config.js",
+    "lint": "npm-run-all --aggregate-output --parallel lint-*",
+    "lint-js": "",
     "copyBsFiles": "gulp copyBsFiles"
   },
   "repository": {
@@ -52,9 +54,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-unicorn": "^39.0.0",
     "gulp": "^4.0.2",
-    "gulp-eslint-new": "^1.1.0",
     "gulp-npm-dist": "^1.0.3",
-    "gulp-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
