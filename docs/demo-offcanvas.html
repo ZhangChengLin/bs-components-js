@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-  <link rel="icon" href="./assets/img/favicons/favicon.ico">
-  <link rel="stylesheet" href="./assets/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="icon" href="./static/img/favicons/favicon.ico">
+  <link rel="stylesheet" href="./static/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/styles/atom-one-dark.min.css">
   <title>Offcanvas demo</title>
   <meta name="description"
         content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
@@ -156,17 +157,31 @@
             <span class="small text-muted">Bootstrap’s offcanvas class exposes a few events for hooking into offcanvas functionality.</span>
           </div>
           <div class="input-group">
-            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="eventFunctions">Functions</label>
-            <select class="form-select" id="eventFunctions">
+            <label class="input-group-text bg-success bg-gradient text-opacity-50 text-white" for="EventsFunction">Functions</label>
+            <select class="form-select" id="EventsFunction">
               <option selected>Choose...</option>
-              <option value="eventFun_1">Event Function 1</option>
-              <option value="eventFun_2">Event Function 2</option>
+              <option value="eventFun_1">EventsFunction_1</option>
+              <option value="eventFun_2">EventsFunction_2</option>
             </select>
           </div>
         </div>
       </div>
     </div>
-    <button class="my-4 mx-auto d-block btn btn-outline-primary" type="button" id="renderOffcanvas">Render Offcanvas effect</button>
+    <button class="my-4 mx-auto d-block btn btn-outline-primary bg-gradient" type="button" id="renderOffcanvas">Render Offcanvas effect</button>
+  </div>
+</div>
+<div class="min-vh-100 bg-black bg-opacity-50">
+  <div class="container">
+    <span>Events Function code</span>
+    <pre><code class="language-javascript language-plaintext">
+function EventsFunction_1() {
+  alert('EventsFunction_1')
+}
+
+function EventsFunction_2() {
+  alert('EventsFunction_2')
+}
+    </code></pre>
   </div>
 </div>
 <div class="min-vh-100 bg-secondary bg-opacity-50">
@@ -174,25 +189,27 @@
     <div class="position-absolute top-50 start-50 translate-middle">
       <div class="mx-auto position-relative" style="width: 50vw;height: 30vh;">
         <div class="position-absolute top-0 start-50 translate-middle">
-          <button class="my-1 btn btn-outline-primary" type="button" id="offcanvas_top" data-offcanvas-placement="top">top</button>
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_top" data-offcanvas-placement="top">top</button>
         </div>
         <div class="position-absolute top-50 start-0 translate-middle">
-          <button class="col my-1 btn btn-outline-primary" type="button" id="offcanvas_start" data-offcanvas-placement="start">start</button>
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_start" data-offcanvas-placement="start">start</button>
         </div>
         <div class="position-absolute top-50 start-50 translate-middle">Offcanvas</div>
         <div class="position-absolute top-50 start-100 translate-middle">
-          <button class="col my-1 btn btn-outline-primary" type="button" id="offcanvas_end" data-offcanvas-placement="end">end</button>
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_end" data-offcanvas-placement="end">end</button>
         </div>
         <div class="position-absolute top-100 start-50 translate-middle">
-          <button class="my-1 btn btn-outline-primary" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">bottom</button>
+          <button class="my-1 btn btn-primary bg-gradient" type="button" id="offcanvas_bottom" data-offcanvas-placement="bottom">bottom</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<script src="./assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./static/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../dist/umd/bsOffcanvasJs.min.js"></script>
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 <script>
   let renderOffcanvas = document.querySelector('#renderOffcanvas')
   renderOffcanvas.addEventListener('click', () => {
