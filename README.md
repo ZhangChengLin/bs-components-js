@@ -1,3 +1,8 @@
-# bs-components-js
 
-[https://github.com/ZhangChengLin/b-components](https://github.com/ZhangChengLin/b-components)
+# This package has been deprecated
+# NEW
+# [https://www.npmjs.com/package/b-components-js](https://www.npmjs.com/package/b-components-js)
+
+---
+
+---
