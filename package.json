@@ -60,7 +60,7 @@
     "prettier": "^2.5.1",
     "rollup": "^2.61.1",
     "rollup-plugin-terser": "^7.0.2",
-    "terser": "^5.10.0"
+    "terser": "^5.14.2"
   },
   "files": [
     "dist/**/*.{js,css,map}",
